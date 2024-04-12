@@ -15,6 +15,9 @@
       <!--Title-->
       <title>Shopping Lists</title>
 
+      
+      <link rel = "stylesheet" href = "../styles/shopping_list_style.css" />
+
    </head>
 
 
@@ -25,13 +28,24 @@
 
       <main>
 
-         <h1>Shopping List</h1>
+         <h1 class = "title">Shopping List</h1>
 
          <section class="left">
-            <input type="text" placeholder="Enter list name">
-            <button>Create a list</button>
-            <input type="text" placeholder="Enter item">
-            <button>Add item</button>
+           <h2>List creation</h2>
+             <!-- Create List -->
+             <form action = "#" method = "POST">
+               <label for = "list_name">Name:</label>
+               <input type = "text" id = "list_name" name = "list_name" />
+               <input type = "submit" value = "Create a list" />
+           </form>
+
+             <!-- Create List -->
+             <form action = "#" method = "POST">
+               <label for = "new_item">Add item:</label>
+               <input type = "text" id = "new_item" name = "new_item" />
+               <input type = "submit" value = "Add item" />
+           </form>
+
          </section>
 
          <section class="center">

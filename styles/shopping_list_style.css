@@ -1,0 +1,75 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Main styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-gap: 20px; 
+    padding: 20px;
+    place-items: center; 
+}
+
+.title{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+/* Left section styles */
+.left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+    grid-gap: 20px;
+    
+}
+
+.left input[type="text"],
+  input[type="submit"]{
+    margin-bottom: 10px;
+    width: 100%;
+ 
+}
+
+.left h2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Center section styles */
+.center {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+
+/* Right section styles */
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.right button,
+.right select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+
+}

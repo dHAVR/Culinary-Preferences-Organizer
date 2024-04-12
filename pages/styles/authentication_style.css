@@ -1,0 +1,45 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Main Container Styles */
+main {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    gap: 10px;
+}
+
+
+/* Input Styles */
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/* Centering Paragraph */
+p {
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+article {
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+p{
+    margin-right: 600px;
+}
+
+.food-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.ingredients {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.food-info img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+

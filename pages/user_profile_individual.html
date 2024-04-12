@@ -1,18 +1,18 @@
-<!-- Individual User Profile -->
 
 <!DOCTYPE html>
 
 
-
 <html>
-
-
+   
    <head>
+
       <!--Charset-->
       <meta charset="UTF-8">
-      
       <!--Title-->
       <title>My Profile</title>
+
+      <link rel = "stylesheet" href = "../styles/profile_individual_style.css" />
+      
    </head>
 
 
@@ -24,50 +24,89 @@
 
       <main>
 
-         <h1>User Profile</h1>
-         <p>Type of Account: [Type of Account]</p>
+         <h1 class = "title">User Profile</h1>
 
-         <section class="profile">
+            <section class="left">
 
-            <div class="left">
+               <h4>Type of Account: [Type of Account]</h4>
                <img src="#" alt="User Photo">
-               <button>Change the profile picture</button>
-            </div>
+               <p>Name: [Name of the user]</p>
+               <p>Username: [Username of the user]</p>
+               <p>Nationality: [Nationality of the user]</p>
+               <p>Age: [Age of the user]</p>
 
-            <div class="center">
-               <input type="text" placeholder="Nationality"><br>
-               <input type="number" placeholder="Age"><br>
-               <input type="text" placeholder="Username"><br>
-               <input type="password" placeholder="Password"><br>
-               <button>Update Profile</button>
-               <button>Delete Account</button>
-               <button>Logout</button>
-            </div>
+               <button class="left_button">Change the profile picture</button>
+               <button class="left_button">Delete Account</button>
+               <button class="left_button">Logout</button>
 
-            <div class="right">
+            </section>
 
-               <section>
-                  <h2>Allergies</h2>
-                  <input type="text" placeholder="Allergy 1"><br>
-                  <input type="text" placeholder="Allergy 2"><br>
-                  <input type="text" placeholder="Allergy 3"><br>
-                  <input type="text" placeholder="Allergy 4"><br>
+            <section class="center">
+
+               <h3>Additional information about you:</h3>
+               <section class="grid-container">
+                  
+                 <form action = "#" method = "POST">
+
+                     <section>
+                       <input type="text" placeholder="Nationality">
+                       <input type="text" placeholder="Age">
+                       <input type="text" placeholder="Username">
+                       <input type="password" placeholder="Password">
+                     </section>
+                   <input type = "submit" value = "Update Profile" />
+                   
+                  </form>
+
                </section>
 
-               <section>
+            </section>
+
+            <section class="right">
+               <section class="grid-container">
+         
+                  <h2 >Allergies</h2>
+                  <form action = "#" method = "POST">
+                     <section>
+                       <input type="text" placeholder="Allergy 1">
+                       <input type="text" placeholder="Allergy 2">
+                     </section>
+
+                     <section>
+                         <input type="text" placeholder="Allergy 3">
+                         <input type="text" placeholder="Allergy 4">
+                      </section>
+
+                      <input type = "submit" value = "Add Allergies" />
+
+                  </form>
+                  
+               </section>
+
+               <section class="grid-container">
+
                   <h2>Culinary Preferences</h2>
-                  <input type="text" placeholder="Preference 1"><br>
-                  <input type="text" placeholder="Preference 2"><br>
-                  <input type="text" placeholder="Preference 3"><br>
-                  <input type="text" placeholder="Preference 4"><br>
+
+                 <form action = "#" method = "POST">
+               
+                     <section>
+                        <input type="text" placeholder="Preference 1">
+                         <input type="text" placeholder="Preference 2">
+                      </section>
+ 
+                     <section>
+                        <input type="text" placeholder="Preference 3">
+                         <input type="text" placeholder="Preference 4">
+                      </section> 
+
+                    <input type = "submit" value = "Add preferences" />
+
+                  </form>
+
                </section>
-
-            </div>
-
-         </section>
-
+            
+            </section>
       </main>
-      
 
       <footer>
       </footer>

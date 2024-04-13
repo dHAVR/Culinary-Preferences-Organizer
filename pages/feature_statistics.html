@@ -10,6 +10,15 @@
 
         <!-- Charset -->
         <meta charset = "UTF-8" />
+
+        <!-- Viewport -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+
+        <!-- Favicon -->
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+
+        <!-- Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_statistics.css">
         
         <!-- Title -->
         <title>Statistics</title>
@@ -20,58 +29,73 @@
     <body>
 
         <!-- Header -->
-        <header>
+        <header class = "header">
             
             <!-- Logo -->
-            <img src = "#" alt = "Logo." />
+            <a href = "./authentication_home_page.html">
+                <img class = "logo" src = "../images/logo.png" alt = "Logo." />
+            </a>
 
-            <!-- Website Name -->
-            <h1>Culinary Preferences Organizer</h1>
+            <!-- Title -->
+            <a class = "title_link" href = "./authentication_home_page.html">
+                <h1 class = "title">Culinary Preferences Organizer</h1>
+            </a>
 
-            <!-- User Picture -->
-            <img src = "#" alt = "User picture." />
+            <!-- User Profile Picture -->
+            <a href = "./user_profile_individual.html">
+                <img class = "user_profile_picture" src = "../images/anonymous_user_profile_picture.png" alt = "User profile picture." />
+            </a>
 
         </header>
 
 
         <!-- Main Window -->
-        <main>
+        <main class = "main">
 
             <!-- Title -->
-            <h1>Statistics</h1>
+            <div class = "title_container">
+                <h1 class = "title">Statistics</h1>
+            </div>
+            
+            <div class = "statistics">
 
-            <!-- Statistics Types -->
-            <section>
-                <button>Personal Statistics</button>
-                <button>Global Statistics</button>
-            </section>
+                <div class = "left_content">
 
-            <!-- Export Options -->
-            <section>
-                <button>Export to PDF</button>
-                <button>Export to CSV</button>
-            </section>
+                    <!-- Statistics Types -->
+                    <section class = "statistics_types">
+                        <button class = "button">Personal Statistics</button>
+                        <button class = "button">Global Statistics</button>
+                    </section>
+    
+                    <!-- Export Options -->
+                    <section class = "export_options">
+                        <button class = "button">Export to PDF</button>
+                        <button class = "button">Export to CSV</button>
+                    </section>
+    
+                </div>
+    
+                <div class = "right_content">
+    
+                    <!-- Statistics Visualization -->
+                    <section>
+                        <p>Statistics</p>
+                    </section>
+    
+                </div>
 
-            <!-- Statistics Visualization -->
-            <section>
-                <p>Statistics</p>
-            </section>
+            </div>
 
         </main>
 
 
         <!-- Footer -->
-        <footer>
+        <footer class = "footer">
 
             <!-- Copyright -->
-            <p>
+            <p class = "copyright">
                 Copyright &copy; 2024 Culinary Preferences Organizer
             </p>
-
-            <!-- System Requirements Specification -->
-            <a href = "./pages/software_requirements_specification.html">
-                System Requirements Specification
-            </a>
 
         </footer>
 

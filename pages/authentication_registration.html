@@ -10,6 +10,15 @@
 
         <!-- Charset -->
         <meta charset = "UTF-8" />
+
+        <!-- Viewport -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+
+        <!-- Favicon -->
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+
+        <!-- Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/authentication_registration.css">
         
         <!-- Title -->
         <title>Registration</title>
@@ -20,72 +29,91 @@
     <body>
 
         <!-- Header -->
-        <header>
+        <header class = "header">
             
             <!-- Logo -->
-            <img src = "#" alt = "Logo." />
+            <a href = "./authentication_home_page.html">
+                <img class = "logo" src = "../images/logo.png" alt = "Logo." />
+            </a>
 
-            <!-- Website Name -->
-            <h1>Culinary Preferences Organizer</h1>
+            <!-- Title -->
+            <a class = "title_link" href = "./authentication_home_page.html">
+                <h1 class = "title">Culinary Preferences Organizer</h1>
+            </a>
 
-            <!-- User Picture -->
-            <img src = "#" alt = "User picture." />
+            <!-- User Profile Picture -->
+            <a href = "./user_profile_individual.html">
+                <img class = "user_profile_picture" src = "../images/anonymous_user_profile_picture.png" alt = "User profile picture." />
+            </a>
 
         </header>
 
 
         <!-- Main Window -->
-        <main>
+        <main class = "main">
 
             <!-- Title -->
-            <h1>Register</h1>
+            <div class = "title_container">
+                <h1 class = "title">Register</h1>
+            </div>
 
             <!-- Registration Form -->
-            <form action = "#" method = "GET">
+            <div class = "registration_form_container">
 
-                <!-- First Name -->
-                <label for = "first_name">First Name:</label>
-                <input type = "text" id = "first_name" name = "first_name" placeholder = "James" />
+                <form class = "registration_form" action = "./user_profile_individual.html" method = "GET">
 
-                <!-- Last Name -->
-                <label for = "last_name">Last Name:</label>
-                <input type = "text" id = "last_name" name = "last_name" placeholder = "Smith" />
+                    <!-- First Name -->
+                    <div class = "first_name_container">
+                        <label class = "label_text" for = "first_name">First Name:</label>
+                        <input class = "input_field" type = "text" id = "first_name" name = "first_name" placeholder = "James" />
+                    </div>
 
-                <!-- Username -->
-                <label for = "username">Username:</label>
-                <input type = "text" id = "username" name = "username" placeholder = "james_smith" />
+                    <!-- Last Name -->
+                    <div class = "last_name_container">
+                        <label class = "label_text" for = "last_name">Last Name:</label>
+                        <input class = "input_field" type = "text" id = "last_name" name = "last_name" placeholder = "Smith" />
+                    </div>
 
-                <!-- Account Type -->
-                <label for = "account_type">Account Type:</label>
-                <select id = "account_type" name = "account_type">
-                    <option value = "individual_account_type">Individual</option>
-                    <option value = "administrator_account_type">Administrator</option>
-                </select>
+                    <!-- Username -->
+                    <div class = "username_container">
+                        <label class = "label_text" for = "username">Username:</label>
+                        <input class = "input_field" type = "text" id = "username" name = "username" placeholder = "james_smith" />
+                    </div>
+    
+                    <!-- Account Type -->
+                    <div class = "account_type_container">
+                        <label class = "label_text" for = "account_type">Account Type:</label>
+                        <select class = "input_field" id = "account_type" name = "account_type">
+                            <option value = "individual_account_type">Individual</option>
+                            <option value = "administrator_account_type">Administrator</option>
+                        </select>
+                    </div>
 
-                <!-- Password -->
-                <label for = "password">Password:</label>
-                <input type = "password" id = "password" name = "password" placeholder = "*********" />
+                    <!-- Password -->
+                    <div class = "password_container">
+                        <label class = "label_text" for = "password">Password:</label>
+                        <input class = "input_field" type = "password" id = "password" name = "password" placeholder = "*********" />
+                    </div>
+    
+                    <!-- Register -->
+                    <div class = "submit_container">
+                        <input class = "submit_button" type = "submit" value = "Register" />
+                    </div>
+    
+                </form>
 
-                <!-- Register -->
-                <input type = "submit" value = "Register" />
-
-            </form>
+            </div>
 
         </main>
 
 
         <!-- Footer -->
-        <footer>
+        <footer class = "footer">
 
             <!-- Copyright -->
-            <p>
+            <p class = "copyright">
                 Copyright &copy; 2024 Culinary Preferences Organizer
             </p>
-
-            <!-- System Requirements Specification -->
-            <a href = "./pages/software_requirements_specification.html">
-                System Requirements Specification
-            </a>
 
         </footer>
 

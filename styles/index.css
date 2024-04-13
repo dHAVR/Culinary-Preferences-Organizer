@@ -1,0 +1,48 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+.header
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100vw;
+    height: 15vh;
+}
+
+
+.main
+{
+    width: 100vw;
+    height: 70vh;
+}
+
+
+.footer
+{
+    width: 100vw;
+    height: 15vh;
+}
+
+
+.logo
+{
+    width: 5vw;
+}
+
+
+.title
+{
+    font-size: 48px;
+}
+
+
+.user_profile_picture
+{
+    width: 5vw;
+}

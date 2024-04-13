@@ -10,6 +10,15 @@
 
         <!-- Charset -->
         <meta charset = "UTF-8" />
+
+        <!-- Viewport -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+
+        <!-- Favicon -->
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+
+        <!-- Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/authentication_home_page.css">
         
         <!-- Title -->
         <title>Culinary Preferences Organizer</title>
@@ -20,51 +29,63 @@
     <body>
 
         <!-- Header -->
-        <header>
+        <header class = "header">
             
             <!-- Logo -->
-            <img src = "#" alt = "Logo." />
+            <a href = "./authentication_home_page.html">
+                <img class = "logo" src = "../images/logo.png" alt = "Logo." />
+            </a>
 
-            <!-- Website Name -->
-            <h1>Culinary Preferences Organizer</h1>
+            <!-- Title -->
+            <a class = "title_link" href = "./authentication_home_page.html">
+                <h1 class = "title">Culinary Preferences Organizer</h1>
+            </a>
 
-            <!-- User Picture -->
-            <img src = "#" alt = "User picture." />
+            <!-- User Profile Picture -->
+            <a href = "./user_profile_individual.html">
+                <img class = "user_profile_picture" src = "../images/anonymous_user_profile_picture.png" alt = "User profile picture." />
+            </a>
 
         </header>
 
 
         <!-- Main Window -->
-        <main>
+        <main class = "main">
 
             <!-- Banner -->
-            <nav>
-
-                <!-- Banner Background Image -->
-                <img src = "" />
+            <nav class = "banner">
 
                 <!-- Search for a Dish -->
-                <form action = "#" method = "GET">
+                <form class = "search_form" action = "./feature_food_information.html" method = "GET">
 
-                    <label for = "search_dish">Search for a dish:</label>
-                    <input type = "text" id = "search_dish" name = "search_dish" placeholder = "apple pie" />
-                    <input type = "submit" value = "Search!" />
+                    <div class = "search_message_container">
+                        <label class = "search_message" for = "search_dish">Search for a Dish:</label>
+                    </div>
+                    
+                    <div class = "search_container">
+                        <input class = "search_input" type = "text" id = "search_dish" name = "search_dish" placeholder = "apple pie" />
+                        <input class = "search_button" type = "submit" value = "Search!" />
+                    </div>
 
                 </form>
 
             </nav>
             
             <!-- User Options -->
-            <section>
+            <section class = "user_options">
 
                 <!-- Welcome Message -->
-                <p>Hello, [user]! What would you like to do today?</p>
+                <p class = "welcome_message">Hello, Roman! What would you like to do today?</p>
 
                 <!-- See Statistics -->
-                <button>See Statistics</button>
-
+                <a href = "./feature_statistics.html">
+                    <button class = "statistics_button">See Statistics</button>
+                </a>
+                
                 <!-- See Shopping Lists -->
-                <button>See Shopping Lists</button>
+                <a href = "./feature_shopping_lists.html">
+                    <button class = "shopping_lists_button">See Shopping Lists</button>
+                </a>
 
             </section>
 
@@ -72,17 +93,12 @@
 
 
         <!-- Footer -->
-        <footer>
+        <footer class = "footer">
 
             <!-- Copyright -->
-            <p>
+            <p class = "copyright">
                 Copyright &copy; 2024 Culinary Preferences Organizer
             </p>
-
-            <!-- System Requirements Specification -->
-            <a href = "./pages/software_requirements_specification.html">
-                System Requirements Specification
-            </a>
 
         </footer>
 

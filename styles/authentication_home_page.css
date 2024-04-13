@@ -1,0 +1,166 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+.header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100vw;
+    height: 15vh;
+}
+
+
+.main
+{
+    width: 100vw;
+    height: 75vh;
+}
+
+
+.footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100vw;
+    height: 10vh;
+}
+
+
+.logo
+{
+    border-radius: 50%;
+    
+    width: 5vw;
+}
+
+
+.title_link:link
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.title_link:visited
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.title_link:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.title
+{
+    font-size: 48px;
+}
+
+
+.user_profile_picture
+{
+    border-radius: 50%;
+
+    width: 5vw;
+}
+
+
+.banner
+{
+    background-color: #444444;
+
+    width: 100vw;
+    height: 20vh;
+}
+
+
+.search_form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 100%;
+}
+
+
+.search_message
+{
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+
+.search_input
+{
+    font-size: 18px;
+
+    width: 250px;
+    height: 25px;
+}
+
+
+.search_button
+{
+    font-size: 18px;
+
+    width: 80px;
+    height: 25px;
+}
+
+
+.user_options
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100vw;
+    height: 55vh;
+}
+
+
+.welcome_message
+{
+    font-size: 30px;
+}
+
+
+.statistics_button
+{
+    font-size: 25px;
+
+    width: 250px;
+    height: 100px;
+}
+
+
+.shopping_lists_button
+{
+    font-size: 25px;
+
+    width: 250px;
+    height: 100px;
+}
+
+
+.copyright
+{
+    font-size: 20px;
+}

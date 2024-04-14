@@ -1,6 +1,5 @@
 /* General Styles */
-*
-{
+* {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #402a23;
     margin: 0;
@@ -10,100 +9,79 @@
 
 body {
     background-color: #f3bc77;
+    overflow-x: hidden;
 }
 
 
 
-.header
-{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color:  #a55233;
-
     width: 100vw;
     height: 20vh;
 }
 
 
-.logo
-{
+.logo {
     height: 20vh;
     width: 10vw;
 }
 
 
-.title_link:link
-{
+.title_link:link,
+.title_link:visited,
+.title_link:hover {
     color: #000000;
     text-decoration: none;
 }
 
 
-.title_link:visited
-{
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.title_link:hover
-{
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.title
-{
-    font-size: 48px;
+.title {
+    font-size: 3em; 
     color: white;
 }
 
 
-.user_profile_picture
-{
+.user_profile_picture {
     border-radius: 50%;
-    margin-right: 30px;
+    margin-right: 1.5rem; 
     width: 5vw;
 }
 
 
 main {
     display: grid;
+    height: 70vh;
     place-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
+    margin-top: 1vh; 
+    margin-bottom: 2.5vh; 
 }
 
-.footer
-{
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     background-color:  #a55233;
-    position: fixed;
-    bottom: 0;
-
-
+    position: relative;
+    height: 100%;
+    min-height: 10vh;
+    
     width: 100vw;
-    height: 10vh;
 }
 
 
 article {
-    height: auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1vh 1vw;
 }
 
+
 h2 {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 1.25rem; 
+    margin-left: 1.25rem; 
 }
 
 
@@ -116,22 +94,21 @@ h2 {
 }
 
 .ingredients {
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 1.25rem; 
+    margin-top: 1.25rem;
 }
 
 .food-info img {
-    height: 200px;
-    width: 200px;
+    height: 12.5rem; 
+    width: 12.5rem;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 20px;
-    margin-right: 40px;
+    margin-top: 1.25rem; 
+    margin-right: 2.5vw; 
 }
 
 
-.copyright
-{
+.copyright {
     color: white;
-    font-size: 20px;
+    font-size: 1.25rem;
 }

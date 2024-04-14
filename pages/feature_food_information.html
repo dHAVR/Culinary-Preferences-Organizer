@@ -9,18 +9,40 @@
     <head>
 
         <meta charset="UTF-8">
-        
-        <title>Food Information</title>
 
+        <!-- Viewport -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+
+        <!-- Favicon -->
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" /> 
+
+        <!--Style-->
         <link rel = "stylesheet" href = "../styles/food_information_style.css" />
+                
+        <title>Food Information</title>
 
     </head>
 
 
     <body>
 
-        <header>
-        
+        <header class = "header">
+            
+            <!-- Logo -->
+            <a href = "./authentication_home_page.html">
+                <img class = "logo" src = "../images/logo.png" alt = "Logo." />
+            </a>
+   
+            <!-- Title -->
+            <a class = "title_link" href = "./authentication_home_page.html">
+                <h1 class = "title">Culinary Love for You</h1>
+            </a>
+   
+            <!-- User Profile Picture -->
+            <a href = "./user_profile_individual.html">
+                <img class = "user_profile_picture" src = "../images/anonymous_user_profile_picture.png" alt = "User profile picture." />
+            </a>
+   
         </header>
         
         <main>
@@ -31,11 +53,11 @@
 
                 <div class="food-info">
 
-                    <img src="#" alt="Picture of the dish">
+                    <img src="../images/generic_food_picture.png" alt="Picture of the dish">
 
                     <div class="details">
-                        <p><strong>Origin:</strong> [Country]</p>
-                        <p><strong>Description:</strong>[Description of the dish]</p>
+                        <p ><strong>Origin:</strong> [Country]</p>
+                        <p ><strong>Description:</strong>[Description of the dish]</p>
                     </div>
 
                 </div>
@@ -57,8 +79,13 @@
 
         </main>
 
-        <footer>
+        <footer class = "footer">
 
+            <!-- Copyright -->
+            <p class = "copyright">
+                Copyright &copy; 2024 Culinary Preferences Organizer
+            </p>
+   
         </footer>
 
     </body>

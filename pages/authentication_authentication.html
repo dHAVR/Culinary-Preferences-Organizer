@@ -11,34 +11,67 @@
 
       <!--Charset-->
       <meta charset="UTF-8">
+
+      <!-- Viewport -->
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+
+      <!-- Favicon -->
+      <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+
+      <!--Style-->
+      <link rel = "stylesheet" href = "../styles/authentication_style.css" />
       
       <!--Title-->
       <title>Authentication</title>
-
-      <link rel = "stylesheet" href = "../styles/authentication_style.css" />
 
    </head>
 
 
    <body>
 
-      <header>
-      </header>
+     
+        <!-- Header -->
+        <header class = "header">
+            
+         <!-- Logo -->
+         <a href = "./authentication_home_page.html">
+             <img class = "logo" src = "../images/logo.png" alt = "Logo." />
+         </a>
+
+         <!-- Title -->
+         <a class = "title_link" href = "./authentication_home_page.html">
+             <h1 class = "title">Culinary Love for You</h1>
+         </a>
+
+         <!-- User Profile Picture -->
+         <a href = "./user_profile_individual.html">
+             <img class = "user_profile_picture" src = "../images/anonymous_user_profile_picture.png" alt = "User profile picture." />
+         </a>
+
+     </header>
 
       <main>
-             <p>Log in</p>
+         
+             <p class = "login_title">Log in</p>
          <form action="#" method="post">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
             <input type="submit" value="Login">
          </form>
 
       </main>
 
-      <footer>
-      </footer>
+        <!-- Footer -->
+        <footer class = "footer">
+
+             <!-- Copyright -->
+            <p class = "copyright">
+               Copyright &copy; 2024 Culinary Preferences Organizer
+            </p>
+
+        </footer>
 
    </body>
 

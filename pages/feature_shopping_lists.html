@@ -23,12 +23,28 @@
 
    <body>
     
-      <header>
-      </header>
+      <header class = "header">
+            
+         <!-- Logo -->
+         <a href = "./authentication_home_page.html">
+             <img class = "logo" src = "../images/logo.png" alt = "Logo." />
+         </a>
+
+         <!-- Title -->
+         <a class = "title_link" href = "./authentication_home_page.html">
+             <h1 class = "title">Culinary Love for You</h1>
+         </a>
+
+         <!-- User Profile Picture -->
+         <a href = "./user_profile_individual.html">
+             <img class = "user_profile_picture" src = "../images/anonymous_user_profile_picture.png" alt = "User profile picture." />
+         </a>
+
+     </header>
 
       <main>
 
-         <h1 class = "title">Shopping List</h1>
+         <h1 class = "page_title">Shopping List</h1>
 
          <section class="left">
            <h2>List creation</h2>
@@ -50,11 +66,11 @@
 
          <section class="center">
             <!-- Shopping list items will be added here -->
-            <p>[Name of the list]</p>
+            <p><strong>Dinner</strong></p>
             <ul>
-               <li>List item 1</li>
-               <li>List item 2</li>
-               <li>List item 3</li>
+               <li>Bread</li>
+               <li>Suger</li>
+               <li>Milk</li>
             </ul>
          </section>
 
@@ -62,17 +78,23 @@
             <button>Export to PDF</button>
             <p>List of groups:</p>
             <select>
-               <option value="group1">Group 1</option>
-               <option value="group2">Group 2</option>
-               <option value="group3">Group 3</option>
+               <option value="group1">Family</option>
+               <option value="group2">Friends</option>
+               <option value="group3">School</option>
             </select>
-            <button>Share</button>
+            <button class = "share_button">Share</button>
          </section>
 
       </main>
 
-      <footer>
-      </footer>
+      <footer class = "footer">
+
+         <!-- Copyright -->
+         <p class = "copyright">
+             Copyright &copy; 2024 Culinary Preferences Organizer
+         </p>
+
+     </footer>
 
    </body>
 

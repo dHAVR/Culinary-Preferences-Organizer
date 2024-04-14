@@ -80,8 +80,7 @@ form {
 
 /* Input Styles */
 input[type="text"],
-input[type="password"],
-input[type="submit"] {
+input[type="password"] {
     width: 100%;
     font-size: 1vw;
     margin-right: 1vw;
@@ -94,6 +93,8 @@ input[type="submit"] {
 /* Submit Button Styles */
 input[type="submit"] {
     padding: 1vh;
+    width: 100%;
+    font-size: 1vw;
     cursor: pointer;
     background-color: #402a23;
     border: 1px solid #402a23;

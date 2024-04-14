@@ -76,8 +76,7 @@ main {
     margin-left: 1vw;
     margin-right: 1vw;
     margin-top: 1vh;
-    margin-bottom: 3vh;
-    padding: 1vh 2vw;
+    padding: 1vh;
     background-color: #402a23;
     border: 1px solid #402a23;
     border-radius: 1vw;
@@ -176,3 +175,16 @@ main {
 }
 
 
+.create_list_buttom{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    padding: 1vh;
+    background-color: #402a23;
+    border: 1px solid #402a23;
+    border-radius: 1vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}

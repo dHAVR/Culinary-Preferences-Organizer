@@ -1,17 +1,98 @@
 /* General Styles */
-body {
+*
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #402a23;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+}
+
+
+body {
+    background-color: #f3bc77;
+}
+
+
+
+.header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #a55233;
+
+    width: 100vw;
+    height: 20vh;
+}
+
+
+.logo
+{
+    height: 20vh;
+    width: 10vw;
+}
+
+
+.title_link:link
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.title_link:visited
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.title_link:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.title
+{
+    font-size: 48px;
+    color: white;
+}
+
+
+.user_profile_picture
+{
+    border-radius: 50%;
+    margin-right: 30px;
+    width: 5vw;
 }
 
 
 main {
     display: grid;
     place-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
+
+.footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #a55233;
+    position: fixed;
+    bottom: 0;
+
+
+    width: 100vw;
+    height: 10vh;
+}
+
 
 article {
     height: auto;
@@ -25,9 +106,7 @@ h2 {
     margin-left: 20px;
 }
 
-p{
-    margin-right: 600px;
-}
+
 
 .food-info {
     display: grid;
@@ -45,8 +124,14 @@ p{
     height: 200px;
     width: 200px;
     object-fit: cover;
+    border-radius: 50%;
     margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 40px;
 }
 
+
+.copyright
+{
+    color: white;
+    font-size: 20px;
+}

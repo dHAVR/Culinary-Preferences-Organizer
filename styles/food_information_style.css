@@ -20,7 +20,7 @@ body {
     align-items: center;
     background-color:  #a55233;
     width: 100vw;
-    height: 20vh;
+    height: 20%;
 }
 
 
@@ -53,9 +53,8 @@ body {
 
 main {
     display: grid;
-    height: 70vh;
+    height: 55%;
     place-items: center;
-    margin-top: 1vh; 
     margin-bottom: 2.5vh; 
 }
 
@@ -146,7 +145,7 @@ main {
     align-items: center;
     background-color:  #a55233;
     
-    height: 10vh;
+    height: 10%;
     width: 100vw;
 }
 
@@ -199,6 +198,10 @@ h2 {
     .logo {
         height: 10vh;
         width: 15vw;
+    }
+
+    .banner{
+        font-size: 2vh;
     }
 
 

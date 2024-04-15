@@ -19,7 +19,7 @@ body {
     align-items: center;
     background-color: #a55233;
     width: 100vw;
-    height: 20vh;
+    height: 20%;
 }
 
 .logo {
@@ -48,6 +48,14 @@ body {
 
 
 main {
+    display: grid;
+    height: 70%;
+    margin-bottom: 3vh;
+    grid-template-columns: 1fr; 
+    grid-gap: 1rem; 
+}
+
+.main_section{
     display: grid;
     height: 70vh;
     margin-bottom: 3vh;
@@ -136,7 +144,7 @@ main {
 }
 
 
- input[type="text"],
+ .main_page input[type="text"],
  input[type="password"] {
     margin-bottom: 1vh;
     margin-top: 1vh;
@@ -146,7 +154,7 @@ main {
     padding: 1vh;
 }
 
-input[type="submit"] {
+.main_page input[type="submit"] {
     margin-top: 1vh;
     width: 104%;
     background-color: #402a23;
@@ -175,7 +183,7 @@ input[type="submit"] {
     align-items: center;
 
     width: 100vw;
-    height: 10vh;
+    height: 10%;
 
     background: #A55233;
 }
@@ -232,7 +240,7 @@ input[type="submit"] {
     }
 
    main{
-        height: 80vh;
+        height: 130vh;
         display: flex;
         flex-direction: column;
    }
@@ -262,7 +270,7 @@ input[type="submit"] {
         font-size: 4vw;
     }
     
-    input[type="text"],
+    .main_page input[type="text"],
     input[type="password"],
     input[type="submit"],
     .action_button {
@@ -330,13 +338,13 @@ input[type="submit"] {
         font-size: 4vw;
     }
     
-    input[type="text"],
+    .main_page  input[type="text"],
     input[type="password"]{
         width: 70%;
         font-size: 3vw;
     }
 
-    input[type="submit"],
+    .main_page input[type="submit"],
     .action_button{
         width: 60%;
         padding: 1vh;
@@ -390,7 +398,7 @@ input[type="submit"] {
         font-size: 4vw;
     }
     
-    input[type="text"],
+    .main_page  input[type="text"],
     input[type="password"],
     input[type="submit"],
     .action_button {

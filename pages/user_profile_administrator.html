@@ -87,48 +87,53 @@
 
          </nav>
 
-         <h2 class = "page_title">User Profile</h2>
+         <section class="main_section">
 
-        <section class = "left">
+            <h2 class = "page_title">User Profile</h2>
 
-         <h4>Account Type: Administrator</h4>
-
-         <section class="grid-container">
-
-         <form action="#" method="post">
-            <section>
-               <label for="username">Username:</label>
-               <input type="text" id="username" name="username">
+            <section class = "left">
+    
+             <h4>Account Type: Administrator</h4>
+    
+             <section class="grid-container">
+    
+             <form action="#" method="post">
+                <section>
+                   <label for="username">Username:</label>
+                   <input type="text" id="username" name="username">
+                </section>
+                
+                <section>
+                   <label for="password">Password:</label>
+                   <input type="password" id="password" name="password">
+                </section>
+             
+            </form>
+    
+            <input type="submit" value="Update Credits">
+    
+             </section>
+    
+            <button class = "action_button">Delete Account</button>
+            <button class = "action_button">Logout</button>
+    
             </section>
-            
-            <section>
-               <label for="password">Password:</label>
-               <input type="password" id="password" name="password">
+           
+            <section class="right">
+                 <!--Information to which the admin should have access (for example, a list of users)-->
+                <h2>Database Information</h2>
+               <p id = "title_list_of_users">List of users:</p>
+               <ul>
+                <li>Anna</li>
+                <li>Kostya</li>
+                <li>Petro</li>
+             </ul>
             </section>
-         
-        </form>
-
-        <input type="submit" value="Update Credits">
+   
 
          </section>
 
-        <button class = "action_button">Delete Account</button>
-        <button class = "action_button">Logout</button>
-
-        </section>
-       
-        <section class="right">
-             <!--Information to which the admin should have access (for example, a list of users)-->
-            <h2>Database Information</h2>
-           <p id = "title_list_of_users">List of users:</p>
-           <ul>
-            <li>Anna</li>
-            <li>Kostya</li>
-            <li>Petro</li>
-         </ul>
-        </section>
-
-
+        
       </main>
 
       <footer class = "footer">

@@ -1,9 +1,19 @@
+/*** Home Page for Anonymous Users ***/
+
+/** Global Properties **/
+
 *
 {
     margin: 0;
     padding: 0;
+
+    font-family: Verdana, 'Lucida Sans', Arial, sans-serif;
+    color: #1D1716;
 }
 
+
+
+/** Header **/
 
 .header
 {
@@ -14,8 +24,63 @@
 
     width: 100vw;
     height: 15vh;
+
+    background: #A55233; 
 }
 
+
+/* Logo */
+
+.logo
+{
+    border-radius: 50%;
+    
+    width: 5vw;
+}
+
+
+/* Title */
+
+.title
+{
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+
+.title_link:link
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.title_link:visited
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.title_link:hover
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/* User Profile Picture */
+
+.user_profile_picture
+{
+    border-radius: 50%;
+
+    width: 5vw;
+}
+
+
+
+/** Main **/
 
 .main
 {
@@ -26,8 +91,49 @@
 
     width: 100vw;
     height: 75vh;
+
+    background: #F3BC77;
 }
 
+
+/* Welcome Message */
+
+.welcome_message
+{
+    font-size: 24px;
+}
+
+
+/* Login Button */
+
+.login_button
+{
+    font-size: 30px;
+    color: #FFFFFF;
+    background: #402A23;
+
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+
+/* Register Button */
+
+.register_button
+{
+    font-size: 30px;
+    color: #FFFFFF;
+    background: #402A23;
+
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+
+
+/** Footer **/
 
 .footer
 {
@@ -38,71 +144,15 @@
 
     width: 100vw;
     height: 10vh;
+
+    background: #A55233;
 }
 
 
-.logo
-{
-    border-radius: 50%;
-    
-    width: 5vw;
-}
-
-
-.title_link:link
-{
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.title_link:visited
-{
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.title_link:hover
-{
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.title
-{
-    font-size: 48px;
-}
-
-
-.user_profile_picture
-{
-    border-radius: 50%;
-
-    width: 5vw;
-}
-
-
-.login_button
-{
-    font-size: 30px;
-
-    width: 200px;
-    height: 100px;
-}
-
-
-.register_button
-{
-    font-size: 30px;
-
-    width: 200px;
-    height: 100px;
-}
-
+/* Copyright */
 
 .copyright
 {
+    color: #FFFFFF;
     font-size: 20px;
 }

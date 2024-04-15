@@ -100,7 +100,11 @@
 
 .welcome_message
 {
+    margin-left: 10px;
+    margin-right: 10px;
+
     font-size: 24px;
+    text-align: center;
 }
 
 
@@ -155,4 +159,79 @@
 {
     color: #FFFFFF;
     font-size: 20px;
+}
+
+
+
+/** Responsive **/
+
+@media only screen and (max-width: 480px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 12px;
+    }
+
+    .welcome_message
+    {
+        font-size: 12px;
+    }
+
+    .copyright
+    {
+        font-size: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 18px;
+    }
+
+    .welcome_message
+    {
+        font-size: 14px;
+    }
+
+    .copyright
+    {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 13vw;
+    }
+
+    .title
+    {
+        font-size: 28px;
+    }
+
+    .welcome_message
+    {
+        font-size: 16px;
+    }
+
+    .copyright
+    {
+        font-size: 18px;
+    }
 }

@@ -238,6 +238,12 @@
 }
 
 
+.statistics_chart
+{
+    width: 30vw;
+}
+
+
 
 /** Footer **/
 
@@ -279,6 +285,11 @@
         font-size: 12px;
     }
 
+    .main
+    {
+        height: 100vh;
+    }
+
     .page_title
     {
         font-size: 20px;
@@ -308,6 +319,11 @@
         font-size: 18px;
     }
 
+    .main
+    {
+        height: 130vh;
+    }
+
     .page_title
     {
         font-size: 25px;
@@ -335,6 +351,11 @@
     .title
     {
         font-size: 28px;
+    }
+
+    .main
+    {
+        height: 150vh;
     }
 
     .page_title

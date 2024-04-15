@@ -1,9 +1,19 @@
+/*** Home Page for Anonymous Users ***/
+
+/** Global Properties **/
+
 *
 {
     margin: 0;
     padding: 0;
+
+    font-family: Verdana, 'Lucida Sans', Arial, sans-serif;
+    color: #1D1716;
 }
 
+
+
+/** Header **/
 
 .header
 {
@@ -14,33 +24,27 @@
 
     width: 100vw;
     height: 15vh;
+
+    background: #A55233;
 }
 
 
-.main
-{
-    width: 100vw;
-    height: 75vh;
-}
-
-
-.footer
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100vw;
-    height: 10vh;
-}
-
+/* Logo */
 
 .logo
 {
     border-radius: 50%;
     
     width: 5vw;
+}
+
+
+/* Title */
+
+.title
+{
+    font-size: 48px;
+    color: #FFFFFF;
 }
 
 
@@ -65,11 +69,7 @@
 }
 
 
-.title
-{
-    font-size: 48px;
-}
-
+/* User Profile Picture */
 
 .user_profile_picture
 {
@@ -79,9 +79,23 @@
 }
 
 
+
+/** Main **/
+
+.main
+{
+    width: 100vw;
+    height: 75vh;
+
+    background: #F3BC77;
+}
+
+
+/* Banner */
+
 .banner
 {
-    background-color: #444444;
+    background-color: #402A23;
 
     width: 100vw;
     height: 20vh;
@@ -109,18 +123,28 @@
 .search_input
 {
     font-size: 18px;
+    background-color: #F3BC77;
 
     width: 250px;
-    height: 25px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+
+.search_input::placeholder
+{
+    color: #A55233;
 }
 
 
 .search_button
 {
     font-size: 18px;
+    background-color: #F3BC77;
 
-    width: 80px;
-    height: 25px;
+    width: 90px;
+    height: 34px;
+    border-radius: 8px;
 }
 
 
@@ -136,31 +160,63 @@
 }
 
 
+/* Welcome Message */
+
 .welcome_message
 {
-    font-size: 30px;
+    font-size: 24px;
 }
 
+
+/* Statistics Button */
 
 .statistics_button
 {
-    font-size: 25px;
+    font-size: 30px;
+    color: #FFFFFF;
+    background: #402A23;
 
-    width: 250px;
+    width: 330px;
     height: 100px;
+    border-radius: 20px;
 }
 
+
+/* Shopping Lists Button */
 
 .shopping_lists_button
 {
-    font-size: 25px;
+    font-size: 30px;
+    color: #FFFFFF;
+    background: #402A23;
 
-    width: 250px;
+    width: 330px;
     height: 100px;
+    border-radius: 20px;
 }
 
 
+
+/** Footer **/
+
+.footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100vw;
+    height: 10vh;
+
+    background: #A55233;
+}
+
+
+/* Copyright */
+
 .copyright
 {
+    color: #FFFFFF;
     font-size: 20px;
 }

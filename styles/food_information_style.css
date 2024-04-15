@@ -258,6 +258,16 @@ h2 {
         font-size: 1.5vw;
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
 
     .login_title {
         font-size: 5vw;
@@ -334,6 +344,16 @@ h2 {
         font-size: 1.5vw;
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
 
     .login_title {
         font-size: 5vw;
@@ -377,7 +397,17 @@ h2 {
         width: 9vw;
         height: 13vh;
     }
-    
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
 
     .food-info img {
         height: 11rem; 

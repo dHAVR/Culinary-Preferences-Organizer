@@ -302,6 +302,16 @@ main {
         place-items: center; 
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
 
     .left{
         display: flex;
@@ -382,7 +392,17 @@ main {
         flex-direction: column;
         place-items: center; 
     }
+    
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
 
+    .navbar_button
+    {
+        margin: 10px;
+    }
 
     .left{
         display: flex;
@@ -448,6 +468,17 @@ main {
     .user_profile_picture {
         height: 9vh;
         width: 8vw;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
     }
 
 

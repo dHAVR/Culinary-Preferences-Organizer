@@ -299,6 +299,17 @@ main {
         margin-top: 5vh;
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
     .center{
         margin-left: 2vw;
     }
@@ -385,6 +396,17 @@ main {
         margin-top: 5vh;
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
     .center{
         margin-left: 2vw;
     }
@@ -469,6 +491,17 @@ main {
         height: 70%;
         grid-gap: 3vw;
         margin-top: 5vh;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
     }
  
     .footer {

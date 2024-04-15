@@ -330,6 +330,17 @@
         font-size: 12px;
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
     .page_title
     {
         font-size: 20px;
@@ -385,6 +396,17 @@
         font-size: 18px;
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
     .page_title
     {
         font-size: 25px;
@@ -438,6 +460,17 @@
     .title
     {
         font-size: 28px;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
     }
 
     .page_title

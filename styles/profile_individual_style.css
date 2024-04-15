@@ -8,6 +8,7 @@
 body {
     background-color: #f3bc77;
     overflow-x: hidden;
+    
 }
 
 .header {
@@ -41,7 +42,8 @@ body {
 .user_profile_picture {
     border-radius: 50%;
     margin-right: 2vw;
-    width: 5vw;
+    width: 8vw;
+    height: 13vh;
 }
 
 main {
@@ -107,7 +109,7 @@ main {
 .center input[type="password"] {
     margin-bottom: 1vh;
     margin-top: 1vh;
-    width: 100%;
+    width: 90%;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
     padding: 1vh;
@@ -115,7 +117,7 @@ main {
 
 .center input[type="submit"] {
     margin-top: 1vh;
-    width: 104%;
+    width: 95%;
     background-color: #402a23;
     border: 0.5vw solid #402a23;
     font-weight: bold;
@@ -139,14 +141,14 @@ main {
     font-weight: bold;
     color: white;
     padding: 1vh 2vw;
-    width: 104%;
+    width:95%;
     border-radius: 1vw;
 }
 
 .right input[type="text"] {
     margin-bottom: 1vh;
     margin-top: 1vh;
-    width: 100%;
+    width: 90%;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
     padding: 1vh;
@@ -175,16 +177,230 @@ main {
 }
 
 
-.create_list_buttom{
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 1vh;
-    padding: 1vh;
-    background-color: #402a23;
-    border: 1px solid #402a23;
-    border-radius: 1vw;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    text-decoration: none;
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: #f3bc77;
+        overflow-x: hidden;
+    }
+    .header {
+        width: auto;
+        margin-right: 0;
+    }
+
+    .logo {
+        height: 15vh;
+        width: 20vw;
+        margin: 2vh auto;
+    }
+
+    .title {
+        font-size: 4vw;
+        margin: 2vh 0;
+    }
+
+    .user_profile_picture {
+        height: 15;
+        width: 15vw;
+        margin-right: 2vw;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+    }
+
+    .center{
+        margin-left: 2vw;
+    }
+
+    .grid-container{
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .page_title {
+        margin-bottom: 5vh;
+    }
+
+    .left_button,
+    .create_list_buttom {
+        width: 90%;
+        margin: 2vh auto;
+    }
+
+    .left img {
+        height: 40vw;
+        width: 40vw;
+        margin: 5vw auto;
+    }
+
+    .copyright {
+        font-size: 3vw;
+        margin: 2vh 0;
+    }
+
+    /* Additional styles to make elements display in a column */
+    .left,
+    .center,
+    .right {
+        width: 90%;
+        padding: 0;
+    }
+
+    .center input[type="submit"],
+    .right input[type="submit"] {
+        width: 95%;
+    }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    body {
+        background-color: #f3bc77;
+        overflow-x: hidden;
+    }
+    .header {
+        width: auto;
+        margin-right: 0;
+    }
+
+    .logo {
+        height: 15vh;
+        width: 20vw;
+        margin: 2vh auto;
+    }
+
+    .title {
+        font-size: 4vw;
+        margin: 2vh 0;
+    }
+
+    .user_profile_picture {
+        height: 15;
+        width: 15vw;
+        margin-right: 2vw;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+    }
+
+    .center{
+        margin-left: 2vw;
+    }
+
+
+    .grid-container{
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .page_title {
+        margin-bottom: 5vh;
+    }
+
+    .left_button,
+    .create_list_buttom {
+        width: 90%;
+        margin: 2vh auto;
+    }
+
+    .left img {
+        height: 40vw;
+        width: 40vw;
+        margin: 5vw auto;
+    }
+
+    .copyright {
+        font-size: 3vw;
+        margin: 2vh 0;
+    }
+
+    /* Additional styles to make elements display in a column */
+    .left,
+    .center,
+    .right {
+        width: 90%;
+        padding: 0;
+    }
+    
+    .grid-containe input[type="text"], input[type="password"]{
+     width: 90%;
+    }
+    
+    .center input[type="submit"],
+    .right input[type="submit"] {
+        width: 93%;
+    }
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    
+    .header{
+        width: 100%;
+    }
+
+    .logo {
+        height:15vh;
+        width: 13vw;
+    }
+
+    .title {
+        font-size: 3vw;
+        margin: 2vh 0;
+    }
+
+    .user_profile_picture {
+        height: 10vh;
+        width: 13vw;
+        margin-right:2vh;
+    }
+
+    main {
+        grid-gap: 3vw;
+        margin-top: 5vh;
+    }
+ 
+    .footer {
+       width: 100%;
+    }
+
+    .page_title {
+        margin-bottom: 5vh;
+    }
+
+    .left_button,
+    .create_list_buttom {
+        width: 90%;
+        margin: 2vh auto;
+    }
+
+    .left img {
+        height:13vw;
+        width: 13vw;
+        margin: 5vw auto;
+    }
+
+    .copyright {
+        font-size: 2vw;
+    }
 }

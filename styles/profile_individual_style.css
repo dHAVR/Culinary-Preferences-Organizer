@@ -48,7 +48,7 @@ body {
 
 main {
     display: grid;
-    height: auto;
+    height: 80vh;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2vw; 
     margin-top: 2vh;
@@ -71,7 +71,7 @@ main {
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
-    margin-bottom: 2vh;
+    font-size: 3vh;
 }
 
 .left_button {
@@ -133,7 +133,8 @@ main {
     width: 100%;
 }
 
-.right input[type="submit"] {
+
+.grid-container input[type="submit"]{
     margin-top: 1vh;
     margin-bottom: 4vh;
     background-color: #402a23;
@@ -145,7 +146,8 @@ main {
     border-radius: 1vw;
 }
 
-.right input[type="text"] {
+
+.grid-container input[type="text"]{
     margin-bottom: 1vh;
     margin-top: 1vh;
     width: 90%;
@@ -154,16 +156,19 @@ main {
     padding: 1vh;
 }
 
+
+
 .grid-container {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
     grid-gap: 1vw;
-    margin-bottom: 1vh;
+
+    width: 90%;
 }
 
 .left img {
-    height: 15vw;
-    width: 15vw;
+    height: 7vw;
+    width: 7vw;
     object-fit: cover;
     margin-top: 2vh;
     margin-left: 1vw;

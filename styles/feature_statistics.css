@@ -287,7 +287,18 @@
 
     .main
     {
-        height: 100vh;
+        height: 130vh;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
     }
 
     .page_title
@@ -324,6 +335,17 @@
         height: 130vh;
     }
 
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
     .page_title
     {
         font-size: 25px;
@@ -356,6 +378,17 @@
     .main
     {
         height: 150vh;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
     }
 
     .page_title

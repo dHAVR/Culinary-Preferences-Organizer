@@ -183,3 +183,93 @@
     color: #FFFFFF;
     font-size: 20px;
 }
+
+
+
+/** Responsive **/
+
+@media only screen and (max-width: 480px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 12px;
+    }
+
+    .page_title
+    {
+        font-size: 20px;
+    }
+
+    .copyright
+    {
+        font-size: 10px;
+    }
+
+    .statistics
+    {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 18px;
+    }
+
+    .page_title
+    {
+        font-size: 25px;
+    }
+
+    .copyright
+    {
+        font-size: 15px;
+    }
+
+    .statistics
+    {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 13vw;
+    }
+
+    .title
+    {
+        font-size: 28px;
+    }
+
+    .page_title
+    {
+        font-size: 30px;
+    }
+
+    .copyright
+    {
+        font-size: 18px;
+    }
+
+    .statistics
+    {
+        flex-direction: column;
+    }
+}

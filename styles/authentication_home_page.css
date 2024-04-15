@@ -167,7 +167,11 @@
 
 .welcome_message
 {
+    margin-left: 10px;
+    margin-right: 10px;
+
     font-size: 24px;
+    text-align: center;
 }
 
 
@@ -226,4 +230,115 @@
 {
     color: #FFFFFF;
     font-size: 20px;
+}
+
+
+
+/** Responsive **/
+
+@media only screen and (max-width: 480px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 12px;
+    }
+
+    .welcome_message
+    {
+        font-size: 12px;
+    }
+
+    .copyright
+    {
+        font-size: 10px;
+    }
+
+    .search_input
+    {
+        width: 100px;
+    }
+
+    .statistics_button, .shopping_lists_button
+    {
+        font-size: 16px;
+        width: 180px;
+        height: 50px;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 18px;
+    }
+
+    .welcome_message
+    {
+        font-size: 14px;
+    }
+
+    .copyright
+    {
+        font-size: 15px;
+    }
+
+    .search_input
+    {
+        width: 150px;
+    }
+
+    .statistics_button, .shopping_lists_button
+    {
+        font-size: 20px;
+        width: 220px;
+        height: 50px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 13vw;
+    }
+
+    .title
+    {
+        font-size: 28px;
+    }
+
+    .welcome_message
+    {
+        font-size: 16px;
+    }
+
+    .copyright
+    {
+        font-size: 18px;
+    }
+
+    .search_input
+    {
+        width: 200px;
+    }
+
+    .statistics_button, .shopping_lists_button
+    {
+        font-size: 25px;
+        width: 300px;
+        height: 70px;
+    }
 }

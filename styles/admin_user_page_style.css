@@ -9,6 +9,7 @@
 
 body {
     background-color: #f3bc77;
+    overflow-x: hidden;
 }
 
 .header {
@@ -48,7 +49,8 @@ body {
 
 main {
     display: grid;
-    height: 70vh;
+    height: auto;
+    margin-bottom: 3vh;
     grid-template-columns: 1fr 2fr; 
     grid-gap: 1rem; 
     padding: 1rem;
@@ -139,6 +141,160 @@ input[type="submit"] {
 
 .copyright {
     color: white;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
+
+
+
+
+@media screen and (max-width: 480px) {
+
+   main{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+   }
+
+   .left{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .right{
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+   }
+
+    .logo {
+        width: 20vw;
+    }
+    
+    .user_profile_picture {
+        width: 11vw;
+        height: 9vh;
+    }
+    
+    .title {
+        font-size: 4vw;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    .action_button {
+        font-size: 3vw;
+    }
+    
+    .footer {
+
+        margin-top: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+    main{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+
+   .left{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .right{
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+   }
+
+    .logo {
+        width: 20vw;
+    }
+    
+    .user_profile_picture {
+        width: 11vw;
+        height: 9vh;
+    }
+    
+    .title {
+        font-size: 4vw;
+    }
+    
+    input[type="text"],
+    input[type="password"]{
+        width: 70%;
+        font-size: 3vw;
+    }
+
+    input[type="submit"],
+    .action_button{
+        width: 60%;
+        padding: 1vh;
+       margin-left: 5vw;
+    }
+    
+    .footer {
+
+        margin-top: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    main{
+        height: auto;
+    }
+
+    .logo {
+        width: 14svw;
+        height: 16vh;
+    }
+    
+    .user_profile_picture {
+        width: 9vw;
+        height: 11vh;
+    }
+    
+    .title {
+        font-size: 4vw;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    .action_button {
+        font-size: 2vw;
+    }
+    
+    .footer {
+        height: 100%;
+        min-height: 10vh;
+    
+    
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+
+}

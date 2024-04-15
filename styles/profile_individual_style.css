@@ -47,11 +47,11 @@ body {
 }
 
 main {
+
     display: grid;
-    height: 80vh;
+    height: 55%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2vw; 
-    margin-top: 2vh;
 }
 
 
@@ -155,6 +155,8 @@ main {
 }
 
 .left_button {
+    width: 100%;
+    margin-bottom: 1vh;
     margin-left: 1vw;
     margin-right: 1vw;
     margin-top: 1vh;

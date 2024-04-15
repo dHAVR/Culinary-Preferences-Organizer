@@ -189,3 +189,114 @@
     color: #FFFFFF;
     font-size: 20px;
 }
+
+
+
+/** Responsive **/
+
+@media only screen and (max-width: 480px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 12px;
+    }
+
+    .page_title
+    {
+        font-size: 20px;
+    }
+
+    .copyright
+    {
+        font-size: 10px;
+    }
+
+    .label_text
+    {
+        font-size: 18px;
+    }
+
+    .input_field
+    {
+        font-size: 14px;
+        width: 100px;
+        height: 22px;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+    .title
+    {
+        font-size: 18px;
+    }
+
+    .page_title
+    {
+        font-size: 25px;
+    }
+
+    .copyright
+    {
+        font-size: 15px;
+    }
+
+    .label_text
+    {
+        font-size: 20px;
+    }
+
+    .input_field
+    {
+        font-size: 16px;
+        width: 120px;
+        height: 25px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 13vw;
+    }
+
+    .title
+    {
+        font-size: 28px;
+    }
+
+    .page_title
+    {
+        font-size: 30px;
+    }
+
+    .copyright
+    {
+        font-size: 18px;
+    }
+
+    .label_text
+    {
+        font-size: 22px;
+    }
+
+    .input_field
+    {
+        font-size: 16px;
+        width: 150px;
+        height: 30px;
+    }
+}

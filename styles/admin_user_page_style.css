@@ -144,7 +144,7 @@ main {
 }
 
 
- .main_page input[type="text"],
+ .main_section input[type="text"],
  input[type="password"] {
     margin-bottom: 1vh;
     margin-top: 1vh;
@@ -154,7 +154,7 @@ main {
     padding: 1vh;
 }
 
-.main_page input[type="submit"] {
+.main_section input[type="submit"] {
     margin-top: 1vh;
     width: 104%;
     background-color: #402a23;
@@ -270,7 +270,7 @@ main {
         font-size: 4vw;
     }
     
-    .main_page input[type="text"],
+    .main_section input[type="text"],
     input[type="password"],
     input[type="submit"],
     .action_button {
@@ -338,13 +338,13 @@ main {
         font-size: 4vw;
     }
     
-    .main_page  input[type="text"],
+    .main_section  input[type="text"],
     input[type="password"]{
         width: 70%;
         font-size: 3vw;
     }
 
-    .main_page input[type="submit"],
+    .main_section input[type="submit"],
     .action_button{
         width: 60%;
         padding: 1vh;
@@ -398,7 +398,7 @@ main {
         font-size: 4vw;
     }
     
-    .main_page  input[type="text"],
+    .main_section  input[type="text"],
     input[type="password"],
     input[type="submit"],
     .action_button {

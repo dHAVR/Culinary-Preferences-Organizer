@@ -15,6 +15,12 @@
       <!--Title-->
       <title>Shopping Lists</title>
 
+      <!-- Viewport -->
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+
+      <!-- Favicon -->
+      <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+
       
       <link rel = "stylesheet" href = "../styles/shopping_list_style.css" />
 
@@ -40,52 +46,60 @@
              <img class = "user_profile_picture" src = "../images/anonymous_user_profile_picture.png" alt = "User profile picture." />
          </a>
 
-     </header>
+     </header> 
+
 
       <main>
 
          <h1 class = "page_title">Shopping List</h1>
 
-         <section class="left">
-           <h2>List creation</h2>
-             <!-- Create List -->
-             <form action = "#" method = "POST">
-               <label for = "list_name">Name:</label>
-               <input type = "text" id = "list_name" name = "list_name" />
-               <input type = "submit" value = "Create a list" />
-           </form>
+         <section class="page">
 
-             <!-- Create List -->
-             <form action = "#" method = "POST">
-               <label for = "new_item">Add item:</label>
-               <input type = "text" id = "new_item" name = "new_item" />
-               <input type = "submit" value = "Add item" />
-           </form>
+            <section class="left">
+               <h2>List creation</h2>
+                 <!-- Create List -->
+                 <form action = "#" method = "POST">
+                   <label for = "list_name">Name:</label>
+                   <input type = "text" id = "list_name" name = "list_name" />
+                   <input type = "submit" value = "Create a list" />
+               </form>
+    
+                 <!-- Create List -->
+                 <form action = "#" method = "POST">
+                   <label for = "new_item">Add item:</label>
+                   <input type = "text" id = "new_item" name = "new_item" />
+                   <input type = "submit" value = "Add item" />
+               </form>
+    
+             </section>
+    
+             <section class="center">
+                <!-- Shopping list items will be added here -->
+                <p><strong>Dinner</strong></p>
+                <ul>
+                   <li>Bread</li>
+                   <li>Suger</li>
+                   <li>Milk</li>
+                </ul>
+             </section>
+    
+             <section class="right">
+                <button>Export to PDF</button>
+                <p>List of groups:</p>
+                <select>
+                   <option value="group1">Family</option>
+                   <option value="group2">Friends</option>
+                   <option value="group3">School</option>
+                </select>
+                <button>Share</button>
+             </section>
+    
 
          </section>
 
-         <section class="center">
-            <!-- Shopping list items will be added here -->
-            <p><strong>Dinner</strong></p>
-            <ul>
-               <li>Bread</li>
-               <li>Suger</li>
-               <li>Milk</li>
-            </ul>
-         </section>
-
-         <section class="right">
-            <button>Export to PDF</button>
-            <p>List of groups:</p>
-            <select>
-               <option value="group1">Family</option>
-               <option value="group2">Friends</option>
-               <option value="group3">School</option>
-            </select>
-            <button class = "share_button">Share</button>
-         </section>
-
+         
       </main>
+
 
       <footer class = "footer">
 
@@ -95,6 +109,7 @@
          </p>
 
      </footer>
+     
 
    </body>
 

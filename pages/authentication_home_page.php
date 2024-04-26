@@ -1,4 +1,4 @@
-<!-- Statistics -->
+<!-- Home Page for Authenticated Users -->
 
 <!DOCTYPE html>
 
@@ -18,10 +18,10 @@
         <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
         <!-- Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/feature_statistics.css">
+        <link rel = "stylesheet" href = "../styles/authentication_home_page.css">
         
         <!-- Title -->
-        <title>Statistics</title>
+        <title>Culinary Love for You</title>
 
     </head>
 
@@ -32,17 +32,17 @@
         <header class = "header">
             
             <!-- Logo -->
-            <a href = "./authentication_home_page.html">
+            <a href = "./authentication_home_page.php">
                 <img class = "logo" src = "../images/logo.png" alt = "Logo." />
             </a>
 
             <!-- Title -->
-            <a class = "title_link" href = "./authentication_home_page.html">
+            <a class = "title_link" href = "./authentication_home_page.php">
                 <h1 class = "title">Culinary Love for You</h1>
             </a>
 
             <!-- User Profile Picture -->
-            <a href = "./user_profile_individual.html">
+            <a href = "./user_profile_individual.php">
                 <img class = "user_profile_picture" src = "../images/profile_picture_example.jpg" alt = "User profile picture." />
             </a>
 
@@ -56,17 +56,17 @@
             <nav class = "banner">
 
                 <!-- Home Button -->
-                <a href = "./authentication_home_page.html">
+                <a href = "./authentication_home_page.php">
                     <button class = "navbar_button">Home</button>
                 </a>
 
                 <!-- Groups Button -->
-                <a href = "./feature_groups.html">
+                <a href = "./feature_groups.php">
                     <button class = "navbar_button">Groups</button>
                 </a>
 
                 <!-- Search for a Dish -->
-                <form class = "search_form" action = "./feature_food_information.html" method = "GET">
+                <form class = "search_form" action = "./feature_food_information.php" method = "GET">
 
                     <div class = "search_message_container">
                         <label class = "search_message" for = "search_dish">Search for a Dish:</label>
@@ -80,50 +80,34 @@
                 </form>
 
                 <!-- Statistics Button -->
-                <a href = "./feature_statistics.html">
+                <a href = "./feature_statistics.php">
                     <button class = "navbar_button">Statistics</button>
                 </a>
                 
                 <!-- Shopping Lists Button -->
-                <a href = "feature_shopping_lists.html">
+                <a href = "feature_shopping_lists.php">
                     <button class = "navbar_button">Shopping Lists</button>
                 </a>
 
             </nav>
-
-            <!-- Title -->
-            <div class = "page_title_container">
-                <h1 class = "page_title">Statistics</h1>
-            </div>
             
-            <div class = "statistics">
+            <!-- User Options -->
+            <section class = "user_options">
 
-                <div class = "left_content">
+                <!-- Welcome Message -->
+                <p class = "welcome_message">Hello, Roman! What would you like to do today?</p>
 
-                    <!-- Statistics Types -->
-                    <section class = "statistics_types">
-                        <button class = "button">Personal Statistics</button>
-                        <button class = "button">Global Statistics</button>
-                    </section>
-    
-                    <!-- Export Options -->
-                    <section class = "export_options">
-                        <button class = "button">Export to PDF</button>
-                        <button class = "button">Export to CSV</button>
-                    </section>
-    
-                </div>
-    
-                <div class = "right_content">
-    
-                    <!-- Statistics Visualization -->
-                    <section>
-                        <img class = "statistics_chart" src = "../images/statistics_example.png" alt = "Statistics example.">
-                    </section>
-    
-                </div>
+                <!-- See Statistics -->
+                <a href = "./feature_statistics.php">
+                    <button class = "statistics_button">See Statistics</button>
+                </a>
+                
+                <!-- See Shopping Lists -->
+                <a href = "./feature_shopping_lists.php">
+                    <button class = "shopping_lists_button">See Shopping Lists</button>
+                </a>
 
-            </div>
+            </section>
 
         </main>
 

@@ -32,17 +32,17 @@
         <header class = "header">
             
             <!-- Logo -->
-            <a href = "./index.html">
+            <a href = "./index.php">
                 <img class = "logo" src = "./images/logo.png" alt = "Logo." />
             </a>
 
             <!-- Title -->
-            <a class = "title_link" href = "./index.html">
+            <a class = "title_link" href = "./index.php">
                 <h1 class = "title">Culinary Love for You</h1>
             </a>
 
             <!-- User Profile Picture -->
-            <a href = "./pages/user_profile_individual.html">
+            <a href = "./pages/user_profile_individual.php">
                 <img class = "user_profile_picture" src = "./images/profile_picture_anonymous.png" alt = "User profile picture." />
             </a>
 
@@ -58,12 +58,12 @@
             </p>
 
             <!-- Login -->
-            <a href = "./pages/authentication_authentication.html">
+            <a href = "./pages/authentication_authentication.php">
                 <button class = "login_button">Login</button>
             </a>
             
             <!-- Register -->
-            <a href = "./pages/authentication_registration.html">
+            <a href = "./pages/authentication_registration.php">
                 <button class = "register_button">Register</button>
             </a>
 

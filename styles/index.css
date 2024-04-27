@@ -1,82 +1,4 @@
-/*** Home Page for Anonymous Users ***/
-
-/** Global Properties **/
-
-*
-{
-    margin: 0;
-    padding: 0;
-
-    font-family: Verdana, 'Lucida Sans', Arial, sans-serif;
-    color: #1D1716;
-}
-
-
-
-/** Header **/
-
-.header
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100vw;
-    height: 15vh;
-
-    background: #A55233; 
-}
-
-
-/* Logo */
-
-.logo
-{
-    border-radius: 50%;
-    
-    width: 7vw;
-}
-
-
-/* Title */
-
-.title
-{
-    color: #FFFFFF;
-    font-size: 48px;
-}
-
-
-.title_link:link
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-.title_link:visited
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-.title_link:hover
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-/* User Profile Picture */
-
-.user_profile_picture
-{
-    border-radius: 50%;
-
-    width: 5vw;
-}
+/**** Home Page for Anonymous Users Stylesheet ****/
 
 
 
@@ -137,101 +59,30 @@
 
 
 
-/** Footer **/
-
-.footer
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100vw;
-    height: 10vh;
-
-    background: #A55233;
-}
-
-
-/* Copyright */
-
-.copyright
-{
-    color: #FFFFFF;
-    font-size: 20px;
-}
-
-
-
 /** Responsive **/
 
 @media only screen and (max-width: 480px)
 {
-    .logo, .user_profile_picture
-    {
-        width: 12vw;
-    }
-
-    .title
-    {
-        font-size: 12px;
-    }
-
     .welcome_message
     {
         font-size: 12px;
-    }
-
-    .copyright
-    {
-        font-size: 10px;
     }
 }
 
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    .logo, .user_profile_picture
-    {
-        width: 12vw;
-    }
-
-    .title
-    {
-        font-size: 18px;
-    }
-
     .welcome_message
     {
         font-size: 14px;
-    }
-
-    .copyright
-    {
-        font-size: 15px;
     }
 }
 
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
-    .logo, .user_profile_picture
-    {
-        width: 13vw;
-    }
-
-    .title
-    {
-        font-size: 28px;
-    }
-
     .welcome_message
     {
         font-size: 16px;
-    }
-
-    .copyright
-    {
-        font-size: 18px;
     }
 }

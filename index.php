@@ -17,7 +17,13 @@
         <!-- Favicon -->
         <link rel = "icon" type = "image/x-icon" href = "./images/favicon.ico" />
 
-        <!-- Stylesheet -->
+        <!-- Global General Stylesheet -->
+        <link rel = "stylesheet" href = "./styles/global_general.css">
+
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "./styles/global_responsive.css">
+
+        <!-- Specific Stylesheet -->
         <link rel = "stylesheet" href = "./styles/index.css">
         
         <!-- Title -->

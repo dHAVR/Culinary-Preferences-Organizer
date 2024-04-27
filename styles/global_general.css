@@ -1,0 +1,109 @@
+/****
+    Global General Stylesheet
+    << Screens Wider Than 1024px >>
+****/
+
+
+
+/*** Global Properties ***/
+
+*
+{
+    /* Sizing */
+    margin: 0;
+    padding: 0;
+
+    /* Styling */
+    font-family: Verdana, 'Lucida Sans', Arial, sans-serif;
+    color: #1D1716;
+}
+
+
+
+/*** Header ***/
+
+.header
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+
+    /* Styling */
+    background: #A55233; 
+}
+
+
+/** Logo **/
+
+.logo
+{
+    /* Sizing */
+    width: 7vw;
+
+    /* Styling */
+    border-radius: 50%;
+}
+
+
+/** Title - Text **/
+
+.title
+{
+    /* Styling */
+    font-size: 48px;
+    color: #FFFFFF;
+}
+
+
+/** Title Link - Unvisited, Visited, Hovered Over and Active **/
+
+.title_link:link, .title_link:visited, .title_link:hover, .title_link:active
+{
+    /* Styling */
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/** User Profile Picture **/
+
+.user_profile_picture
+{
+    /* Sizing */
+    width: 5vw;
+
+    /* Styling */
+    border-radius: 50%;
+}
+
+
+
+/*** Footer ***/
+
+.footer
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+
+    /* Styling */
+    background: #A55233;
+}
+
+
+/** Copyright **/
+
+.copyright
+{
+    /* Styling */
+    font-size: 20px;
+    color: #FFFFFF;
+}

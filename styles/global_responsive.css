@@ -1,0 +1,76 @@
+/****
+    Global Responsive Stylesheet
+    << Screens Not Wider Than 1024px >>
+****/
+
+
+
+/*** 1px - 480px Wide Screens ***/
+
+@media only screen and (max-width: 480px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+    
+
+    .title
+    {
+        font-size: 12px;
+    }
+
+
+    .copyright
+    {
+        font-size: 10px;
+    }
+}
+
+
+
+/*** 481px - 768px Wide Screens ***/
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 12vw;
+    }
+
+
+    .title
+    {
+        font-size: 18px;
+    }
+
+
+    .copyright
+    {
+        font-size: 15px;
+    }
+}
+
+
+
+/*** 769px - 1024px Wide Screens ***/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .logo, .user_profile_picture
+    {
+        width: 13vw;
+    }
+
+
+    .title
+    {
+        font-size: 28px;
+    }
+
+
+    .copyright
+    {
+        font-size: 18px;
+    }
+}

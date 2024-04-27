@@ -1,0 +1,109 @@
+/****
+    Home Page for Authenticated Users Responsive Stylesheet
+    << Screens Not Wider Than 1024px >>
+****/
+
+
+
+/*** 769px - 1024px Wide Screens ***/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+    .welcome_message
+    {
+        font-size: 16px;
+    }
+
+    .search_input
+    {
+        width: 200px;
+    }
+
+    .statistics_button, .shopping_lists_button
+    {
+        font-size: 25px;
+        width: 300px;
+        height: 70px;
+    }
+}
+
+
+
+/*** 481px - 768px Wide Screens ***/
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+    .welcome_message
+    {
+        font-size: 14px;
+    }
+
+    .search_input
+    {
+        width: 150px;
+    }
+
+    .statistics_button, .shopping_lists_button
+    {
+        font-size: 20px;
+        width: 220px;
+        height: 50px;
+    }
+}
+
+
+
+/*** 1px - 480px Wide Screens ***/
+
+@media only screen and (max-width: 480px)
+{
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+    .welcome_message
+    {
+        font-size: 12px;
+    }
+
+    .search_input
+    {
+        width: 100px;
+    }
+
+    .statistics_button, .shopping_lists_button
+    {
+        font-size: 16px;
+        width: 180px;
+        height: 50px;
+    }
+}

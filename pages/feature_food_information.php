@@ -29,17 +29,17 @@
         <header class = "header">
             
             <!-- Logo -->
-            <a href = "./authentication_home_page.html">
+            <a href = "./authentication_home_page.php">
                 <img class = "logo" src = "../images/logo.png" alt = "Logo." />
             </a>
    
             <!-- Title -->
-            <a class = "title_link" href = "./authentication_home_page.html">
+            <a class = "title_link" href = "./authentication_home_page.php">
                 <h1 class = "title">Culinary Love for You</h1>
             </a>
    
             <!-- User Profile Picture -->
-            <a href = "./user_profile_individual.html">
+            <a href = "./user_profile_individual.php">
                 <img class = "user_profile_picture" src = "../images/profile_picture_example.jpg" alt = "User profile picture." />
             </a>
    
@@ -51,17 +51,17 @@
             <nav class = "banner">
 
                 <!-- Home Button -->
-                <a href = "./authentication_home_page.html">
+                <a href = "./authentication_home_page.php">
                     <button class = "navbar_button">Home</button>
                 </a>
 
                 <!-- Groups Button -->
-                <a href = "./feature_groups.html">
+                <a href = "./feature_groups.php">
                     <button class = "navbar_button">Groups</button>
                 </a>
 
                 <!-- Search for a Dish -->
-                <form class = "search_form" action = "./feature_food_information.html" method = "GET">
+                <form class = "search_form" action = "./feature_food_information.php" method = "GET">
 
                     <div class = "search_message_container">
                         <label class = "search_message" for = "search_dish">Search for a Dish:</label>
@@ -75,12 +75,12 @@
                 </form>
 
                 <!-- Statistics Button -->
-                <a href = "./feature_statistics.html">
+                <a href = "./feature_statistics.php">
                     <button class = "navbar_button">Statistics</button>
                 </a>
                 
                 <!-- Shopping Lists Button -->
-                <a href = "feature_shopping_lists.html">
+                <a href = "feature_shopping_lists.php">
                     <button class = "navbar_button">Shopping Lists</button>
                 </a>
 

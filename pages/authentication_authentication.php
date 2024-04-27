@@ -34,17 +34,17 @@
         <header class = "header">
             
          <!-- Logo -->
-         <a href = "./authentication_home_page.html">
+         <a href = "./authentication_home_page.php">
              <img class = "logo" src = "../images/logo.png" alt = "Logo." />
          </a>
 
          <!-- Title -->
-         <a class = "title_link" href = "./authentication_home_page.html">
+         <a class = "title_link" href = "./authentication_home_page.php">
              <h1 class = "title">Culinary Love for You</h1>
          </a>
 
          <!-- User Profile Picture -->
-         <a href = "./user_profile_individual.html">
+         <a href = "./user_profile_individual.php">
              <img class = "user_profile_picture" src = "../images/profile_picture_anonymous.png" alt = "User profile picture." />
          </a>
 
@@ -53,7 +53,7 @@
       <main>
          
              <p class = "login_title">Log in</p>
-         <form action="./user_profile_individual.html" method="post">
+         <form action="./user_profile_individual.php" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
             <label for="password">Password:</label>
@@ -61,7 +61,7 @@
             <input type="submit" value="Login">
          </form>
 
-         <a href="./user_profile_administrator.html">Go to admin accound</a>
+         <a href="./user_profile_administrator.php">Go to admin accound</a>
 
       </main>
 

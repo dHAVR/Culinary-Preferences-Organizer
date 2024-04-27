@@ -285,7 +285,6 @@ h2 {
 
 @media screen and (min-width: 481px) and (max-width: 768px){
 
-       /* Adjust styles here for screens >= 480px */
        .logo {
         height: 15vh;
         width: 13vw;
@@ -372,33 +371,63 @@ h2 {
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
 
-   .header{
-        height: 20vh;
-   }
-
-    main{
-        height:70vh;
-    }
-
-    .footer{
-        height: 10vh;
-    }
-
-
-    .title {
-        font-size: 3vw;
-    } 
-
-
     .logo {
-        height: 20vh;
-        width: 15vw;
+        height: 15vh;
+        width: 13vw;
     }
 
 
     .user_profile_picture {
-        width: 9vw;
-        height: 13vh;
+        width: 11vw;
+        height: 9vh;
+    }
+
+    .header{
+       height: 20%;
+    }
+
+    main{
+        height: 90%;
+    }
+
+    .footer{
+        height: 20%;
+    }
+
+
+    .food-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .food-info img {
+        height: 9rem; 
+        width: 9rem;
+    }
+    
+    
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .details{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .title {
+        font-size: 4vw;
+    }
+
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 1.5vw;
     }
 
     .banner
@@ -412,10 +441,13 @@ h2 {
         margin: 10px;
     }
 
-    .food-info img {
-        height: 11rem; 
-        width: 10rem;
+    .login_title {
+        font-size: 5vw;
     }
 
+
+    .copyright {
+        font-size: 2vw;
+    }
 }
 

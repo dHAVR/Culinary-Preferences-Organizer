@@ -300,88 +300,19 @@ main {
 }
 
 
-@media screen and (min-width: 481px) and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
     .header{
-        height: 10vh;
+        height: 20%;
+        width: auto;
+        margin-right: 0;
     }
 
     main{
-        height: 80vh;
         display: flex;
+        height: 70%;
         flex-direction: column;
         align-items: center;
-   }
-
-   .left{
-    display: flex;
-    flex-direction: column;
-   }
-
-   .right{
-    margin-left: 3vw;
-    display: flex;
-    flex-direction: column;
-   }
-
-    .logo {
-        width: 15vw;
-        height: 10vh;
-    }
-    
-    .user_profile_picture {
-        width: 11vw;
-        height: 9vh;
-    }
-    
-    .title {
-        font-size: 4vw;
-    }
-    
-    .main_section  input[type="text"],
-    input[type="password"]{
-        width: 70%;
-        font-size: 3vw;
-    }
-
-    .main_section input[type="submit"],
-    .action_button{
-        width: 60%;
-        padding: 1vh;
-       margin-left: 5vw;
-    }
-
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-    
-    .footer {
-        height: 10vh;
-        padding: 1vh;
-        margin-top: 1rem;
-    }
-
-    .copyright {
-        font-size: 0.8rem;
-    }
-
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px){
-
-    .header{
-        height: 20vh;
-    }
-
-    main{
-        height: 70vh;
     }
 
     .logo {
@@ -417,13 +348,65 @@ main {
     }
     
     .footer {
-        height: 10vh;
-        padding: 1vh;
-        min-height: 10vh;
+        height: 10%;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    .header{
+        height: 20%;
+        width: auto;
+        margin-right: 0;
+    }
+
+    main{
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 14svw;
+        height: 16vh;
+    }
     
+    .user_profile_picture {
+        width: 9vw;
+        height: 11vh;
+    }
     
-        width: 100vw;
-        height: 10vh;
+    .title {
+        font-size: 4vw;
+    }
+    
+    .main_section  input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    .action_button {
+        font-size: 2vw;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+    
+    .footer {
+        height: 10%;
     }
 
     .copyright {

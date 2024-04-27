@@ -1,4 +1,6 @@
-<!-- Home Page for Anonymous Users -->
+<!--
+    Home Page for Anonymous Users
+-->
 
 <!DOCTYPE html>
 
@@ -23,8 +25,11 @@
         <!-- Global Responsive Stylesheet -->
         <link rel = "stylesheet" href = "./styles/global_responsive.css">
 
-        <!-- Specific Stylesheet -->
-        <link rel = "stylesheet" href = "./styles/index.css">
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "./styles/index_general.css">
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "./styles/index_responsive.css">
         
         <!-- Title -->
         <title>Culinary Love for You</title>

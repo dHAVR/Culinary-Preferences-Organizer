@@ -1,0 +1,40 @@
+/****
+    Global Responsive Stylesheet
+    << Screens Not Wider Than 1024px >>
+****/
+
+
+
+/*** 769px - 1024px Wide Screens ***/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .welcome_message
+    {
+        font-size: 16px;
+    }
+}
+
+
+
+/*** 481px - 768px Wide Screens ***/
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .welcome_message
+    {
+        font-size: 14px;
+    }
+}
+
+
+
+/*** 1px - 480px Wide Screens ***/
+
+@media only screen and (max-width: 480px)
+{
+    .welcome_message
+    {
+        font-size: 12px;
+    }
+}

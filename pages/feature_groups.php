@@ -1,4 +1,6 @@
-<!-- Groups -->
+<!--
+    Groups Page
+-->
 
 <!DOCTYPE html>
 
@@ -17,9 +19,18 @@
         <!-- Favicon -->
         <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
-        <!-- Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/feature_groups.css">
-        
+        <!-- Global General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_general.css">
+
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_responsive.css">
+
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_groups_general.css">
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_groups_responsive.css">
+
         <!-- Title -->
         <title>Groups</title>
 

@@ -1,0 +1,231 @@
+/****
+    Groups Page General Stylesheet
+    << Screens Wider Than 1024px >>
+****/
+
+
+
+/*** Main ***/
+
+.main
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 75vh;
+
+    /* Styling */
+    background: #F3BC77;
+}
+
+
+/** Banner **/
+
+.banner
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+
+    /* Styling */
+    background-color: #402A23;
+}
+
+
+.navbar_button
+{
+    /* Sizing */
+    font-size: 20px;
+    width: 170px;
+    height: 40px;
+    border-radius: 10px;
+
+    /* Styling */
+    color: #1D1716;
+    background: #F3BC77;
+    cursor: pointer;
+}
+
+
+.search_form
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+
+.search_message
+{
+    /* Sizing */
+    font-size: 30px;
+
+    /* Styling */
+    color: #FFFFFF;
+}
+
+
+.search_input
+{
+    /* Sizing */
+    font-size: 18px;
+    text-indent: 8px;
+    width: 250px;
+    height: 30px;
+    border-radius: 8px;
+
+    /* Styling */
+    background-color: #F3BC77;
+}
+
+
+.search_input::placeholder
+{
+    /* Styling */
+    color: #A55233;
+}
+
+
+.search_button
+{
+    /* Sizing */
+    font-size: 18px;
+    width: 90px;
+    height: 34px;
+    border-radius: 8px;
+
+    /* Styling */
+    background-color: #F3BC77;
+    cursor: pointer;
+}
+
+
+/** Page Title **/
+
+.page_title_container
+{
+    /* Sizing */
+    height: 10vh;
+}
+
+
+.page_title
+{
+    /* Sizing */
+    font-size: 48px;
+}
+
+
+.groups_container
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+
+.my_groups_container, .selected_group_container, .new_group_container
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30vh;
+    margin: 15px;
+}
+
+
+.create_group_form, .add_person_form
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vh;
+}
+
+
+.group_name_input
+{
+    /* Sizing */
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 6px;
+
+    /* Styling */
+    color: #FFFFFF;
+    background-color: #A55233;
+}
+
+
+.group_name_input::placeholder
+{
+    /* Styling */
+    color: #F3BC77;
+}
+
+
+.create_group_button
+{
+    /* Sizing */
+    font-size: 20px;
+    height: 36px;
+    width: 90px;
+    border-radius: 8px;
+
+    /* Styling */
+    color: #FFFFFF;
+    background-color: #A55233;
+}
+
+
+.email_address_input
+{
+    /* Sizing */
+    font-size: 20px;
+    height: 30px;
+    width: 260px;
+    border-radius: 6px;
+
+    /* Styling */
+    color: #FFFFFF;
+    background-color: #A55233;
+}
+
+
+.email_address_input::placeholder
+{
+    /* Styling */
+    color: #F3BC77;
+}
+
+
+.add_person_button
+{
+    /* Sizing */
+    font-size: 20px;
+    height: 36px;
+    width: 140px;
+    border-radius: 8px;
+
+    /* Styling */
+    color: #FFFFFF;
+    background-color: #A55233;
+}

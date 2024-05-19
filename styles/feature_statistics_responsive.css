@@ -14,21 +14,6 @@
         height: 150vh;
     }
 
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
-    .page_title
-    {
-        font-size: 30px;
-    }
 
     .statistics
     {
@@ -47,21 +32,6 @@
         height: 130vh;
     }
 
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
-    .page_title
-    {
-        font-size: 25px;
-    }
 
     .statistics
     {
@@ -80,21 +50,6 @@
         height: 130vh;
     }
 
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
-    .page_title
-    {
-        font-size: 20px;
-    }
 
     .statistics
     {

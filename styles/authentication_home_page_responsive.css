@@ -9,17 +9,6 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
     .welcome_message
     {
         font-size: 16px;
@@ -44,17 +33,6 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
     .welcome_message
     {
         font-size: 14px;
@@ -79,17 +57,6 @@
 
 @media only screen and (max-width: 480px)
 {
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
     .welcome_message
     {
         font-size: 12px;

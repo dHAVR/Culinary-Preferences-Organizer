@@ -9,11 +9,6 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
-    .page_title
-    {
-        font-size: 30px;
-    }
-
     .label_text
     {
         font-size: 22px;
@@ -33,11 +28,6 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    .page_title
-    {
-        font-size: 25px;
-    }
-
     .label_text
     {
         font-size: 20px;
@@ -57,11 +47,6 @@
 
 @media only screen and (max-width: 480px)
 {
-    .page_title
-    {
-        font-size: 20px;
-    }
-
     .label_text
     {
         font-size: 18px;

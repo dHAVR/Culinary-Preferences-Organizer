@@ -25,6 +25,25 @@
     {
         font-size: 18px;
     }
+
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+
+    .page_title
+    {
+        font-size: 30px;
+    }
 }
 
 
@@ -49,6 +68,25 @@
     {
         font-size: 15px;
     }
+
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+
+    .page_title
+    {
+        font-size: 25px;
+    }
 }
 
 
@@ -72,5 +110,24 @@
     .copyright
     {
         font-size: 10px;
+    }
+
+    
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+
+    .page_title
+    {
+        font-size: 20px;
     }
 }

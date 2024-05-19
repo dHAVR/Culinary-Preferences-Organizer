@@ -9,22 +9,6 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
-    .page_title
-    {
-        font-size: 30px;
-    }
-
     .groups_category_title
     {
         font-size: 25px;
@@ -58,22 +42,6 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
-    .page_title
-    {
-        font-size: 25px;
-    }
-
     .groups_container
     {
         flex-direction: column;
@@ -112,22 +80,6 @@
 
 @media only screen and (max-width: 480px)
 {
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
-    .page_title
-    {
-        font-size: 20px;
-    }
-
     .groups_container
     {
         flex-direction: column;

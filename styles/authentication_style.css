@@ -1,73 +1,4 @@
 
-/* Common styles for all elements */
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #402a23;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #f3bc77;
-}
-
-/* Global Reset */
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100vw;
-    height: 15vh;
-
-    background: #A55233; 
-}
-
-.logo {
-    border-radius: 50%;
-    width: 7vw;
-}
-
-.title {
-    font-size: 48px;
-    color: #FFFFFF;
-}
-
-.title_link:link,
-.title_link:visited,
-.title_link:hover {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.user_profile_picture {
-    border-radius: 50%;
-    width: 5vw;
-}
-
-/* Main Container Styles */
-main {
-    max-width: 30vw;
-    margin: 5vw auto;
-    padding: 1vw;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 3vw rgba(64, 42, 35, 0.4);
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #a55233;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 10vh;
-}
-
 /* Form Styles */
 form {
     display: flex;
@@ -111,16 +42,7 @@ input[type="submit"]:hover {
     border: 1px solid #402a23bb;
 }
 
-/* Centering Paragraph */
-p {
-    font-weight: bold;
-    text-align: center;
-}
 
-.copyright {
-    color: white;
-    font-size: 1.5vw;
-}
 
 /* Media Query for screen widths >= 480px */
 @media screen and (max-width: 480px) {

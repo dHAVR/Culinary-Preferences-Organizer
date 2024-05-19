@@ -18,6 +18,9 @@
       <!-- Favicon -->
       <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
+       <!-- Global General Stylesheet -->
+       <link rel = "stylesheet" href = "../styles/global_general.css">
+
       <!--Style-->
       <link rel = "stylesheet" href = "../styles/authentication_style.css" />
       
@@ -64,16 +67,14 @@
          <a href="./user_profile_administrator.php">Go to admin accound</a>
 
       </main>
+      <footer class = "footer">
 
-        <!-- Footer -->
-        <footer class = "footer">
+            <!-- Copyright -->
+         <p class = "copyright">
+           Copyright &copy; 2024 Culinary Love for You
+        </p>
 
-             <!-- Copyright -->
-            <p class = "copyright">
-               Copyright &copy; 2024 Culinary Preferences Organizer
-            </p>
-
-        </footer>
+           </footer>
 
    </body>
 

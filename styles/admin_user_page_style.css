@@ -1,134 +1,9 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #402a23;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     background-color: #f3bc77;
     overflow-x: hidden;
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100vw;
-    height: 15vh;
-
-    background: #A55233; 
-}
-
-.logo {
-    border-radius: 50%;
-    width: 7vw;
-}
-
-.title {
-    font-size: 48px;
-    color: #FFFFFF;
-}
-
-.title_link:link,
-.title_link:visited,
-.title_link:hover {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.user_profile_picture {
-    border-radius: 50%;
-    width: 5vw;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 70%;
-    margin-bottom: 3vh;
-    padding: 1rem;
-}
-
-.main_section {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 70vh;
-    margin-bottom: 3vh;
-    width: 100%;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-/* Banner */
-.banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    background-color: #402A23;
-
-    width: 100vw;
-    height: 15vh;
-}
-
-.navbar_button {
-    font-size: 20px;
-    color: #1D1716;
-    background: #F3BC77;
-
-    width: 170px;
-    height: 40px;
-    border-radius: 10px;
-
-    cursor: pointer;
-}
-
-.search_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    height: 100%;
-}
-
-.search_message {
-    font-size: 30px;
-    color: #FFFFFF;
-}
-
-.search_input {
-    font-size: 18px;
-    background-color: #F3BC77;
-    text-indent: 8px;
-
-    width: 250px;
-    height: 30px;
-    border-radius: 8px;
-}
-
-.search_input::placeholder {
-    color: #A55233;
-}
-
-.search_button {
-    font-size: 18px;
-    background-color: #F3BC77;
-
-    width: 90px;
-    height: 34px;
-    border-radius: 8px;
-
-    cursor: pointer;
-}
 
 .main_section input[type="text"],
 input[type="password"] {
@@ -162,24 +37,6 @@ input[type="password"] {
     border-radius: 1vw;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100vw;
-    height: 10%;
-
-    background: #A55233;
-}
-
-.page_title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 #title_list_of_users {
     margin-bottom: 1vh;
     margin-top: 1vh;
@@ -210,10 +67,6 @@ button {
     margin-bottom: 2rem;
 }
 
-.copyright {
-    color: white;
-    font-size: 1rem;
-}
 
 @media screen and (max-width: 480px) {
 

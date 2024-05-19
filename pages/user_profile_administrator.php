@@ -20,6 +20,9 @@
       <!--Title-->
       <title>My Profile</title>
 
+      <!-- Global General Stylesheet -->
+      <link rel = "stylesheet" href = "../styles/global_general.css">
+
       <link rel = "stylesheet" href = "../styles/admin_user_page_style.css" />
 
    </head>
@@ -138,12 +141,12 @@
 
       <footer class = "footer">
 
-         <!-- Copyright -->
-         <p class = "copyright">
-             Copyright &copy; 2024 Culinary Preferences Organizer
-         </p>
+      <!-- Copyright -->
+       <p class = "copyright">
+          Copyright &copy; 2024 Culinary Love for You
+      </p>
 
-     </footer>
+        </footer>
 
    </body>
 

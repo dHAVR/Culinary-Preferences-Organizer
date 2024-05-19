@@ -21,6 +21,8 @@
       <!-- Favicon -->
       <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
+      <!-- Global General Stylesheet -->
+      <link rel = "stylesheet" href = "../styles/global_general.css">
       
       <link rel = "stylesheet" href = "../styles/shopping_list_style.css" />
 
@@ -139,15 +141,14 @@
          
       </main>
 
-
       <footer class = "footer">
 
          <!-- Copyright -->
-         <p class = "copyright">
-             Copyright &copy; 2024 Culinary Preferences Organizer
+        <p class = "copyright">
+          Copyright &copy; 2024 Culinary Love for You
          </p>
 
-     </footer>
+</footer>
      
 
    </body>

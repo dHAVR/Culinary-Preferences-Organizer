@@ -1,130 +1,10 @@
 /* General Styles */
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #402a23;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     background-color: #f3bc77;
     overflow-x: hidden;
 }
 
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100vw;
-    height: 15vh;
-
-    background: #A55233;
-}
-
-.logo {
-    border-radius: 50%;
-    width: 7vw;
-}
-
-.title {
-    font-size: 48px;
-    color: #FFFFFF;
-}
-
-.title_link:link, .title_link:visited, .title_link:hover {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.user_profile_picture {
-    border-radius: 50%;
-    width: 5vw;
-}
-
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 55%;
-    margin-bottom: 2.5vh;
-}
-
-/* Banner */
-.banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    background-color: #402A23;
-
-    width: 100vw;
-    height: 15vh;
-}
-
-.navbar_button {
-    font-size: 20px;
-    color: #1D1716;
-    background: #F3BC77;
-
-    width: 170px;
-    height: 40px;
-    border-radius: 10px;
-
-    cursor: pointer;
-}
-
-.search_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    height: 100%;
-}
-
-.search_message {
-    font-size: 30px;
-    color: #FFFFFF;
-}
-
-.search_input {
-    font-size: 18px;
-    background-color: #F3BC77;
-    text-indent: 8px;
-
-    width: 250px;
-    height: 30px;
-    border-radius: 8px;
-}
-
-.search_input::placeholder {
-    color: #A55233;
-}
-
-.search_button {
-    font-size: 18px;
-    background-color: #F3BC77;
-
-    width: 90px;
-    height: 34px;
-    border-radius: 8px;
-
-    cursor: pointer;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #a55233;
-
-    height: 10%;
-    width: 100vw;
-}
 
 article {
     margin: 1vh 1vw;
@@ -155,10 +35,6 @@ h2 {
     margin-right: 2.5vw;
 }
 
-.copyright {
-    color: white;
-    font-size: 1.25rem;
-}
 
 @media screen and (max-width: 480px) {
 

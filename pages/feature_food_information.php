@@ -16,6 +16,9 @@
         <!-- Favicon -->
         <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" /> 
 
+        <!-- Global General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_general.css">
+
         <!--Style-->
         <link rel = "stylesheet" href = "../styles/food_information_style.css" />
                 
@@ -141,9 +144,9 @@
 
             <!-- Copyright -->
             <p class = "copyright">
-                Copyright &copy; 2024 Culinary Preferences Organizer
+                Copyright &copy; 2024 Culinary Love for You
             </p>
-   
+
         </footer>
 
     </body>

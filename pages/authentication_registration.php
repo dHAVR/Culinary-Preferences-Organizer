@@ -1,4 +1,6 @@
-<!-- Registration -->
+<!--
+    Registration Page
+-->
 
 <!DOCTYPE html>
 
@@ -17,9 +19,18 @@
         <!-- Favicon -->
         <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
-        <!-- Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/authentication_registration.css">
-        
+        <!-- Global General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_general.css">
+
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_responsive.css">
+
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/authentication_registration_general.css">
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/authentication_registration_responsive.css">
+
         <!-- Title -->
         <title>Registration</title>
 

@@ -1,0 +1,100 @@
+/****
+    Registration Page General Stylesheet
+    << Screens Wider Than 1024px >>
+****/
+
+
+
+/*** Main ***/
+
+.main
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 75vh;
+
+    /* Styling */
+    background: #F3BC77;
+}
+
+
+/* Page Title */
+
+.page_title_container
+{
+    /* Sizing */
+    height: 10vh;
+}
+
+
+.page_title
+{
+    /* Sizing */
+    font-size: 48px;
+}
+
+
+/* Registration Form */
+
+.registration_form_container
+{
+    /* Sizing */
+    height: 55vh;
+}
+
+
+.registration_form
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+}
+
+
+.label_text
+{
+    /* Sizing */
+    font-size: 24px;
+}
+
+
+.input_field
+{
+    /* Sizing */
+    font-size: 20px;
+    width: 200px;
+    height: 28px;
+    border-radius: 6px;
+
+    /* Styling */
+    background: #A55233;
+    color: #FFFFFF;
+}
+
+
+.input_field::placeholder
+{
+    /* Styling */
+    color: #FFFFFF;
+}
+
+
+.submit_button
+{
+    /* Sizing */
+    font-size: 24px;
+    width: 120px;
+    height: 42px;
+    border-radius: 6px;
+
+    /* Styling */
+    background: #402A23;
+    color: #FFFFFF;
+}

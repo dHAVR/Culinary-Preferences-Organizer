@@ -6,14 +6,12 @@
     padding: 0;
 }
 
-
 body {
     background-color: #f3bc77;
     overflow-x: hidden;
 }
 
-
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -22,65 +20,39 @@ body {
     width: 100vw;
     height: 15vh;
 
-    background: #A55233; 
+    background: #A55233;
 }
 
 .logo {
     border-radius: 50%;
-    
     width: 7vw;
 }
 
-.title
-{
+.title {
     font-size: 48px;
     color: #FFFFFF;
 }
 
-
-.title_link:link
-{
+.title_link:link, .title_link:visited, .title_link:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-
-.title_link:visited
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-.title_link:hover
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-
-.user_profile_picture
-{
+.user_profile_picture {
     border-radius: 50%;
-
     width: 5vw;
 }
 
-
-
 main {
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 55%;
-    place-items: center;
-    margin-bottom: 2.5vh; 
+    margin-bottom: 2.5vh;
 }
 
-
 /* Banner */
-
-.banner
-{
+.banner {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -92,9 +64,7 @@ main {
     height: 15vh;
 }
 
-
-.navbar_button
-{
+.navbar_button {
     font-size: 20px;
     color: #1D1716;
     background: #F3BC77;
@@ -106,9 +76,7 @@ main {
     cursor: pointer;
 }
 
-
-.search_form
-{
+.search_form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -117,16 +85,12 @@ main {
     height: 100%;
 }
 
-
-.search_message
-{
+.search_message {
     font-size: 30px;
     color: #FFFFFF;
 }
 
-
-.search_input
-{
+.search_input {
     font-size: 18px;
     background-color: #F3BC77;
     text-indent: 8px;
@@ -136,15 +100,11 @@ main {
     border-radius: 8px;
 }
 
-
-.search_input::placeholder
-{
+.search_input::placeholder {
     color: #A55233;
 }
 
-
-.search_button
-{
+.search_button {
     font-size: 18px;
     background-color: #F3BC77;
 
@@ -154,61 +114,51 @@ main {
 
     cursor: pointer;
 }
- 
 
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color:  #a55233;
-    
+    background-color: #a55233;
+
     height: 10%;
     width: 100vw;
 }
-
 
 article {
     margin: 1vh 1vw;
 }
 
-
 h2 {
-    margin-top: 1.25rem; 
-    margin-left: 1.25rem; 
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
 }
-
 
 .food-info {
-    display: grid;
-    grid-template-columns:auto 1fr;
-    grid-gap: 10vw;
+    display: flex;
     align-items: center;
+    gap: 10vw;
 }
 
-
 .ingredients {
-    margin-left: 1.25rem; 
+    margin-left: 1.25rem;
     margin-top: 1.25rem;
 }
 
-
 .food-info img {
-    height: 12.5rem; 
+    height: 12.5rem;
     width: 12.5rem;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 1.25rem; 
-    margin-right: 2.5vw; 
+    margin-top: 1.25rem;
+    margin-right: 2.5vw;
 }
-
 
 .copyright {
     color: white;
     font-size: 1.25rem;
 }
-
-
 
 @media screen and (max-width: 480px) {
 
@@ -218,160 +168,62 @@ h2 {
         width: 15vw;
     }
 
-    .banner{
+    .banner {
         font-size: 2vh;
     }
 
-
     .user_profile_picture {
         width: 13vw;
         height: 9vh;
     }
 
-
-    .header{
+    .header {
         height: 20%;
-     }
- 
-     main{
-         height: 70%;
-     }
- 
-     .footer{
-         padding: 2%;
-         width: 96%;
-         height: 30%;
-     }
- 
-
-    .food-info{
-        display: flex;
-        flex-direction: column;
     }
 
-
-    .food-info img {
-        height: 9rem; 
-        width: 9rem;
-    }
-    
-
-    article {
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    .details{
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    .title {
-        font-size: 4vw;
-    }
-
-
-    input[type="text"],
-    input[type="password"],
-    input[type="submit"] {
-        font-size: 1.5vw;
-    }
-
-    .banner
-    {
-        flex-direction: column;
-        height: 40vh;
-    }
-
-    .navbar_button
-    {
-        margin: 10px;
-    }
-
-    .login_title {
-        font-size: 5vw;
-    }
-
-
-    .copyright {
-        font-size: 3vw;
-    }
-}
-
-
-@media screen and (min-width: 481px) and (max-width: 768px){
-
-       .logo {
-        height: 15vh;
-        width: 13vw;
-    }
-
-
-    .user_profile_picture {
-        width: 11vw;
-        height: 9vh;
-    }
-
-    .header{
-       height: 20%;
-    }
-
-    main{
+    main {
         height: 70%;
     }
 
-    .footer{
+    .footer {
         padding: 2%;
         width: 96%;
         height: 30%;
     }
 
-
-    .food-info{
-        display: flex;
+    .food-info {
         flex-direction: column;
     }
 
-
     .food-info img {
-        height: 9rem; 
+        height: 9rem;
         width: 9rem;
     }
-    
-    
+
     article {
         display: flex;
         flex-direction: column;
     }
 
-    
-    .details{
+    .details {
         display: flex;
         flex-direction: column;
     }
-
 
     .title {
         font-size: 4vw;
     }
 
-
-    input[type="text"],
-    input[type="password"],
-    input[type="submit"] {
+    input[type="text"], input[type="password"], input[type="submit"] {
         font-size: 1.5vw;
     }
 
-    .banner
-    {
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
 
@@ -379,83 +231,70 @@ h2 {
         font-size: 5vw;
     }
 
-
     .copyright {
         font-size: 3vw;
     }
 }
 
-
-
-@media screen and (min-width: 769px) and (max-width: 1024px){
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
     .logo {
         height: 15vh;
         width: 13vw;
     }
 
-
     .user_profile_picture {
         width: 11vw;
         height: 9vh;
     }
 
-    .header{
-       height: 20%;
-    }
-
-    main{
-        height: 90%;
-    }
-
-    .footer{
+    .header {
         height: 20%;
     }
 
+    main {
+        height: 70%;
+    }
 
-    .food-info{
-        display: flex;
+    .footer {
+        padding: 2%;
+        width: 96%;
+        height: 30%;
+    }
+
+    .food-info {
         flex-direction: column;
     }
 
-
     .food-info img {
-        height: 9rem; 
+        height: 9rem;
         width: 9rem;
     }
-    
-    
+
     article {
         display: flex;
         flex-direction: column;
     }
 
-    
-    .details{
+    .details {
         display: flex;
         flex-direction: column;
     }
-
 
     .title {
         font-size: 4vw;
     }
 
-
-    input[type="text"],
-    input[type="password"],
-    input[type="submit"] {
+    input[type="text"], input[type="password"], input[type="submit"] {
         font-size: 1.5vw;
     }
 
-    .banner
-    {
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
 
@@ -463,9 +302,76 @@ h2 {
         font-size: 5vw;
     }
 
+    .copyright {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .logo {
+        height: 15vh;
+        width: 13vw;
+    }
+
+    .user_profile_picture {
+        width: 11vw;
+        height: 9vh;
+    }
+
+    .header {
+        height: 20%;
+    }
+
+    main {
+        height: 90%;
+    }
+
+    .footer {
+        height: 20%;
+    }
+
+    .food-info {
+        flex-direction: column;
+    }
+
+    .food-info img {
+        height: 9rem;
+        width: 9rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 4vw;
+    }
+
+    input[type="text"], input[type="password"], input[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+    .banner {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button {
+        margin: 10px;
+    }
+
+    .login_title {
+        font-size: 5vw;
+    }
 
     .copyright {
         font-size: 2vw;
     }
 }
-

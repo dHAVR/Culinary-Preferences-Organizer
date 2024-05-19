@@ -26,46 +26,25 @@ body {
 
 .logo {
     border-radius: 50%;
-    
     width: 7vw;
 }
 
-.title
-{
+.title {
     font-size: 48px;
     color: #FFFFFF;
 }
 
-
-.title_link:link
-{
+.title_link:link,
+.title_link:visited,
+.title_link:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-
-.title_link:visited
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-.title_link:hover
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-
-.user_profile_picture
-{
+.user_profile_picture {
     border-radius: 50%;
-
     width: 5vw;
 }
-
 
 /* Main Container Styles */
 main {
@@ -85,14 +64,14 @@ main {
     background-color: #a55233;
     position: fixed;
     bottom: 0;
-
     width: 100vw;
     height: 10vh;
 }
 
 /* Form Styles */
 form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 2vw;
 }
 
@@ -143,7 +122,6 @@ p {
     font-size: 1.5vw;
 }
 
-
 /* Media Query for screen widths >= 480px */
 @media screen and (max-width: 480px) {
     /* Adjust styles here for screens >= 480px */
@@ -163,7 +141,6 @@ p {
         height: 9vh;
     }
     
-
     .footer {
         height: 5vh;
     }
@@ -171,7 +148,6 @@ p {
     .title {
         font-size: 4vw;
     }
-
 
     input[type="text"],
     input[type="password"],
@@ -188,47 +164,44 @@ p {
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Adjust styles here for screens between 481px and 768px */
+    main {
+        max-width: 60vw;
+    }
 
-   /* Adjust styles here for screens between 481px and 768px */
-   main {
-    max-width: 60vw;
+    .title {
+        font-size: 3vw;
+    }
+
+    .logo {
+        height: 20vh;
+        width: 20vw;
+    }
+
+    .user_profile_picture {
+        width: 10vw;
+        height: 9vh;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+    .login_title {
+        font-size: 3vw;
+    }
+
+    .footer {
+        height: 5vh;
+    }
+
+    .copyright {
+        font-size: 2vw;
+    }
 }
-
-.title {
-    font-size: 3vw;
-}
-
-.logo {
-    height: 20vh;
-    width: 20vw;
-}
-
-.user_profile_picture {
-    width: 10vw;
-    height: 9vh;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="submit"] {
-    font-size: 1.5vw;
-}
-
-.login_title {
-    font-size: 3vw;
-}
-
-.footer {
-    height: 5vh;
-}
-
-.copyright {
-    font-size: 2vw;
-}
-
-}
-
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     /* Adjust styles here for screens between 769px and 1024px */
@@ -249,7 +222,6 @@ input[type="submit"] {
         width: 8vw;
         height: 10vh;
     }    
-   
 
     input[type="text"],
     input[type="password"],

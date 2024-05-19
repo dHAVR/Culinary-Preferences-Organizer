@@ -1,7 +1,6 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #402a23;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,70 +25,49 @@ body {
 
 .logo {
     border-radius: 50%;
-    
     width: 7vw;
 }
 
-.title
-{
+.title {
     font-size: 48px;
     color: #FFFFFF;
 }
 
-
-.title_link:link
-{
+.title_link:link,
+.title_link:visited,
+.title_link:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-
-.title_link:visited
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-.title_link:hover
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-
-.user_profile_picture
-{
+.user_profile_picture {
     border-radius: 50%;
-
     width: 5vw;
 }
 
-
-
 main {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 70%;
     margin-bottom: 3vh;
-    grid-template-columns: 1fr; 
-    grid-gap: 1rem; 
-}
-
-.main_section{
-    display: grid;
-    height: 70vh;
-    margin-bottom: 3vh;
-    grid-template-columns: 1fr 2fr; 
-    grid-gap: 1rem; 
     padding: 1rem;
 }
 
+.main_section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 70vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+}
 
 /* Banner */
-
-.banner
-{
+.banner {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -101,9 +79,7 @@ main {
     height: 15vh;
 }
 
-
-.navbar_button
-{
+.navbar_button {
     font-size: 20px;
     color: #1D1716;
     background: #F3BC77;
@@ -115,9 +91,7 @@ main {
     cursor: pointer;
 }
 
-
-.search_form
-{
+.search_form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -126,16 +100,12 @@ main {
     height: 100%;
 }
 
-
-.search_message
-{
+.search_message {
     font-size: 30px;
     color: #FFFFFF;
 }
 
-
-.search_input
-{
+.search_input {
     font-size: 18px;
     background-color: #F3BC77;
     text-indent: 8px;
@@ -145,15 +115,11 @@ main {
     border-radius: 8px;
 }
 
-
-.search_input::placeholder
-{
+.search_input::placeholder {
     color: #A55233;
 }
 
-
-.search_button
-{
+.search_button {
     font-size: 18px;
     background-color: #F3BC77;
 
@@ -164,9 +130,8 @@ main {
     cursor: pointer;
 }
 
-
- .main_section input[type="text"],
- input[type="password"] {
+.main_section input[type="text"],
+input[type="password"] {
     margin-bottom: 1vh;
     margin-top: 1vh;
     width: 100%;
@@ -186,7 +151,7 @@ main {
     border-radius: 1vw;
 }
 
-.action_button{
+.action_button {
     margin-top: 1vh;
     width: 104%;
     background-color: #402a23;
@@ -209,14 +174,13 @@ main {
     background: #A55233;
 }
 
-.page_title{
-    grid-column-start: 1;
-    grid-column-end: 3;
+.page_title {
+    width: 100%;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-#title_list_of_users{
+#title_list_of_users {
     margin-bottom: 1vh;
     margin-top: 1vh;
 }
@@ -229,7 +193,8 @@ main {
     width: 70%;
 }
 
-.left section, button {
+.left section,
+button {
     margin-top: 1rem;
 }
 
@@ -238,10 +203,10 @@ main {
     margin-top: 1rem;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -250,47 +215,35 @@ main {
     font-size: 1rem;
 }
 
-
-
-
-
 @media screen and (max-width: 480px) {
 
-    .header{
+    .header {
         height: 10vh;
     }
 
-   main{
+    main {
         height: 130vh;
-        display: flex;
-        flex-direction: column;
-   }
+    }
 
-   .left{
-    display: flex;
-    flex-direction: column;
-   }
+    .left,
+    .right {
+        margin-left: 3vw;
+    }
 
-   .right{
-    margin-left: 3vw;
-    display: flex;
-    flex-direction: column;
-   }
+    .logo {
+        width: 15vw;
+        height: 10vh;
+    }
 
-   .logo {
-    width: 15vw;
-    height: 10vh;
-}
-    
     .user_profile_picture {
         width: 11vw;
         height: 8vh;
     }
-    
+
     .title {
         font-size: 4vw;
     }
-    
+
     .main_section input[type="text"],
     input[type="password"],
     input[type="submit"],
@@ -298,17 +251,15 @@ main {
         font-size: 3vw;
     }
 
-    .banner
-    {
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
-    
+
     .footer {
         height: 10vh;
         padding: 1vh;
@@ -317,57 +268,52 @@ main {
     .copyright {
         font-size: 0.8rem;
     }
-
 }
-
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
-    .header{
+    .header {
         height: 20%;
         width: auto;
         margin-right: 0;
     }
 
-    main{
-        display: flex;
+    main {
         height: 70%;
         flex-direction: column;
         align-items: center;
     }
 
     .logo {
-        width: 14svw;
+        width: 14vw;
         height: 16vh;
     }
-    
+
     .user_profile_picture {
         width: 9vw;
         height: 11vh;
     }
-    
+
     .title {
         font-size: 4vw;
     }
-    
-    .main_section  input[type="text"],
+
+    .main_section input[type="text"],
     input[type="password"],
     input[type="submit"],
     .action_button {
         font-size: 2vw;
     }
 
-    .banner
-    {
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
-    
+
     .footer {
         height: 10%;
     }
@@ -375,57 +321,52 @@ main {
     .copyright {
         font-size: 1rem;
     }
-
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-
-    .header{
+    .header {
         height: 20%;
         width: auto;
         margin-right: 0;
     }
 
-    main{
-        display: flex;
+    main {
         height: 70%;
         flex-direction: column;
         align-items: center;
     }
 
     .logo {
-        width: 14svw;
+        width: 14vw;
         height: 16vh;
     }
-    
+
     .user_profile_picture {
         width: 9vw;
         height: 11vh;
     }
-    
+
     .title {
         font-size: 4vw;
     }
-    
-    .main_section  input[type="text"],
+
+    .main_section input[type="text"],
     input[type="password"],
     input[type="submit"],
     .action_button {
         font-size: 2vw;
     }
 
-    .banner
-    {
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
-    
+
     .footer {
         height: 10%;
     }
@@ -433,6 +374,4 @@ main {
     .copyright {
         font-size: 1rem;
     }
-
-
 }

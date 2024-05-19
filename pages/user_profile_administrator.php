@@ -95,7 +95,7 @@
     
              <h4>Account Type: Administrator</h4>
     
-             <section class="grid-container">
+             <section class="flex-container">
     
              <form action="#" method="post">
                 <section>

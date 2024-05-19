@@ -7,82 +7,56 @@
     color: #402a23;
 }
 
-
 body {
     background-color: #f3bc77;
     overflow-x: hidden;
 }
- 
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
     width: 100vw;
-    height: 15vh;
+    height: 20vh;
 
-    background: #A55233; 
+    background: #A55233;
 }
 
 .logo {
     border-radius: 50%;
-    
     width: 7vw;
 }
 
-.title
-{
+.title {
     font-size: 48px;
     color: #FFFFFF;
 }
 
-
-.title_link:link
-{
+.title_link:link,
+.title_link:visited,
+.title_link:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-
-.title_link:visited
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-.title_link:hover
-{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-
-.user_profile_picture
-{
+.user_profile_picture {
     border-radius: 50%;
-
     width: 5vw;
 }
-
 
 /* Main styles */
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 70vh;
-    place-items: center; 
     width: 100%;
 }
 
-
 /* Banner */
-
-.banner
-{
+.banner {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -94,9 +68,7 @@ main {
     height: 15vh;
 }
 
-
-.navbar_button
-{
+.navbar_button {
     font-size: 20px;
     color: #1D1716;
     background: #F3BC77;
@@ -108,9 +80,7 @@ main {
     cursor: pointer;
 }
 
-
-.search_form
-{
+.search_form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -119,16 +89,12 @@ main {
     height: 100%;
 }
 
-
-.search_message
-{
+.search_message {
     font-size: 30px;
     color: #FFFFFF;
 }
 
-
-.search_input
-{
+.search_input {
     font-size: 18px;
     background-color: #F3BC77;
     text-indent: 8px;
@@ -138,21 +104,15 @@ main {
     border-radius: 8px;
 }
 
-
-.search_input::placeholder
-{
+.search_input::placeholder {
     color: #A55233;
 }
 
-.search_message_container{
- 
-    width: 100%d;
-
+.search_message_container {
+    width: 100%;
 }
 
-
-.search_button
-{
+.search_button {
     font-size: 18px;
     background-color: #F3BC77;
 
@@ -163,56 +123,50 @@ main {
     cursor: pointer;
 }
 
-
-.page{
+.page {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    place-items: center; 
+    align-items: center;
 }
-
 
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color:  #a55233;
+    background-color: #a55233;
     position: relative;
-    height: 100%;
-
-    width: 100vw;
     height: 10vh;
+    width: 100vw;
 }
-
 
 .page_title {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    margin-top:  1vh; 
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 1vh;
 }
-
 
 /* Left section styles */
 .left {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
     margin-left: 2.5%;
-    grid-gap: 2.5%;
+    width: 100%;
 }
-
 
 .left input[type="text"] {
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
     padding: 1vh;
     margin-bottom: 1.25rem;
-    width: 100%;
+    width: calc(50% - 2.5%);
 }
 
-
- input[type="submit_profile"]{
+input[type="submit_profile"] {
     margin-top: 1vh;
     width: 100%;
     background-color: #402a23;
@@ -222,15 +176,12 @@ main {
     color: white;
 }
 
-
 .left h2 {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    width: 100%;
     text-align: center;
-    margin-bottom: 1.25rem; 
-    margin-top: 1.25rem; 
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
 }
-
 
 /* Center section styles */
 .center {
@@ -246,7 +197,6 @@ main {
     width: 60%;
 }
 
-
 /* Right section styles */
 .right {
     display: flex;
@@ -256,8 +206,7 @@ main {
     margin-right: 5vw;
 }
 
-
-.right select{
+.right select {
     margin-top: 1.5vh;
     width: 100%;
     background-color: white;
@@ -266,24 +215,21 @@ main {
     font-weight: bold;
 }
 
-
 .right button {
     margin-top: 1vh;
-    margin-bottom: 1vh;;
+    margin-bottom: 1vh;
     width: 100%;
     background-color: #402a23;
     border: 0.5vw solid #402a23;
     border-radius: 10px;
     font-weight: bold;
-    color: white;    
+    color: white;
 }
-
 
 .copyright {
     color: white;
     font-size: 1.25rem;
 }
-
 
 @media screen and (max-width: 480px) {
     .header {
@@ -291,24 +237,20 @@ main {
         width: 100%;
     }
 
-
     .logo {
         height: 14vh;
         width: 20vw;
         margin-bottom: 1rem;
     }
 
-
     .title {
         font-size: 3vh;
     }
 
-
     .user_profile_picture {
-        height: 15;
+        height: 15vh;
         width: 15vw;
     }
-
 
     main {
         height: 70%;
@@ -317,36 +259,31 @@ main {
         align-items: center;
     }
 
-
-    .page{
+    .page {
         display: flex;
         flex-direction: column;
-        place-items: center; 
+        align-items: center;
     }
-    
-    .banner
-    {
+
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
 
-    .left{
+    .left {
         display: flex;
         flex-direction: column;
-        place-items: center; 
+        align-items: center;
         margin-bottom: 2vh;
     }
 
-
-    .center{
+    .center {
         font-size: 2vh;
     }
-
 
     .footer {
         height: 10%;
@@ -354,12 +291,9 @@ main {
         flex-direction: column;
     }
 
-
     .page_title {
-        grid-column: auto;
         margin-top: 0.5rem;
     }
-
 
     .left,
     .center,
@@ -367,38 +301,31 @@ main {
         width: 70%;
     }
 
-
-    .copyright{
+    .copyright {
         font-size: 2vh;
     }
-
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
-
-       .header {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .header {
         height: 20%;
         width: 100%;
     }
 
-
     .logo {
         height: 14vh;
         width: 20vw;
         margin-bottom: 1rem;
     }
 
-
     .title {
         font-size: 3vh;
     }
 
-
     .user_profile_picture {
-        height: 15;
+        height: 15vh;
         width: 15vw;
     }
-
 
     main {
         height: 70%;
@@ -407,36 +334,31 @@ main {
         align-items: center;
     }
 
-
-    .page{
+    .page {
         display: flex;
         flex-direction: column;
-        place-items: center; 
+        align-items: center;
     }
-    
-    .banner
-    {
+
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
 
-    .left{
+    .left {
         display: flex;
         flex-direction: column;
-        place-items: center; 
+        align-items: center;
         margin-bottom: 2vh;
     }
 
-
-    .center{
+    .center {
         font-size: 2vh;
     }
-
 
     .footer {
         height: 10%;
@@ -444,12 +366,9 @@ main {
         flex-direction: column;
     }
 
-
     .page_title {
-        grid-column: auto;
         margin-top: 0.5rem;
     }
-
 
     .left,
     .center,
@@ -457,56 +376,45 @@ main {
         width: 70%;
     }
 
-
-    .copyright{
+    .copyright {
         font-size: 2vh;
     }
-
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-    
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .header {
         height: 20vh;
     }
-    
 
     .logo {
         height: 15vh;
     }
 
-
     .title {
         font-size: 2em;
     }
 
-
-    main{
+    main {
         height: 80vh;
     }
-
 
     .user_profile_picture {
         height: 9vh;
         width: 8vw;
     }
 
-    .banner
-    {
+    .banner {
         flex-direction: column;
         height: 40vh;
     }
 
-    .navbar_button
-    {
+    .navbar_button {
         margin: 10px;
     }
-
 
     .footer {
         height: 5vh;
     }
-
 
     .page_title {
         font-size: 3vh;
@@ -514,38 +422,32 @@ main {
         margin-top: 0.5vh;
     }
 
-
     .left input[type="text"] {
         padding: 0.75vh;
         margin-bottom: 1vh;
     }
-
 
     input[type="submit"] {
         margin-top: 0.5vh;
         border-radius: 8px;
     }
 
-
     .left h2 {
-        margin-bottom: 1vh; 
-        margin-top: 1vh; 
+        margin-bottom: 1vh;
+        margin-top: 1vh;
     }
-
 
     .center {
         padding: 1.5vh;
     }
 
-
     .right select {
         margin-top: 1vh;
     }
 
-
     .right button {
         margin-top: 0.5vh;
-        margin-bottom: 0.5vh;;
+        margin-bottom: 0.5vh;
         border-radius: 8px;
     }
 }

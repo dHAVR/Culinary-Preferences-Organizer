@@ -1,0 +1,103 @@
+/****
+    Statistics Page Responsive Stylesheet
+    << Screens Not Wider Than 1024px >>
+****/
+
+
+
+/*** 769px - 1024px Wide Screens ***/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .main
+    {
+        height: 150vh;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+    .page_title
+    {
+        font-size: 30px;
+    }
+
+    .statistics
+    {
+        flex-direction: column;
+    }
+}
+
+
+
+/*** 481px - 768px Wide Screens ***/
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .main
+    {
+        height: 130vh;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+    .page_title
+    {
+        font-size: 25px;
+    }
+
+    .statistics
+    {
+        flex-direction: column;
+    }
+}
+
+
+
+/*** 1px - 480px Wide Screens ***/
+
+@media only screen and (max-width: 480px)
+{
+    .main
+    {
+        height: 130vh;
+    }
+
+    .banner
+    {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .navbar_button
+    {
+        margin: 10px;
+    }
+
+    .page_title
+    {
+        font-size: 20px;
+    }
+
+    .statistics
+    {
+        flex-direction: column;
+    }
+}

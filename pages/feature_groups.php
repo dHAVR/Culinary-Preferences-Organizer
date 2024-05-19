@@ -154,7 +154,7 @@
                             </div>
         
                             <div>
-                                <input class = "create_group_button" type = "submit" value = "Create" />
+                                <input class = "button create_group_button" type = "submit" value = "Create" />
                             </div>
         
                         </form>
@@ -172,7 +172,7 @@
                             </div>
 
                             <div>
-                                <input class = "add_person_button" type = "submit" id = "add_person" name = "add_person" value = "Add Person" />
+                                <input class = "button add_person_button" type = "submit" id = "add_person" name = "add_person" value = "Add Person" />
                             </div>
 
                         </form>

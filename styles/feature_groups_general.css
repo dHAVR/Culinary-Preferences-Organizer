@@ -10,15 +10,7 @@
 .main
 {
     /* Sizing */
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 75vh;
-
-    /* Styling */
-    background: #F3BC77;
 }
 
 
@@ -57,17 +49,24 @@
 }
 
 
-.group_name_input
+.group_name_input, .email_address_input
 {
     /* Sizing */
     font-size: 20px;
     height: 30px;
     width: 100px;
-    border-radius: 6px;
-
+    
     /* Styling */
     color: #FFFFFF;
     background-color: #A55233;
+    border-radius: 6px;
+}
+
+
+.email_address_input
+{
+    /* Sizing */
+    width: 260px;
 }
 
 
@@ -78,31 +77,22 @@
 }
 
 
-.create_group_button
+.create_group_button, .add_person_button
 {
     /* Sizing */
     font-size: 20px;
     height: 36px;
     width: 90px;
-    border-radius: 8px;
 
     /* Styling */
-    color: #FFFFFF;
-    background-color: #A55233;
+    border-radius: 8px;
 }
 
 
-.email_address_input
+.add_person_button
 {
     /* Sizing */
-    font-size: 20px;
-    height: 30px;
-    width: 260px;
-    border-radius: 6px;
-
-    /* Styling */
-    color: #FFFFFF;
-    background-color: #A55233;
+    width: 140px;
 }
 
 
@@ -110,18 +100,4 @@
 {
     /* Styling */
     color: #F3BC77;
-}
-
-
-.add_person_button
-{
-    /* Sizing */
-    font-size: 20px;
-    height: 36px;
-    width: 140px;
-    border-radius: 8px;
-
-    /* Styling */
-    color: #FFFFFF;
-    background-color: #A55233;
 }

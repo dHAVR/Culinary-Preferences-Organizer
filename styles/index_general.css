@@ -7,21 +7,6 @@
 
 /*** Main ***/
 
-.main
-{
-    /* Sizing */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100vw;
-    height: 75vh;
-
-    /* Styling */
-    background: #F3BC77;
-}
-
-
 /** Welcome Message **/
 
 .welcome_message
@@ -36,9 +21,9 @@
 }
 
 
-/** Login Button **/
+/** Login Button and Register Button **/
 
-.login_button
+.login_button, .register_button
 {
     /* Sizing */
     width: 200px;
@@ -46,23 +31,5 @@
 
     /* Styling */
     font-size: 30px;
-    color: #FFFFFF;
-    background: #402A23;
-    border-radius: 20px;
-}
-
-
-/** Register Button **/
-
-.register_button
-{
-    /* Sizing */
-    width: 200px;
-    height: 100px;
-
-    /* Styling */
-    font-size: 30px;
-    color: #FFFFFF;
-    background: #402A23;
     border-radius: 20px;
 }

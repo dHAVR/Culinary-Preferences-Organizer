@@ -70,12 +70,12 @@
 
             <!-- Login -->
             <a href = "./pages/authentication_authentication.php">
-                <button class = "login_button">Login</button>
+                <button class = "button login_button">Login</button>
             </a>
             
             <!-- Register -->
             <a href = "./pages/authentication_registration.php">
-                <button class = "register_button">Register</button>
+                <button class = "button register_button">Register</button>
             </a>
 
         </main>

@@ -10,15 +10,7 @@
 .main
 {
     /* Sizing */
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 75vh;
-
-    /* Styling */
-    background: #F3BC77;
 }
 
 
@@ -64,12 +56,9 @@
     font-size: 20px;
     width: 220px;
     height: 40px;
-    border-radius: 10px;
 
     /* Styling */
-    color: #FFFFFF;
-    background: #402A23;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
 

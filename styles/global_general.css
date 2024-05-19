@@ -82,35 +82,31 @@
 
 
 
-/*** Footer ***/
+/*** Main ***/
 
-.footer
+.main
 {
     /* Sizing */
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     width: 100vw;
-    height: 10vh;
+    height: 75vh;
 
     /* Styling */
-    background: #A55233;
+    background: #F3BC77;
 }
 
 
-/** Copyright **/
-
-.copyright
+.button
 {
     /* Styling */
-    font-size: 20px;
     color: #FFFFFF;
+    background: #402A23;
+    cursor: pointer;
 }
 
-
-
-/*** Main ***/
 
 /** Banner **/
 
@@ -213,4 +209,32 @@
 {
     /* Sizing */
     font-size: 48px;
+}
+
+
+
+/*** Footer ***/
+
+.footer
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+
+    /* Styling */
+    background: #A55233;
+}
+
+
+/** Copyright **/
+
+.copyright
+{
+    /* Styling */
+    font-size: 20px;
+    color: #FFFFFF;
 }

@@ -108,7 +108,7 @@
     
                     <!-- Register -->
                     <div class = "submit_container">
-                        <input class = "submit_button" type = "submit" value = "Register" />
+                        <input class = "button submit_button" type = "submit" value = "Register" />
                     </div>
     
                 </form>

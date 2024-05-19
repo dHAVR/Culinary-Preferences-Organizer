@@ -110,12 +110,12 @@
 
                 <!-- See Statistics -->
                 <a href = "./feature_statistics.php">
-                    <button class = "statistics_button">See Statistics</button>
+                    <button class = "button statistics_button">See Statistics</button>
                 </a>
                 
                 <!-- See Shopping Lists -->
                 <a href = "./feature_shopping_lists.php">
-                    <button class = "shopping_lists_button">See Shopping Lists</button>
+                    <button class = "button shopping_lists_button">See Shopping Lists</button>
                 </a>
 
             </section>

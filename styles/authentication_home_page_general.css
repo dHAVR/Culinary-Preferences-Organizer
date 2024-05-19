@@ -9,12 +9,7 @@
 
 .main
 {
-    /* Sizing */
-    width: 100vw;
-    height: 75vh;
-
-    /* Styling */
-    background: #F3BC77;
+    display: block;
 }
 
 
@@ -37,42 +32,22 @@
     /* Sizing */
     margin-left: 10px;
     margin-right: 10px;
+    font-size: 24px;
 
     /* Styling */
-    font-size: 24px;
     text-align: center;
 }
 
 
-/* Statistics Button */
+/* Statistics Button and Shopping Lists Button */
 
-.statistics_button
+.statistics_button, .shopping_lists_button
 {
     /* Sizing */
     width: 330px;
     height: 100px;
+    font-size: 30px;
     
     /* Styling */
     border-radius: 20px;
-    cursor: pointer;
-    font-size: 30px;
-    color: #FFFFFF;
-    background: #402A23;
-}
-
-
-/* Shopping Lists Button */
-
-.shopping_lists_button
-{
-    /* Sizing */
-    width: 330px;
-    height: 100px;
-
-    /* Styling */
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 30px;
-    color: #FFFFFF;
-    background: #402A23;
 }

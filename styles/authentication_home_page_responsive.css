@@ -9,15 +9,13 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
+    /** Main **/
+
     .welcome_message
     {
         font-size: 16px;
     }
 
-    .search_input
-    {
-        width: 200px;
-    }
 
     .statistics_button, .shopping_lists_button
     {
@@ -33,15 +31,13 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
+    /** Main **/
+
     .welcome_message
     {
         font-size: 14px;
     }
 
-    .search_input
-    {
-        width: 150px;
-    }
 
     .statistics_button, .shopping_lists_button
     {
@@ -57,15 +53,13 @@
 
 @media only screen and (max-width: 480px)
 {
+    /** Main **/
+
     .welcome_message
     {
         font-size: 12px;
     }
 
-    .search_input
-    {
-        width: 100px;
-    }
 
     .statistics_button, .shopping_lists_button
     {

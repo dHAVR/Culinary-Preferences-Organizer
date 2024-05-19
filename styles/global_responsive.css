@@ -9,6 +9,8 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
+    /** Header **/
+
     .logo, .user_profile_picture
     {
         width: 13vw;
@@ -21,11 +23,7 @@
     }
 
 
-    .copyright
-    {
-        font-size: 18px;
-    }
-
+    /** Main **/
 
     .banner
     {
@@ -40,9 +38,23 @@
     }
 
 
+    .search_input
+    {
+        width: 200px;
+    }
+
+
     .page_title
     {
         font-size: 30px;
+    }
+
+
+    /** Footer **/
+
+    .copyright
+    {
+        font-size: 18px;
     }
 }
 
@@ -52,6 +64,8 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
+    /** Header **/
+
     .logo, .user_profile_picture
     {
         width: 12vw;
@@ -64,11 +78,7 @@
     }
 
 
-    .copyright
-    {
-        font-size: 15px;
-    }
-
+    /** Main **/
 
     .banner
     {
@@ -83,9 +93,23 @@
     }
 
 
+    .search_input
+    {
+        width: 150px;
+    }
+
+
     .page_title
     {
         font-size: 25px;
+    }
+
+
+    /** Footer **/
+
+    .copyright
+    {
+        font-size: 15px;
     }
 }
 
@@ -95,6 +119,8 @@
 
 @media only screen and (max-width: 480px)
 {
+    /** Header **/
+
     .logo, .user_profile_picture
     {
         width: 12vw;
@@ -107,12 +133,8 @@
     }
 
 
-    .copyright
-    {
-        font-size: 10px;
-    }
+    /** Main **/
 
-    
     .banner
     {
         flex-direction: column;
@@ -126,8 +148,22 @@
     }
 
 
+    .search_input
+    {
+        width: 100px;
+    }
+
+
     .page_title
     {
         font-size: 20px;
+    }
+
+
+    /** Footer **/
+
+    .copyright
+    {
+        font-size: 10px;
     }
 }

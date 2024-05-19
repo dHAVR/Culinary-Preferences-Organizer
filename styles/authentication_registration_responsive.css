@@ -9,10 +9,13 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
+    /** Main **/
+
     .label_text
     {
         font-size: 22px;
     }
+
 
     .input_field
     {
@@ -28,10 +31,13 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
+    /** Main **/
+
     .label_text
     {
         font-size: 20px;
     }
+
 
     .input_field
     {
@@ -47,11 +53,14 @@
 
 @media only screen and (max-width: 480px)
 {
+    /** Main **/
+
     .label_text
     {
         font-size: 18px;
     }
 
+    
     .input_field
     {
         font-size: 14px;

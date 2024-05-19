@@ -9,6 +9,8 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
+    /** Main **/
+
     .welcome_message
     {
         font-size: 16px;
@@ -21,6 +23,8 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
+    /** Main **/
+
     .welcome_message
     {
         font-size: 14px;
@@ -33,6 +37,8 @@
 
 @media only screen and (max-width: 480px)
 {
+    /** Main **/
+    
     .welcome_message
     {
         font-size: 12px;

@@ -9,6 +9,8 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
+    /** Main **/
+
     .main
     {
         height: 150vh;
@@ -27,6 +29,8 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
+    /** Main **/
+
     .main
     {
         height: 130vh;
@@ -45,6 +49,8 @@
 
 @media only screen and (max-width: 480px)
 {
+    /** Main **/
+    
     .main
     {
         height: 130vh;

@@ -22,22 +22,6 @@
 }
 
 
-/** Page Title **/
-
-.page_title_container
-{
-    /* Sizing */
-    height: 10vh;
-}
-
-
-.page_title
-{
-    /* Sizing */
-    font-size: 48px;
-}
-
-
 /** Registration Form **/
 
 .registration_form_container

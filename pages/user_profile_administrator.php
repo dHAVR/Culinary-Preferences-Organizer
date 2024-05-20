@@ -8,22 +8,29 @@
 
    <head>
 
-      <!--Charset-->
-      <meta charset="UTF-8">
+        <!-- Charset -->
+        <meta charset = "UTF-8" />
 
-      <!-- Viewport -->
-      <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+        <!-- Viewport -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
 
-      <!-- Favicon -->
-      <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+        <!-- Favicon -->
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
-      <!--Title-->
-      <title>My Profile</title>
+        <!-- Global General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_general.css">
 
-      <!-- Global General Stylesheet -->
-      <link rel = "stylesheet" href = "../styles/global_general.css">
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_responsive.css">
 
-      <link rel = "stylesheet" href = "../styles/admin_user_page_style.css" />
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_admin_user_page_general.css">
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_admin_user_page_responsive.css">
+
+        <!-- Title -->
+        <title>Culinary Love for You</title>
 
    </head>
 
@@ -49,7 +56,7 @@
 
      </header>
 
-      <main>
+      <main class = "main">
 
          <!-- Banner -->
          <nav class = "banner">
@@ -90,35 +97,34 @@
 
          </nav>
 
-         <section class="main_section">
 
             <h2 class = "page_title">User Profile</h2>
 
+            <section class="main_section">
+
             <section class = "left">
     
-             <h4>Account Type: Administrator</h4>
+               <h4>Account Type: Administrator</h4>
     
-             <section class="flex-container">
+         
+                   <form action="#" method="post">
+                     <section>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                     </section>
+                     
+                     <section>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                     </section>
+                  
+                  </form>
     
-             <form action="#" method="post">
-                <section>
-                   <label for="username">Username:</label>
-                   <input type="text" id="username" name="username">
-                </section>
-                
-                <section>
-                   <label for="password">Password:</label>
-                   <input type="password" id="password" name="password">
-                </section>
-             
-            </form>
+                   <input type="submit" value="Update Credits">
     
-            <input type="submit" value="Update Credits">
-    
-             </section>
-    
-            <button class = "action_button">Delete Account</button>
-            <button class = "action_button">Logout</button>
+
+               <button class = "action_button">Delete Account</button>
+               <button class = "action_button">Logout</button>
     
             </section>
            
@@ -136,8 +142,7 @@
 
          </section>
 
-        
-      </main>
+        </main>
 
       <footer class = "footer">
 

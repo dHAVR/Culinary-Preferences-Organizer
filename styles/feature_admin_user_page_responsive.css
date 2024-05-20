@@ -1,0 +1,38 @@
+
+@media screen and (max-width: 480px) {
+
+
+    .main_section input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    .action_button {
+        font-size: 3vw;
+    }
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+
+    .main_section input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    .action_button {
+        font-size: 2vw;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+    .main_section input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    .action_button {
+        font-size: 2vw;
+    }
+
+}

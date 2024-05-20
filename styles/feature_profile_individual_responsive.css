@@ -1,0 +1,89 @@
+@media screen and (max-width: 480px) {
+
+    .center {
+        margin-left: 2vw;
+    }
+
+    .grid-container {
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+
+    .left_button,
+    .create_list_buttom {
+        width: 90%;
+        margin: 2vh auto;
+    }
+
+    .left img {
+        height: 40vw;
+        width: 40vw;
+        margin: 5vw auto;
+    }
+
+    .left,
+    .center,
+    .right {
+        width: 90%;
+        padding: 0;
+    }
+
+    .center input[type="submit"],
+    .right input[type="submit"] {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+   
+    .center {
+        margin-left: 2vw;
+    }
+
+
+    .left_button,
+    .create_list_buttom {
+        width: 90%;
+        margin: 2vh auto;
+    }
+
+    .left img {
+        height: 40vw;
+        width: 40vw;
+        margin: 5vw auto;
+    }
+
+    .left,
+    .center,
+    .right {
+        width: 90%;
+        padding: 0;
+    }
+
+    .grid-container input[type="text"],
+    input[type="password"] {
+        width: 90%;
+    }
+
+    .center input[type="submit"],
+    .right input[type="submit"] {
+        width: 93%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .left_button,
+    .create_list_buttom {
+        width: 90%;
+        margin: 2vh auto;
+    }
+
+    .left img {
+        height: 13vw;
+        width: 13vw;
+        margin: 5vw auto;
+    }
+
+}

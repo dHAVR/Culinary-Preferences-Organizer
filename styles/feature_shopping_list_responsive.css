@@ -1,0 +1,86 @@
+@media screen and (max-width: 480px) {
+
+    .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2vh;
+    }
+
+    .center {
+        font-size: 2vh;
+    }
+
+
+    .left,
+    .center,
+    .right {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2vh;
+    }
+
+    .center {
+        font-size: 2vh;
+    }
+
+
+    .left,
+    .center,
+    .right {
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .left input[type="text"] {
+        padding: 0.75vh;
+        margin-bottom: 1vh;
+    }
+
+    input[type="submit"] {
+        margin-top: 0.5vh;
+        border-radius: 8px;
+    }
+
+    .left h2 {
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+
+    .center {
+        padding: 1.5vh;
+    }
+
+    .right select {
+        margin-top: 1vh;
+    }
+
+    .right button {
+        margin-top: 0.5vh;
+        margin-bottom: 0.5vh;
+        border-radius: 8px;
+    }
+}

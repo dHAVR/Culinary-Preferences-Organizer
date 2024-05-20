@@ -1,0 +1,100 @@
+
+@media screen and (max-width: 480px) {
+
+
+    .food-info {
+        flex-direction: column;
+    }
+
+    .food-info img {
+        height: 9rem;
+        width: 9rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="text"], input[type="password"], input[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+
+    .login_title {
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+ 
+    .food-info {
+        flex-direction: column;
+    }
+
+    .food-info img {
+        height: 9rem;
+        width: 9rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="text"], input[type="password"], input[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+
+    .login_title {
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+    .food-info {
+        flex-direction: column;
+    }
+
+    .food-info img {
+        height: 9rem;
+        width: 9rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    input[type="text"], input[type="password"], input[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+
+    .login_title {
+        font-size: 5vw;
+    }
+
+}

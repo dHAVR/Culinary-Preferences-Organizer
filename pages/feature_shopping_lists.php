@@ -9,25 +9,31 @@
 
    <head>
 
-      <!--Charset-->
-      <meta charset="UTF-8">
-      
-      <!--Title-->
-      <title>Shopping Lists</title>
+           <!-- Charset -->
+        <meta charset = "UTF-8" />
 
-      <!-- Viewport -->
-      <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+        <!-- Viewport -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
 
-      <!-- Favicon -->
-      <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+        <!-- Favicon -->
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
-      <!-- Global General Stylesheet -->
-      <link rel = "stylesheet" href = "../styles/global_general.css">
-      
-      <link rel = "stylesheet" href = "../styles/shopping_list_style.css" />
+        <!-- Global General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_general.css">
 
-   </head>
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_responsive.css">
 
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_shopping_list_general.css">
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_shopping_list_style_responsive.css">
+
+        <!-- Title -->
+        <title>Culinary Love for You</title>
+
+    <head>
 
    <body>
     
@@ -51,7 +57,7 @@
      </header> 
 
 
-      <main>
+      <main class = "main">
 
          <!-- Banner -->
          <nav class = "banner">
@@ -127,7 +133,7 @@
              <section class="right">
                 <button>Export to PDF</button>
                 <p>List of groups:</p>
-                <select>
+                <select class="select_group">
                    <option value="group1">Family</option>
                    <option value="group2">Friends</option>
                    <option value="group3">School</option>

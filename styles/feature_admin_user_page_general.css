@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .main_section {
     display: flex;
     flex-direction: row;

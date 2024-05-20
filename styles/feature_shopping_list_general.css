@@ -3,12 +3,21 @@ body {
     overflow-x: hidden;
 }
 
+.main
+{
+display: block;
+}
+
+.page_title_container{
+    text-align: center;
+}
+
 .page {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5.3vh;
+    
 }
 
 

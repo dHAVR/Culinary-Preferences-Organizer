@@ -100,8 +100,10 @@
 
          <div class="article">
 
-              <h1 class = "food_information_title">Food Information</h2>
-
+         
+         <div class = "page_title_container">
+              <h1>Food Information</h2>
+         </div>
               <div class="content">
 
                     <div class="right">
@@ -122,7 +124,6 @@
                             <li>butter</li>
                             <li>cacao</li>
                             <li>sugar</li>
-                            <li>milk</li>
 
                         </ul>
 

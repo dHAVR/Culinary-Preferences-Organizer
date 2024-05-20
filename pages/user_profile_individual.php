@@ -95,8 +95,9 @@
             </a>
 
          </nav>
-
+         <div class = "page_title_container">
              <h1 class = "page_title">User Profile</h1>
+         </div>
 
              <div class ="content">
             <section class="left">

@@ -98,7 +98,9 @@
 
          </nav>
 
-         <h1 class = "page_title">Shopping List</h1>
+         <div class = "page_title_container">
+                <h1 class = "page_title">Shopping list</h1>
+            </div>
 
          <section class="page">
 

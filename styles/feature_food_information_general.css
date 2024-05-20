@@ -9,6 +9,15 @@
 
 }
 
+.main
+{
+display: block;
+}
+
+.page_title_container{
+    text-align: center;
+}
+
 .ingredients{
     margin-bottom: 1vh;
 }
@@ -36,7 +45,7 @@
     width: 12.5vw;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 1.7vh; 
+    margin-top: 1vh; 
     margin-right: 2.5vw; 
     margin-left: 1vw; 
 }

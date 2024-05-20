@@ -7,22 +7,30 @@
 <html>
 
     <head>
-
-        <meta charset="UTF-8">
+        
+            <!-- Charset -->
+        <meta charset = "UTF-8" />
 
         <!-- Viewport -->
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
 
         <!-- Favicon -->
-        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" /> 
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
         <!-- Global General Stylesheet -->
         <link rel = "stylesheet" href = "../styles/global_general.css">
 
-        <!--Style-->
-        <link rel = "stylesheet" href = "../styles/food_information_style.css" />
-                
-        <title>Food Information</title>
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_responsive.css">
+
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_food_information_general.css">
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_food_information_responsive.css">
+
+        <!-- Title -->
+        <title>Culinary Love for You</title>
 
     </head>
 
@@ -48,7 +56,7 @@
    
         </header>
         
-        <main>
+        <main class = "main">
 
             <!-- Banner -->
             <nav class = "banner">
@@ -89,15 +97,41 @@
 
             </nav>
 
-            <h1>Food Information</h2>
 
-            <article>
+         <div class="article">
 
-                <h2>Kyiv Cake</h2>
+              <h1 class = "food_information_title">Food Information</h2>
+
+              <div class="content">
+
+                    <div class="right">
+
+                        <h2>Kyiv Cake</h2>
+                    
+                        <img src="../images/kyiv_cake.png" alt="Picture of the dish">
+                        
+                   <div class="ingredients">
+
+                       <h3>Ingredients:</h3>
+
+                        <ul>
+                            <li>Eggs</li>
+                            <li>sugger powder</li>
+                            <li>hazelnuts</li>
+                            <li>flour</li>
+                            <li>butter</li>
+                            <li>cacao</li>
+                            <li>sugar</li>
+                            <li>milk</li>
+
+                        </ul>
+
+                    </div>
+
+                    </div>
+                    
 
                 <div class="food-info">
-
-                    <img src="../images/kyiv_cake.png" alt="Picture of the dish">
 
                     <div class="details">
                         <p ><strong>Origin: </strong>&nbsp;Ukraine</p>
@@ -118,23 +152,7 @@
 
                 </div>
 
-                <div class="ingredients">
-
-                    <h3>Ingredients:</h3>
-
-                    <ul>
-                        <li>Eggs</li>
-                        <li>sugger powder</li>
-                        <li>hazelnuts</li>
-                        <li>flour</li>
-                        <li>butter</li>
-                        <li>sugger</li>
-                        <li>milk</li>
-                        <li>cacao</li>
-
-                    </ul>
-
-                </div>
+            </div>
 
             </article>
 

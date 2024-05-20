@@ -9,23 +9,29 @@
 
    <head>
 
-      <!--Charset-->
-      <meta charset="UTF-8">
+        <!-- Charset -->
+        <meta charset = "UTF-8" />
 
-      <!-- Viewport -->
-      <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+        <!-- Viewport -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
 
-      <!-- Favicon -->
-      <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+        <!-- Favicon -->
+        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
-       <!-- Global General Stylesheet -->
-       <link rel = "stylesheet" href = "../styles/global_general.css">
+        <!-- Global General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_general.css">
 
-      <!--Style-->
-      <link rel = "stylesheet" href = "../styles/authentication_style.css" />
-      
-      <!--Title-->
-      <title>Authentication</title>
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_responsive.css">
+
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/authentication_general.css" />
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/authentication_responsive.css">
+
+        <!-- Title -->
+        <title>Culinary Love for You</title>
 
    </head>
 
@@ -53,20 +59,20 @@
 
      </header>
 
-      <main>
-         
-             <p class = "login_title">Log in</p>
-         <form action="./user_profile_individual.php" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <input type="submit" value="Login">
-         </form>
+        <main class="main">
+            <div class="login-container">
+                    <p class="login_title">Log in</p>
+                    <form action="./user_profile_individual.php" method="post">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                        <input type="submit" value="Login">
+                    </form>
+                    <a href="./user_profile_administrator.php">Go to admin account</a>
+             </div>
+        </main>
 
-         <a href="./user_profile_administrator.php">Go to admin accound</a>
-
-      </main>
       <footer class = "footer">
 
             <!-- Copyright -->

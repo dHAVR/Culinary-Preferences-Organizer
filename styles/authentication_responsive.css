@@ -1,0 +1,44 @@
+
+/* Media Query for screen widths >= 480px */
+@media screen and (max-width: 480px) {
+  
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+    .login_title {
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+    .login_title {
+        font-size: 3vw;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 1.7vw;
+    }
+
+    .login_title {
+        font-size: 3vw;
+    }
+
+}

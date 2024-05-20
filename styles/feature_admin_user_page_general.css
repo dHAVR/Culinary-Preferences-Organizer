@@ -1,0 +1,67 @@
+
+body {
+    overflow-x: hidden;
+}
+
+.main_section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 3vh;
+}
+
+
+.left input[type="text"],
+input[type="password"] {
+
+    width: 100%;
+    border: 0.1vw solid #ccc;
+    border-radius: 1vw;
+    margin-bottom: 2vh;
+    padding: 0.5vh 0.5vw;
+}
+
+.left input[type="submit"] {
+
+    width: 100%;
+    background-color: #402a23;
+    border: 0.5vw solid #402a23;
+    font-weight: bold;
+    color: white;
+    border-radius: 1vw;
+}
+
+.action_button {
+    width: 100%;
+    background-color: #402a23;
+    border: 0.5vw solid #402a23;
+    font-weight: bold;
+    color: white;
+    padding: 0.5vh 0.5vw;
+    border-radius: 1vw;
+}
+
+#title_list_of_users {
+    margin-bottom: 1vh;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: 70%;
+}
+
+.left section,
+button {
+    margin-top: 1.4vh;
+}
+
+.right {
+    width: 100%;
+    margin-left: 4vw;
+}
+
+

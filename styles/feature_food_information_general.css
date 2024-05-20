@@ -1,0 +1,44 @@
+/* General Styles */
+
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.ingredients{
+    margin-bottom: 1vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food-info {
+    display: flex;
+    align-items: center;
+}
+
+
+.right img {
+    height: 20vh; 
+    width: 12.5vw;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1.7vh; 
+    margin-right: 2.5vw; 
+    margin-left: 1vw; 
+}
+
+

@@ -6,8 +6,8 @@
    
    <head>
 
-      <!--Charset-->
-      <meta charset="UTF-8">
+           <!-- Charset -->
+        <meta charset = "UTF-8" />
 
         <!-- Viewport -->
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
@@ -15,14 +15,20 @@
         <!-- Favicon -->
         <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
 
-        <!--Title-->
-        <title>My Profile</title>
-
         <!-- Global General Stylesheet -->
         <link rel = "stylesheet" href = "../styles/global_general.css">
 
-        <!--Style-->
-        <link rel = "stylesheet" href = "../styles/profile_individual_style.css" />
+        <!-- Global Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/global_responsive.css">
+
+        <!-- Specific General Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_profile_individual_general.css">
+
+        <!-- Specific Responsive Stylesheet -->
+        <link rel = "stylesheet" href = "../styles/feature_profile_individual_responsive.css">
+
+        <!-- Title -->
+        <title>Culinary Love for You</title>
       
    </head>
 
@@ -49,7 +55,7 @@
      </header>
 
 
-      <main>
+      <main class = "main">
 
          <!-- Banner -->
          <nav class = "banner">
@@ -92,6 +98,7 @@
 
              <h1 class = "page_title">User Profile</h1>
 
+             <div class ="content">
             <section class="left">
 
                <h4>Type of Account: Individual</h4>
@@ -114,7 +121,6 @@
 
             <section class="center">
                   <h3>Additional information about you:</h3>
-               <section class="grid-container">
                   
                  <form action = "#" method = "POST">
 
@@ -127,13 +133,10 @@
                        <input type = "submit" value = "Update Profile" />
                    
                   </form>
-
-               </section>
             </section>
 
 
             <section class="right">
-               <section class="grid-container">
          
                   <h2 >Allergies:</h2>
 
@@ -146,10 +149,6 @@
                       <input type = "submit" value = "Add Allergy" />
 
                   </form>
-                  
-               </section>
-
-               <section class="grid-container">
 
                   <h2>Culinary Preferences:</h2>
 
@@ -163,10 +162,11 @@
 
                   </form>
 
-               </section>
             
             </section>
 
+
+             </div>
 
       </main>
 

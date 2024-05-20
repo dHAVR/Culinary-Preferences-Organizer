@@ -71,7 +71,7 @@
             <!-- Registration Form -->
             <div class = "registration_form_container">
 
-                <form class = "registration_form" action = "./user_profile_individual.php" method = "GET">
+                <form class = "registration_form" action = "../services/authentication_registration_service.php" method = "GET">
 
                     <!-- First Name -->
                     <div class = "first_name_container">
@@ -95,8 +95,8 @@
                     <div class = "account_type_container">
                         <label class = "label_text" for = "account_type">Account Type:</label>
                         <select class = "input_field" id = "account_type" name = "account_type">
-                            <option value = "individual_account_type">Individual</option>
-                            <option value = "administrator_account_type">Administrator</option>
+                            <option class = "option" value = "individual_account_type">Individual</option>
+                            <option class = "option" value = "administrator_account_type">Administrator</option>
                         </select>
                     </div>
 

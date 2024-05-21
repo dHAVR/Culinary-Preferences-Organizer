@@ -3,6 +3,14 @@ body {
     overflow-x: hidden;
 }
 
+.main{
+    display: block;
+}
+
+.page_title_container{
+    text-align: center;
+}
+
 
 .main_section {
     display: flex;

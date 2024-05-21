@@ -1,6 +1,7 @@
 /****
-    Global General Stylesheet
-    << Screens Wider Than 1024px >>
+    Global
+    General Stylesheet
+    For Screens Wider Than 1024px
 ****/
 
 
@@ -131,11 +132,11 @@
     font-size: 20px;
     width: 170px;
     height: 40px;
-    border-radius: 10px;
 
     /* Styling */
     color: #1D1716;
     background: #F3BC77;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -168,10 +169,10 @@
     text-indent: 8px;
     width: 250px;
     height: 30px;
-    border-radius: 8px;
-
+    
     /* Styling */
     background-color: #F3BC77;
+    border-radius: 8px;
 }
 
 
@@ -188,10 +189,10 @@
     font-size: 18px;
     width: 90px;
     height: 34px;
-    border-radius: 8px;
-
+    
     /* Styling */
     background-color: #F3BC77;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -209,6 +210,7 @@
 {
     /* Sizing */
     font-size: 48px;
+    padding-top: 20px;
 }
 
 
@@ -234,7 +236,9 @@
 
 .copyright
 {
-    /* Styling */
+    /* Sizing */
     font-size: 20px;
+
+    /* Styling */
     color: #FFFFFF;
 }

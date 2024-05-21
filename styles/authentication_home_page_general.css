@@ -1,6 +1,7 @@
 /****
-    Home Page for Authenticated Users General Stylesheet
-    << Screens Wider Than 1024px >>
+    Home Page for Authenticated Users
+    General Stylesheet
+    Screens Wider Than 1024px
 ****/
 
 
@@ -9,6 +10,7 @@
 
 .main
 {
+    /* Sizing */
     display: block;
 }
 
@@ -25,7 +27,7 @@
 }
 
 
-/* Welcome Message */
+/** Welcome Message **/
 
 .welcome_message
 {
@@ -33,20 +35,18 @@
     margin-left: 10px;
     margin-right: 10px;
     font-size: 24px;
-
-    /* Styling */
     text-align: center;
 }
 
 
-/* Statistics Button and Shopping Lists Button */
+/** Options **/
 
-.statistics_button, .shopping_lists_button
+.option
 {
     /* Sizing */
-    width: 330px;
-    height: 100px;
-    font-size: 30px;
+    width: 302px;
+    height: 84px;
+    font-size: 28px;
     
     /* Styling */
     border-radius: 20px;

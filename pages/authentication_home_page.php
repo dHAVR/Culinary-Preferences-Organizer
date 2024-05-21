@@ -2,6 +2,8 @@
     Home Page for Authenticated Users
 -->
 
+
+
 <!DOCTYPE html>
 
 
@@ -108,14 +110,19 @@
                 <!-- Welcome Message -->
                 <p class = "welcome_message">Hello, Roman! What would you like to do today?</p>
 
+                <!-- See Groups -->
+                <a href = "./feature_groups.php">
+                    <button class = "button option">See Groups</button>
+                </a>
+
                 <!-- See Statistics -->
                 <a href = "./feature_statistics.php">
-                    <button class = "button statistics_button">See Statistics</button>
+                    <button class = "button option">See Statistics</button>
                 </a>
                 
                 <!-- See Shopping Lists -->
                 <a href = "./feature_shopping_lists.php">
-                    <button class = "button shopping_lists_button">See Shopping Lists</button>
+                    <button class = "button option">See Shopping Lists</button>
                 </a>
 
             </section>

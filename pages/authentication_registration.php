@@ -1,6 +1,9 @@
 <!--
     Registration Page
+    Page Structure
 -->
+
+
 
 <!DOCTYPE html>
 
@@ -32,7 +35,7 @@
         <link rel = "stylesheet" href = "../styles/authentication_registration_responsive.css">
 
         <!-- Title -->
-        <title>Registration</title>
+        <title>Register</title>
 
     </head>
 
@@ -88,13 +91,13 @@
                     <!-- Username -->
                     <div class = "username_container">
                         <label class = "label_text" for = "username">Username:</label>
-                        <input class = "input_field" type = "text" id = "username" name = "username" placeholder = "romantudor" />
+                        <input class = "input_field" type = "text" id = "username" name = "username" placeholder = "tudorroman" />
                     </div>
     
                     <!-- Account Type -->
                     <div class = "account_type_container">
                         <label class = "label_text" for = "account_type">Account Type:</label>
-                        <select class = "input_field" id = "account_type" name = "account_type">
+                        <select class = "input_field select_input" id = "account_type" name = "account_type">
                             <option class = "option" value = "individual_account_type">Individual</option>
                             <option class = "option" value = "administrator_account_type">Administrator</option>
                         </select>

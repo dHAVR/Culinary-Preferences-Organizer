@@ -1,6 +1,7 @@
 /****
-    Registration Page General Stylesheet
-    << Screens Wider Than 1024px >>
+    Registration Page
+    General Stylesheet
+    For Screens Wider Than 1024px
 ****/
 
 
@@ -44,6 +45,9 @@
     /* Styling */
     background: #A55233;
     color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
     border-radius: 6px;
 }
 
@@ -55,8 +59,20 @@
 }
 
 
+.select_input
+{
+    /* Sizing */
+    width: 168px;
+    height: 34px;
+    
+    /* Styling */
+    cursor: pointer;
+}
+
+
 .option
 {
+    /* Styling */
     color: #FFFFFF;
 }
 

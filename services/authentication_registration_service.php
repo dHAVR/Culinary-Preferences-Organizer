@@ -2,6 +2,8 @@
     Registration Service
 -->
 
+
+
 <?php
 
     # Connect to the database.
@@ -45,39 +47,33 @@
 
 	if ($sql_result_individual->num_rows == 0 && $sql_result_administrator->num_rows == 0)
 	{
+        $sql_query_max_id = "SELECT MAX(id) AS 'max_id' FROM ";
+        $sql_query_insert = "INSERT INTO ";
+        $profile_redirect = "../pages/user_profile_";
+
         if ($account_type == "individual_account_type")
         {
-            $sql_query_max_id = "SELECT MAX(id) AS 'max_id' FROM individual_users;";
-            $sql_result_max_id = $mysql->query($sql_query_max_id);
-            $sql_result_max_id = $sql_result_max_id->fetch_assoc();
-            $sql_result_max_id = $sql_result_max_id['max_id'];
-
-            $id = $sql_result_max_id + 1;
-
-            $sql_query_insert = "INSERT INTO individual_users (id, first_name, last_name, username, password)";
-            $sql_query_insert = $sql_query_insert . " VALUES (" . $id . ", '" . $first_name . "', '";
-            $sql_query_insert = $sql_query_insert . $last_name . "', '" . $username . "', '";
-            $sql_query_insert = $sql_query_insert . $password . "');";
-
-            $profile_redirect = "../pages/user_profile_individual.php";
+            $sql_query_max_id .= "individual";
+            $sql_query_insert .= "individual";
+            $profile_redirect .= "individual";
         }
         else
         {
-            $sql_query_max_id = "SELECT MAX(id) AS max_id FROM administrator_users;";
-            $sql_result_max_id = $mysql->query($sql_query_max_id);
-            $sql_result_max_id = $sql_result_max_id->fetch_assoc();
-            $sql_result_max_id = $sql_result_max_id['max_id'];
-            
-            $id = $sql_result_max_id + 1;
-
-            $sql_query_insert = "INSERT INTO administrator_users (id, first_name, last_name, username, password)";
-            $sql_query_insert = $sql_query_insert . " VALUES (" . $id . ", '" . $first_name . "', '";
-            $sql_query_insert = $sql_query_insert . $last_name . "', '" . $username . "', '";
-            $sql_query_insert = $sql_query_insert . $password . "');";
-
-            $profile_redirect = "../pages/user_profile_administrator.php";
+            $sql_query_max_id .= "administrator";
+            $sql_query_insert .= "administrator";
+            $profile_redirect .= "administrator";
         }
-        
+
+        $sql_query_max_id .= "_users;";
+        $sql_result_max_id = $mysql->query($sql_query_max_id)->fetch_assoc()['max_id'];
+        $id = $sql_result_max_id + 1;
+
+        $sql_query_insert .= "_users (id, first_name, last_name, username, password)";
+        $sql_query_insert .= " VALUES (" . $id . ", '" . $first_name . "', '";
+        $sql_query_insert .= $last_name . "', '" . $username . "', '" . $password . "');";
+
+        $profile_redirect .= ".php";
+
 
         # Add the user to the database.
 
@@ -94,10 +90,10 @@
 
     else
     {
-        # Send the user to the registration page again.
+        # Send the user to the login page.
 
-        $register_redirect = "../pages/authentication_registration.php";
-        header("Location: $register_redirect");
+        $login_redirect = "../pages/authentication_authentication.php";
+        header("Location: $login_redirect");
     }
 
 	$mysql->close();

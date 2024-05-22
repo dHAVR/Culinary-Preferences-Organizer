@@ -64,7 +64,7 @@
                 unset($_SESSION['login_error']);
             }
             ?>
-            <form action="../services/authentication_login_service.php" method="post">
+            <form action="../services/authentication_authentication_service.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password">Password:</label>

@@ -129,7 +129,7 @@
 
             <h2>Allergies:</h2>
 
-            <form action="../services/add_allergy.php" method="POST">
+            <form action="../services/add_allergy_service.php" method="POST">
 
             <section>
            <input type="text" name="new_allergy" placeholder="Allergy 1">
@@ -141,10 +141,10 @@
 
             <h2>Culinary Preferences:</h2>
 
-            <form action="#" method="POST">
+            <form  action="../services/add_preference_service.php" method="POST">
 
                 <section>
-                    <input type="text" placeholder="Preference 1">
+                    <input type="text" name="new_preference" placeholder="Preference 1">
                 </section>
 
                 <input type="submit" value="Add Preference" />

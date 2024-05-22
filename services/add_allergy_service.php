@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 $conn = new mysqli
 (
     'localhost',
@@ -16,11 +14,30 @@ if (mysqli_connect_errno())
 }
 
 
-// Get the user ID and the new allergy from the POST request
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error_message'] = "Please login.";
+    header("Location: ../pages/authentication_authentication.php");
+    exit();
+}
+
 $user_id = $_SESSION['user_id']; 
 $new_allergy = $_POST['new_allergy'];
 
-// Fetch the existing allergies from the database
+if($new_allergy==""){
+    $_SESSION['error_message'] = "Enter an allergy";
+    header("Location: ../pages/user_profile_individual.php");
+    exit();
+}
+
+
+
+if (empty($new_allergy)) {
+    $_SESSION['error_message'] = "Enter allergies.";
+    header("Location: ../pages/user_profile_individual.php");
+    exit();
+}
+
+
 $sql = "SELECT allergies FROM individual_users WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
@@ -31,27 +48,27 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $existing_allergies = $row['allergies'];
     
-    // Append the new allergy to the existing allergies
+
     if (empty($existing_allergies)) {
         $updated_allergies = $new_allergy;
     } else {
-        $updated_allergies = $existing_allergies . ',' . $new_allergy;
+        $updated_allergies = $existing_allergies . ', ' . $new_allergy;
     }
     
-    // Update the allergies in the database
+ 
     $sql = "UPDATE individual_users SET allergies = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("si", $updated_allergies, $user_id);
     if ($stmt->execute()) {
-        echo "Allergy added successfully!";
+        $_SESSION['success_message'] = "Allergy successfully added!";
     } else {
-        echo "Error updating record: " . $conn->error;
+        $_SESSION['error_message'] = "Record update error: " . $conn->error;
     }
 } else {
-    echo "No user found with the specified ID.";
+    $_SESSION['error_message'] = "The user with the specified ID was not found.";
 }
 
 $conn->close();
-
-
+header("Location: ../pages/user_profile_individual.php");
+exit();
 ?>

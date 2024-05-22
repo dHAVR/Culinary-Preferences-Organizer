@@ -1,6 +1,9 @@
 <!--
     Groups Page
+    Page Structure
 -->
+
+
 
 <!DOCTYPE html>
 

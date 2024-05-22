@@ -1,0 +1,40 @@
+/****
+    Search Results Page
+    General Stylesheet
+    For Screens Wider Than 1024px
+****/
+
+
+
+/*** Main ***/
+
+.main
+{
+    /* Sizing */
+    justify-content: center;
+}
+
+
+.search_results_container
+{
+    /* Sizing */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+
+.search_results_list
+{
+    font-size: 30px;
+    line-height: 2.0;
+}
+
+
+.search_result_link
+{
+    text-decoration: none;
+}

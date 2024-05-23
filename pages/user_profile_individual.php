@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -93,21 +97,18 @@
 
     <div class="content">
         <section class="left">
-
-            <h4>Type of Account: Individual</h4>
-
+        <h4>Type of Account: Individual</h4>
             <img src="../images/profile_picture_example.jpg" alt="User Photo">
             <p class="user_info"><strong>Name:</strong> Roman Tudor</p>
             <p class="user_info"><strong>Username:</strong> romantudor</p>
             <p class="user_info"><strong>Nationality:</strong> Romanian</p>
             <p class="user_info"><strong>Age:</strong> 25</p>
-
+   
             <button class="left_button">Change the profile picture</button>
             <button class="left_button">Delete Account</button>
             <a href="../index.html">
                 <button class="left_button">Logout</button>
             </a>
-
 
         </section>
 
@@ -126,32 +127,37 @@
         </section>
 
         <section class="right">
+            <?php
+            if (isset($_SESSION['error_message'])) {
+                echo '<p class="error_message">' . $_SESSION['error_message'] . '</p>';
+                unset($_SESSION['error_message']);
+            }
+            if (isset($_SESSION['success_message'])) {
+                echo '<p class="success_message">' . $_SESSION['success_message'] . '</p>';
+                unset($_SESSION['success_message']);
+            }
+            ?>
 
             <h2>Allergies:</h2>
-
-            <form action="../services/add_allergy_service.php" method="POST">
-
-            <section>
-           <input type="text" name="new_allergy" placeholder="Allergy 1">
-           </section>
-
-           <input type="submit" value="Add Allergy" />
-
-           </form>
+            <form action="../services/allergy_managing_service.php" method="POST">
+                <section>
+                    <input type="text" name="new_allergy" placeholder="Allergy 1">
+                </section>
+                <input type="submit" name="action" value="Add Allergy" />
+                <input type="submit" name="action" value="Delete Allergy" />
+            </form>
 
             <h2>Culinary Preferences:</h2>
-
-            <form  action="../services/add_preference_service.php" method="POST">
-
+            <form action="../services/preference_managing_service.php" method="POST">
                 <section>
                     <input type="text" name="new_preference" placeholder="Preference 1">
                 </section>
-
-                <input type="submit" value="Add Preference" />
-
+                <input type="submit" name="action" value="Add Preference" class="add">
+                <input type="submit" name="action" value="Delete Preference" class="delete">
             </form>
 
         </section>
+
 
     </div>
 

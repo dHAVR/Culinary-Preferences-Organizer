@@ -49,19 +49,16 @@
 	{
         $sql_query_max_id = "SELECT MAX(id) AS 'max_id' FROM ";
         $sql_query_insert = "INSERT INTO ";
-        $profile_redirect = "../pages/user_profile_";
 
         if ($account_type == "individual_account_type")
         {
             $sql_query_max_id .= "individual";
             $sql_query_insert .= "individual";
-            $profile_redirect .= "individual";
         }
         else
         {
             $sql_query_max_id .= "administrator";
             $sql_query_insert .= "administrator";
-            $profile_redirect .= "administrator";
         }
 
         $sql_query_max_id .= "_users;";
@@ -72,7 +69,7 @@
         $sql_query_insert .= " VALUES (" . $id . ", '" . $first_name . "', '";
         $sql_query_insert .= $last_name . "', '" . $username . "', '" . $password . "');";
 
-        $profile_redirect .= ".php";
+        $home_redirect = "../pages/authentication_home_page.php";
 
 
         # Add the user to the database.
@@ -80,9 +77,9 @@
         $sql_result_insert = $mysql->query($sql_query_insert);
 
 
-        # Send the user to his profile page.
+        # Send the user to home page.
 
-        header("Location: $profile_redirect");
+        header("Location: $home_redirect");
 	}
 
 

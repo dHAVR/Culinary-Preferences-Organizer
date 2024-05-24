@@ -46,17 +46,17 @@
         <header class = "header">
             
             <!-- Logo -->
-            <a href = "./authentication_home_page.php">
+            <a href = "../index.php">
                 <img class = "logo" src = "../images/logo.png" alt = "Logo." />
             </a>
 
             <!-- Title -->
-            <a class = "title_link" href = "./authentication_home_page.php">
+            <a class = "title_link" href = "../index.php">
                 <h1 class = "title">Culinary Love for You</h1>
             </a>
 
             <!-- User Profile Picture -->
-            <a href = "./user_profile_individual.php">
+            <a href = "../index.php">
                 <img class = "user_profile_picture" src = "../images/profile_picture_anonymous.png" alt = "User profile picture." />
             </a>
 

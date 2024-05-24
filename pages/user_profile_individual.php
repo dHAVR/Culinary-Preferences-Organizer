@@ -1,5 +1,5 @@
 <?php
-session_start();
+include "../services/get_user_info_service.php"
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ session_start();
 
     <!-- User Profile Picture -->
     <a href="./user_profile_individual.php">
-        <img class="user_profile_picture" src="../images/profile_picture_example.jpg" alt="User profile picture." />
+        <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
     </a>
 
 </header>
@@ -97,34 +97,55 @@ session_start();
 
     <div class="content">
         <section class="left">
-        <h4>Type of Account: Individual</h4>
-            <img src="../images/profile_picture_example.jpg" alt="User Photo">
-            <p class="user_info"><strong>Name:</strong> Roman Tudor</p>
-            <p class="user_info"><strong>Username:</strong> romantudor</p>
-            <p class="user_info"><strong>Nationality:</strong> Romanian</p>
-            <p class="user_info"><strong>Age:</strong> 25</p>
-   
-            <button class="left_button">Change the profile picture</button>
-            <button class="left_button">Delete Account</button>
+            <h4>Type of Account: Individual</h4>
+            <div class="user_info">
+                <div>
+                    <img src="data:image/png;base64,<?= $profile_photograph ?>" alt="User Photo">
+                    <p class="user_info"><strong>Nationality:</strong> <?= htmlspecialchars($user['nationality']) ?></p>
+                    <p class="user_info"><strong>Age:</strong> <?= htmlspecialchars($user['age']) ?></p>
+                    <p class="user_info"><strong>Allergies:</strong> <?= htmlspecialchars($user['allergies']) ?></p>
+                    <p class="user_info"><strong>Preferences:</strong> <?= htmlspecialchars($user['preferred_cuisines']) ?></p>
+
+                </div>
+                <div>
+                    <p class="user_info"><strong>First name:</strong> <?= htmlspecialchars($user['first_name']) ?></p>
+                    <p class="user_info"><strong>Last name:</strong> <?= htmlspecialchars($user['last_name']) ?></p>
+                    <p class="user_info"><strong>Email:</strong> <?= htmlspecialchars($user['email_address']) ?></p>
+                    <p class="user_info"><strong>Username:</strong> <?= htmlspecialchars($user['username']) ?></p>
+                </div>
+            </div>
             <a href="../index.html">
-                <button class="left_button">Logout</button>
+            <button class="button">Change the profile picture</button>
+               
             </a>
 
         </section>
 
-        <section class="center">
-            <h3>Additional information about you:</h3>
+            <section class="center">
+                <h3>Additional information about you:</h3>
 
-            <form action="#" method="POST">
-                <section>
-                    <input type="text" placeholder="Nationality">
-                    <input type="text" placeholder="Age">
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                </section>
-                <input type="submit" value="Update Profile" />
-            </form>
-        </section>
+                <form action="../services/update_profile_service.php" method="POST">
+                    <div class="center_form"> <!-- Изменено с section на div и добавлен class -->
+                        <input type="text" name="email_address" placeholder="Email", value="<?= htmlspecialchars($user['email_address']) ?>">
+                        <div class="center_form_info"> <!-- Добавлен class -->
+                            <div>
+                                <input type="text" name="first_name" placeholder="First name" value="<?= htmlspecialchars($user['first_name']) ?>">
+                                <input type="text" name="nationality" placeholder="Nationality" value="<?= htmlspecialchars($user['nationality']) ?>">
+                                <input type="text" name="username" placeholder="Username" value="<?= htmlspecialchars($user['username']) ?>">
+                            </div>
+                            <div>
+                                <input type="text" name="last_name" placeholder="Last name" value="<?= htmlspecialchars($user['last_name']) ?>">
+                                <input type="text" name="age" placeholder="Age" value="<?= htmlspecialchars($user['age']) ?>">
+                                <input type="password" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <input type="submit" value="Update Profile" />
+                    </div>
+                </form>
+                <button class="button">Delete Account</button>
+                <button class="button">Logout</button>
+            </section>
+
 
         <section class="right">
             <?php

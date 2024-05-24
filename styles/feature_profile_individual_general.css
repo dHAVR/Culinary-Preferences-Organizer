@@ -1,9 +1,22 @@
 
 body {
+    
 }
 
 .main {
     display: block;
+}
+
+.center_form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+    align-items: center;
+}
+
+.center_form_info{
+    display: flex;
+    flex-direction: row;
 }
 
 .page_title_container {
@@ -17,10 +30,10 @@ body {
     align-items: center;
 }
 
-.left_button {
+.button {
     width: 100%;
     margin-top: 1vh;
-    padding: 0.5vh;
+    padding: 1vh;
     background-color: #402a23;
     border: 1px solid #402a23;
     border-radius: 1vw;
@@ -31,38 +44,43 @@ body {
 .left {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
     margin-bottom: 2vh;
     margin-right: 2vw;
     margin-left: 2vw;
 }
 
 
-.user_info {
-    margin-bottom: 1vh;
+.user_info{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.3vw;
+
 }
+
 
 .center {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
+    margin-right: 3vw;
 }
 
 .center input[type="text"],
 .center input[type="password"] {
     margin-bottom: 1vh;
     margin-top: 1vh;
-    width: 90%;
     padding: 1vh;
+    width: 93%;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
 }
 
 .center input[type="submit"] {
-    width: 95%;
     background-color: #402a23;
     border: 0.5vw solid #402a23;
     font-weight: bold;
+    width: 100%;
     color: white;
     border-radius: 1vw;
 }
@@ -70,7 +88,7 @@ body {
 .right {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 40%;
 }
 
 .right input[type="text"] {

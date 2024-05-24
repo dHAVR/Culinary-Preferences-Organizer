@@ -106,7 +106,6 @@
             <section class = "left">
     
                <h4>Account Type: Administrator</h4>
-    
          
                    <form action="#" method="post">
                      <section>
@@ -121,7 +120,7 @@
                   
                   </form>
     
-                   <input class = "button" type="submit" value="Update Credits">
+                   <input class = "button action_button" type="submit" value="Update Credits">
     
                 <!-- Delete Account -->
                 <form action = "../services/account_deletion_service.php" method = "GET">
@@ -144,6 +143,12 @@
                 <li>Kostya</li>
                 <li>Petro</li>
              </ul>
+
+               <!-- Product Management -->
+               <form action = "./product_management.php" method = "GET">
+                  <button class = "button action_button">Product Management</button>
+               </form>
+
             </section>
    
 

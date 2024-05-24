@@ -29,6 +29,7 @@
 
 .search_results_list
 {
+    /* Sizing */
     font-size: 30px;
     line-height: 2.0;
 }
@@ -36,5 +37,6 @@
 
 .search_result_link
 {
+    /* Styling */
     text-decoration: none;
 }

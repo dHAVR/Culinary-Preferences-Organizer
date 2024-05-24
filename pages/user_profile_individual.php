@@ -142,12 +142,16 @@ include "../services/get_user_info_service.php"
                         <input class = "button" type="submit" value="Update Profile" />
                     </div>
                 </form>
-                <button class="button">Delete Account</button>
 
-                <!-- Logout Button -->
-                <a href = "../index.php">
+                <!-- Delete Account -->
+                <form action = "../services/account_deletion_service.php" method = "GET">
+                    <button class = "button">Delete Account</button>
+                </form>
+                
+                <!-- Logout -->
+                <form action = "../services/logout_service.php" method = "GET">
                     <button class = "button">Logout</button>
-                </a>
+                </form>
             
             </section>
 

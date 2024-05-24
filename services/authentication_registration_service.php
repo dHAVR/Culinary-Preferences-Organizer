@@ -69,29 +69,18 @@
         $sql_query_insert .= " VALUES (" . $id . ", '" . $first_name . "', '";
         $sql_query_insert .= $last_name . "', '" . $username . "', '" . $password . "');";
 
-        $home_redirect = "../pages/authentication_home_page.php";
-
-
+        
         # Add the user to the database.
 
         $sql_result_insert = $mysql->query($sql_query_insert);
-
-
-        # Send the user to home page.
-
-        header("Location: $home_redirect");
 	}
+    
 
+    # Send the user to the login page.
 
-    # If already registered, then:
+    $home_redirect = "../pages/authentication_authentication.php";
+    header("Location: $home_redirect");
 
-    else
-    {
-        # Send the user to the login page.
-
-        $login_redirect = "../pages/authentication_authentication.php";
-        header("Location: $login_redirect");
-    }
 
 	$mysql->close();
 

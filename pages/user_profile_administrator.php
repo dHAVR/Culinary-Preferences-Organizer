@@ -123,9 +123,15 @@
     
                    <input class = "button" type="submit" value="Update Credits">
     
+                <!-- Delete Account -->
+                <form action = "../services/account_deletion_service.php" method = "GET">
+                    <button class = "button action_button">Delete Account</button>
+                </form>
 
-               <button class = "button action_button">Delete Account</button>
-               <button class = "button action_button">Logout</button>
+                <!-- Logout -->
+                <form action = "../services/logout_service.php" method = "GET">
+                    <button class = "button action_button">Logout</button>
+                </form>
     
             </section>
            

@@ -42,7 +42,7 @@ input[type="password"] {
 }
 
 .action_button {
-    width: 100%;
+    width: 40%;
     background-color: #402a23;
     border: 0.5vw solid #402a23;
     font-weight: bold;

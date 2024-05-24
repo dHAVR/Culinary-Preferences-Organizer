@@ -22,13 +22,19 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if ($result->num_rows > 0) {
+if($result->num_rows > 0) {
     $user = $result->fetch_assoc();
-    $profile_photograph = base64_encode($user['profile_photograph']);
+
+    if(!empty($user['profile_photograph'])){
+        $profile_photograph = base64_encode($user['profile_photograph']);
+    }else{
+        $profile_photograph = base64_encode(file_get_contents('../images/profile_picture_anonymous.png'));
+    }
+
 } else {
     $_SESSION['error_message'] = "User not found.";
-    header("Location: ../pages/authentication_authentication.php");
-    exit();
+    #header("Location: ../pages/authentication_authentication.php");
+    #exit();
 }
 
 $conn->close();

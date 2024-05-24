@@ -114,10 +114,13 @@ include "../services/get_user_info_service.php"
                     <p class="user_info"><strong>Username:</strong> <?= htmlspecialchars($user['username']) ?></p>
                 </div>
             </div>
-            <a href="../index.html">
-            <button class="button">Change the profile picture</button>
-               
-            </a>
+            <form method="post" enctype="multipart/form-data" action="../services/upload_profile_picture_service.php">
+                <label for="file-upload" class="custom-file-upload">
+                    Change user profile photo
+                </label>
+                <input id="file-upload" type="file" name="photo" required>
+                <button type="submit" class="button">Upload</button>
+            </form>
 
         </section>
 

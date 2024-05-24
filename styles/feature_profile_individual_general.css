@@ -1,7 +1,4 @@
 
-body {
-    
-}
 
 .main {
     display: block;
@@ -10,7 +7,7 @@ body {
 .center_form{
     display: flex;
     flex-direction: column;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
     align-items: center;
 }
 
@@ -45,10 +42,28 @@ body {
     display: flex;
     flex-direction: column;
     width: 60%;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
     margin-right: 2vw;
     margin-left: 2vw;
 }
+
+input[type="file"] {
+    display: none;
+  }
+  
+  .custom-file-upload {
+    background-color: #402a23;
+    border: 1px solid #402a23;
+    border-radius: 1vw;
+    width: 97%;
+    padding: 1vh;
+    margin-top: 2vh;
+    text-align: center;
+    display: inline-block;
+    padding: 1vh;
+    color: white;
+    cursor: pointer;
+  }
 
 
 .user_info{
@@ -68,7 +83,7 @@ body {
 
 .center input[type="text"],
 .center input[type="password"] {
-    margin-bottom: 1vh;
+
     margin-top: 1vh;
     padding: 1vh;
     width: 93%;
@@ -94,7 +109,7 @@ body {
 .right input[type="text"] {
     width: 90%;
     margin-bottom: 1vh;
-    padding: 1vh;
+    padding: 0.5vh;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
 }
@@ -106,7 +121,6 @@ body {
     color: white;
     width: 95%;
     border-radius: 1vw;
-    margin-bottom: 1vh;
 }
 
 .left img {

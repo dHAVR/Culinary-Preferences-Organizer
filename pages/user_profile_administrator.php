@@ -30,7 +30,7 @@
         <link rel = "stylesheet" href = "../styles/feature_admin_user_page_responsive.css">
 
         <!-- Title -->
-        <title>Culinary Love for You</title>
+        <title>My Profile</title>
 
    </head>
 
@@ -98,7 +98,7 @@
          </nav>
 
          <div class = "page_title_container">
-            <h2 class = "page_title">User Profile</h2>
+            <h2 class = "page_title">My Profile</h2>
          </div>
 
             <section class="main_section">
@@ -121,11 +121,11 @@
                   
                   </form>
     
-                   <input type="submit" value="Update Credits">
+                   <input class = "button" type="submit" value="Update Credits">
     
 
-               <button class = "action_button">Delete Account</button>
-               <button class = "action_button">Logout</button>
+               <button class = "button action_button">Delete Account</button>
+               <button class = "button action_button">Logout</button>
     
             </section>
            

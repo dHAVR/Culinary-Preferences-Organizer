@@ -27,7 +27,7 @@ include "../services/get_user_info_service.php"
     <link rel="stylesheet" href="../styles/feature_profile_individual_responsive.css">
 
     <!-- Title -->
-    <title>Culinary Love for You</title>
+    <title>My Profile</title>
 </head>
 
 <body>
@@ -92,7 +92,7 @@ include "../services/get_user_info_service.php"
 
     </nav>
     <div class="page_title_container">
-        <h1 class="page_title">User Profile</h1>
+        <h1 class="page_title">My Profile</h1>
     </div>
 
     <div class="content">
@@ -139,7 +139,7 @@ include "../services/get_user_info_service.php"
                                 <input type="password" name="password" placeholder="Password">
                             </div>
                         </div>
-                        <input type="submit" value="Update Profile" />
+                        <input class = "button" type="submit" value="Update Profile" />
                     </div>
                 </form>
                 <button class="button">Delete Account</button>
@@ -164,8 +164,8 @@ include "../services/get_user_info_service.php"
                 <section>
                     <input type="text" name="new_allergy" placeholder="Allergy 1">
                 </section>
-                <input type="submit" name="action" value="Add Allergy" />
-                <input type="submit" name="action" value="Delete Allergy" />
+                <input class = "button" type="submit" name="action" value="Add Allergy" />
+                <input class = "button" type="submit" name="action" value="Delete Allergy" />
             </form>
 
             <h2>Culinary Preferences:</h2>
@@ -173,8 +173,8 @@ include "../services/get_user_info_service.php"
                 <section>
                     <input type="text" name="new_preference" placeholder="Preference 1">
                 </section>
-                <input type="submit" name="action" value="Add Preference" class="add">
-                <input type="submit" name="action" value="Delete Preference" class="delete">
+                <input type="submit" name="action" value="Add Preference" class="button add">
+                <input type="submit" name="action" value="Delete Preference" class="button delete">
             </form>
 
         </section>

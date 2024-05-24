@@ -31,7 +31,7 @@
         <link rel = "stylesheet" href = "../styles/feature_shopping_list_style_responsive.css">
 
         <!-- Title -->
-        <title>Culinary Love for You</title>
+        <title>Shopping Lists</title>
 
     <head>
 
@@ -99,7 +99,7 @@
          </nav>
 
          <div class = "page_title_container">
-                <h1 class = "page_title">Shopping list</h1>
+                <h1 class = "page_title">Shopping Lists</h1>
             </div>
 
          <section class="page">
@@ -110,14 +110,14 @@
                  <form action = "#" method = "POST">
                    <label for = "list_name">Name:</label>
                    <input type = "text" id = "list_name" name = "list_name" />
-                   <input type = "submit_profile" value = "Create a list" />
+                   <input class = "button" type = "submit_profile" value = "Create a list" />
                </form>
     
                  <!-- Create List -->
                  <form action = "#" method = "POST">
                    <label for = "new_item">Add item:</label>
                    <input type = "text" id = "new_item" name = "new_item" />
-                   <input type = "submit_profile" value = "Add item" />
+                   <input class = "button" type = "submit_profile" value = "Add item" />
                </form>
     
              </section>
@@ -133,14 +133,14 @@
              </section>
     
              <section class="right">
-                <button>Export to PDF</button>
+                <button class = "button">Export to PDF</button>
                 <p>List of groups:</p>
                 <select class="select_group">
                    <option value="group1">Family</option>
                    <option value="group2">Friends</option>
                    <option value="group3">School</option>
                 </select>
-                <button>Share</button>
+                <button class = "button">Share</button>
              </section>
     
 

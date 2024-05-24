@@ -54,7 +54,7 @@
     font-size: 20px;
     height: 32px;
     width: 170px;
-    margin-top: 30px;
+    margin-top: 20px;
     
     /* Styling */
     color: #FFFFFF;
@@ -66,7 +66,7 @@
 .operation_input::placeholder
 {
     /* Styling */
-    color: #F3BC77;
+    color: rgba(243, 188, 119, 0.5);
 }
 
 

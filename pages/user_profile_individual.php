@@ -143,7 +143,12 @@ include "../services/get_user_info_service.php"
                     </div>
                 </form>
                 <button class="button">Delete Account</button>
-                <button class="button">Logout</button>
+
+                <!-- Logout Button -->
+                <a href = "../index.php">
+                    <button class = "button">Logout</button>
+                </a>
+            
             </section>
 
 

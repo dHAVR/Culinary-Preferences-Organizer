@@ -187,7 +187,7 @@ include "../services/get_user_info_service.php"
                 <section>
                     <input type="text" name="new_preference" placeholder="Enter favorite dish to delete...">
                 </section>
-                <input type="submit" name="action" value="Delete Preference" class="button delete">
+                <input type="submit" name="action" value="Delete a dish from favorites" class="button delete">
             </form>
         </div>
 

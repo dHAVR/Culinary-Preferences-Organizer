@@ -1,9 +1,8 @@
 <!-- Administrator User Profile -->
 
 <?php
-session_start();
+include "../services/get_user_info_service.php"
 ?>
-
 <!DOCTYPE html>
 
 
@@ -71,10 +70,10 @@ session_start();
             <section class="main_section">
 
             <section class = "left">
-    
+            <h2 class="admin_info"><strong>Hi, <?= htmlspecialchars($user['first_name']) ?>!</strong></h2>
                <h4>Account Type: Administrator</h4>
          
-                   <form action="#" method="post">
+                   <form action="../services/update_profile_service.php" method="post">
                      <section>
                         <label for="username">Username:</label>
                         <input type="text" id="username" name="username">
@@ -84,10 +83,11 @@ session_start();
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password">
                      </section>
-                  
+
+                     <input class = "button action_button" type="submit" value="Update Credits">
                   </form>
     
-                   <input class = "button action_button" type="submit" value="Update Credits">
+                  
     
                 <!-- Delete Account -->
                 <form action = "../services/account_deletion_service.php" method = "GET">

@@ -40,8 +40,10 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         # Check if an individual user exists.
         if ($sql_result_individual->num_rows > 0) {
             $row = $sql_result_individual->fetch_assoc();
+
             $_SESSION['user_id'] = $row['id'];  // Save user ID to session
             $_SESSION['user_type'] = 'individual';  // Save type of an accound
+
             # Redirect to the individual user's profile page.
             header("Location: ../pages/user_profile_individual.php");
         } else {
@@ -52,8 +54,11 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
             # Check if an administrator user exists.
             if ($sql_result_administrator->num_rows > 0) {
                 # Redirect to the administrator user's profile page.
+                $row = $sql_result_administrator->fetch_assoc();
+
                 $_SESSION['user_id'] = $row['id'];  // Save user ID to session
                 $_SESSION['user_type'] = 'administrator';  // Save type of an accound
+
                 header("Location: ../pages/user_profile_administrator.php");
             } else {
                 # If login fails, set error message and redirect back to the login page.

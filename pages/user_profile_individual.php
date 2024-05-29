@@ -183,11 +183,11 @@ include "../services/get_user_info_service.php"
             </form>
            <div class="favorite_dishes">
             <h2>Favorite dishes:</h2>
-            <form action="../services/preference_managing_service.php" method="POST" >
+            <form action="../services/dishes_managing_service.php" method="POST" >
                 <section>
                     <input type="text" name="new_preference" placeholder="Enter favorite dish to delete...">
                 </section>
-                <input type="submit" name="action" value="Delete a dish from favorites" class="button delete">
+                <input type="submit" name="action" value="Delete dish" class="button delete">
             </form>
         </div>
 

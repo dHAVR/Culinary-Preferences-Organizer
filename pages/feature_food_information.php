@@ -1,4 +1,7 @@
 <!-- Food Information -->
+<?php
+include "../services/get_user_info_service.php"
+?>
 
 <!DOCTYPE html>
 
@@ -51,7 +54,7 @@
    
             <!-- User Profile Picture -->
             <a href = "./user_profile_individual.php">
-                <img class = "user_profile_picture" src = "../images/profile_picture_example.jpg" alt = "User profile picture." />
+                <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
             </a>
    
         </header>
@@ -110,28 +113,50 @@
 
                         <h2>Kyiv Cake</h2>
                     
-                        <img src="../images/kyiv_cake.png" alt="Picture of the dish">
-                        
-                   <div class="ingredients">
+                        <img src="../images/kyiv_cake.png" alt="Picture of the dish" class="dish_image">
 
-                       <h3>Ingredients:</h3>
+                        <p class = "favorite_info">Like!</p>
+ 
+                        <form action="../services/dishes_managing_service.php" method="POST">
 
-                        <ul>
-                            <li>Eggs</li>
-                            <li>sugger powder</li>
-                            <li>hazelnuts</li>
-                            <li>flour</li>
-                            <li>butter</li>
-                            <li>cacao</li>
+                            <input type="hidden" name="new_preference" value="Kyiv Cake">
+
+                            <input type="hidden"  name="action" value="Add dish">
+                              <button class="heart_button">
+                               <?php
+                                    $favorite_dishes_array = explode(',', $user['favorite_dishes']);
+                                        if (in_array("Kyiv Cake", $favorite_dishes_array)) {
+                                            echo('<img src="../images/heart_filled_icon.svg" class="heart-icon" alt="Heart Icon">');
+                                        } else{
+                                            echo('<img src="../images/heart_icon.svg" class="heart-icon" alt="Heart Icon">');
+                                        }
+                                    ?>
+                              
+                               </button>
+                            </input>
+
+                       </form>
+
+
+
+
+                    </div>
+
+                    <div class="ingredients">
+                    <h3>Ingredients:</h3>
+
+                         <ul>
+                             <li>Eggs</li>
+                             <li>sugger powder</li>
+                             <li>hazelnuts</li>
+                             <li>flour</li>
+                             <li>butter</li>
+                             <li>cacao</li>
                             <li>sugar</li>
 
-                        </ul>
-
-                    </div>
-
-                    </div>
-                    
-
+                          </ul>
+                     </div>
+                                                        
                 <div class="food-info">
 
                     <div class="details">

@@ -44,13 +44,13 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $existing_preferences = $row['favorite_dishes'];
 
-    if ($action == "Add Preference") {
+    if ($action == "Add dish") {
 
         $preferences_array = !empty($existing_preferences) ? explode(',', $existing_preferences) : [];
 
         if (in_array($new_preference, $preferences_array)) {
-            $_SESSION['error_message'] = "This preference is already added.";
-            header("Location: ../pages/user_profile_individual.php");
+            $_SESSION['error_message'] = "This dish is already added.";
+            header("Location: ../pages/feature_food_information.php");
             exit();
         }
     
@@ -66,11 +66,15 @@ if ($result->num_rows > 0) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("si", $updated_preferences, $user_id);
     if ($stmt->execute()) {
-        $_SESSION['success_message'] = "Preference successfully added!";
+        $_SESSION['success_message'] = "Dish successfully added!";
     } else {
         $_SESSION['error_message'] = "Record update error: " . $conn->error;
     }
-}elseif($action == "Delete Preference"){
+
+    header("Location: ../pages/feature_food_information.php");
+
+}elseif($action == "Delete dish"){
+
     if (!empty($existing_preferences)) {
         $preferences_array = explode(',', $existing_preferences);
         if (($key = array_search($new_preference, $preferences_array)) !== false) {
@@ -81,24 +85,25 @@ if ($result->num_rows > 0) {
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("si", $updated_preferences, $user_id);
             if ($stmt->execute()) {
-                $_SESSION['success_message'] = "Preferences successfully removed!";
+                $_SESSION['success_message'] = "Dish successfully removed!";
 
             } else {
                 $_SESSION['error_message'] = "Record update error: " . $conn->error;
             }
         } else {
-            $_SESSION['error_message'] = "No preference found.";
+            $_SESSION['error_message'] = "No dish found.";
         }
     } else {
-        $_SESSION['error_message'] = "You have no existing allergies.";
+        $_SESSION['error_message'] = "You have no existing dishes.";
     }
+    header("Location: ../pages/user_profile_individual.php");
 }else {
     $_SESSION['error_message'] = "The user with the specified ID was not found.";
 }
+
 }
 
 $conn->close();
-header("Location: ../pages/user_profile_individual.php");
 exit();
 
 ?>

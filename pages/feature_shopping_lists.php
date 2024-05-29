@@ -1,4 +1,8 @@
 <!-- Shopping Lists -->
+<?php
+include "../services/get_user_info_service.php"
+?>
+
 
 <!DOCTYPE html>
 
@@ -51,7 +55,7 @@
 
          <!-- User Profile Picture -->
          <a href = "./user_profile_individual.php">
-             <img class = "user_profile_picture" src = "../images/profile_picture_example.jpg" alt = "User profile picture." />
+             <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
          </a>
 
      </header> 

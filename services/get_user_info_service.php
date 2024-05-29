@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 
-$sql = "SELECT first_name, last_name, email_address, username, nationality, age, allergies, preferred_cuisines, profile_photograph FROM individual_users WHERE id = ?";
+$sql = "SELECT first_name, last_name, email_address, username, nationality, age, allergies, favorite_dishes, profile_photograph FROM individual_users WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();

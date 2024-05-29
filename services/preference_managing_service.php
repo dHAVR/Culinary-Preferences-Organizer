@@ -34,7 +34,7 @@ if(empty($new_preference)){
 }
 
 // Fetch the existing preferences from the database
-$sql = "SELECT preferred_cuisines FROM individual_users WHERE id = ?";
+$sql = "SELECT favorite_dishes FROM individual_users WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
@@ -42,7 +42,7 @@ $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $existing_preferences = $row['preferred_cuisines'];
+    $existing_preferences = $row['favorite_dishes'];
 
     if ($action == "Add Preference") {
 
@@ -62,7 +62,7 @@ if ($result->num_rows > 0) {
     }
     
     // Update the preferences in the database
-    $sql = "UPDATE individual_users SET preferred_cuisines = ? WHERE id = ?";
+    $sql = "UPDATE individual_users SET favorite_dishes = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("si", $updated_preferences, $user_id);
     if ($stmt->execute()) {
@@ -77,7 +77,7 @@ if ($result->num_rows > 0) {
             unset($preferences_array[$key]);
             $updated_preferences = implode(',', $preferences_array);
 
-            $sql = "UPDATE individual_users SET preferred_cuisines = ? WHERE id = ?";
+            $sql = "UPDATE individual_users SET favorite_dishes = ? WHERE id = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("si", $updated_preferences, $user_id);
             if ($stmt->execute()) {

@@ -98,25 +98,27 @@ include "../services/get_user_info_service.php"
     <div class="content">
         <section class="left">
             <h4>Type of Account: Individual</h4>
-            <div class="user_info">
-                <div>
+            <div class="user_info_main">
+                <div class="user_info_row">
                     <img src="data:image/png;base64,<?= $profile_photograph ?>" alt="User Photo">
+                     <div class="user_info_column">
+                        <p class="user_info"><strong>First name:</strong> <?= htmlspecialchars($user['first_name']) ?></p>
+                        <p class="user_info"><strong>Last name:</strong> <?= htmlspecialchars($user['last_name']) ?></p>
+                        <p class="user_info"><strong>Email:</strong> <?= htmlspecialchars($user['email_address']) ?></p>
+                        <p class="user_info"><strong>Username:</strong> <?= htmlspecialchars($user['username']) ?></p>
+                     </div>
+                </div>
+                <div>
                     <p class="user_info"><strong>Nationality:</strong> <?= htmlspecialchars($user['nationality']) ?></p>
                     <p class="user_info"><strong>Age:</strong> <?= htmlspecialchars($user['age']) ?></p>
                     <p class="user_info"><strong>Allergies:</strong> <?= htmlspecialchars($user['allergies']) ?></p>
-                    <p class="user_info"><strong>Preferences:</strong> <?= htmlspecialchars($user['preferred_cuisines']) ?></p>
+                    <p class="user_info"><strong>Favorite dishes:</strong> <?= htmlspecialchars($user['favorite_dishes']) ?></p>
 
-                </div>
-                <div>
-                    <p class="user_info"><strong>First name:</strong> <?= htmlspecialchars($user['first_name']) ?></p>
-                    <p class="user_info"><strong>Last name:</strong> <?= htmlspecialchars($user['last_name']) ?></p>
-                    <p class="user_info"><strong>Email:</strong> <?= htmlspecialchars($user['email_address']) ?></p>
-                    <p class="user_info"><strong>Username:</strong> <?= htmlspecialchars($user['username']) ?></p>
                 </div>
             </div>
             <form method="post" enctype="multipart/form-data" action="../services/upload_profile_picture_service.php">
                 <label for="file-upload" class="custom-file-upload">
-                    Change user profile photo
+                    Choose a photo
                 </label>
                 <input id="file-upload" type="file" name="photo" required>
                 <button type="submit" class="button">Upload</button>
@@ -174,20 +176,20 @@ include "../services/get_user_info_service.php"
             <h2>Allergies:</h2>
             <form action="../services/allergy_managing_service.php" method="POST">
                 <section>
-                    <input type="text" name="new_allergy" placeholder="Allergy 1">
+                    <input type="text" name="new_allergy" placeholder="Enter allergy...">
                 </section>
                 <input class = "button" type="submit" name="action" value="Add Allergy" />
                 <input class = "button" type="submit" name="action" value="Delete Allergy" />
             </form>
-
-            <h2>Culinary Preferences:</h2>
-            <form action="../services/preference_managing_service.php" method="POST">
+           <div class="favorite_dishes">
+            <h2>Favorite dishes:</h2>
+            <form action="../services/preference_managing_service.php" method="POST" >
                 <section>
-                    <input type="text" name="new_preference" placeholder="Preference 1">
+                    <input type="text" name="new_preference" placeholder="Enter favorite dish to delete...">
                 </section>
-                <input type="submit" name="action" value="Add Preference" class="button add">
                 <input type="submit" name="action" value="Delete Preference" class="button delete">
             </form>
+        </div>
 
         </section>
 

@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.favorite_dishes{
+    margin-top: 2vh;
+}
+
 .center_form_info{
     display: flex;
     flex-direction: row;
@@ -66,11 +70,22 @@ input[type="file"] {
   }
 
 
-.user_info{
+.user_info_main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 0.3vw;
 
+}
+
+.user_info_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user_info_column{
+    display: flex;
+    flex-direction: column;
 }
 
 

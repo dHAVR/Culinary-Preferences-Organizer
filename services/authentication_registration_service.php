@@ -17,9 +17,7 @@
 	);
 
 	if (mysqli_connect_errno())
-	{
 		die ('Connection failed!');
-	}
 
 
     # Get user's input.
@@ -47,26 +45,15 @@
 
 	if ($sql_result_individual->num_rows == 0 && $sql_result_administrator->num_rows == 0)
 	{
-        $sql_query_max_id = "SELECT MAX(id) AS 'max_id' FROM ";
         $sql_query_insert = "INSERT INTO ";
 
         if ($account_type == "individual_account_type")
-        {
-            $sql_query_max_id .= "individual";
             $sql_query_insert .= "individual";
-        }
         else
-        {
-            $sql_query_max_id .= "administrator";
             $sql_query_insert .= "administrator";
-        }
 
-        $sql_query_max_id .= "_users;";
-        $sql_result_max_id = $mysql->query($sql_query_max_id)->fetch_assoc()['max_id'];
-        $id = $sql_result_max_id + 1;
-
-        $sql_query_insert .= "_users (id, first_name, last_name, username, password)";
-        $sql_query_insert .= " VALUES (" . $id . ", '" . $first_name . "', '";
+        $sql_query_insert .= "_users (first_name, last_name, username, password)";
+        $sql_query_insert .= " VALUES ('" . $first_name . "', '";
         $sql_query_insert .= $last_name . "', '" . $username . "', '" . $password . "');";
 
         

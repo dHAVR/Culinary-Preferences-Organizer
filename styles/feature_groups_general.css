@@ -19,8 +19,8 @@
     /* Sizing */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
     width: 100vw;
     height: 50vh;
 }
@@ -35,6 +35,32 @@
     align-items: center;
     height: 30vh;
     margin: 15px;
+}
+
+
+.selected_group_list
+{
+    /* Styling */
+    list-style-type: none;
+}
+
+
+.member_name
+{
+    /* Sizing */
+    font-size: 20px;
+
+    /* Styling */
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.4;
+}
+
+
+.member_information_label
+{
+    font-weight: bold;
+    line-height: 1.3;
 }
 
 

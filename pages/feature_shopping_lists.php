@@ -1,6 +1,7 @@
 <!-- Shopping Lists -->
 <?php
-include "../services/get_user_info_service.php"
+include "../services/get_user_info_service.php";
+include "../services/shopping_lists_service.php";
 ?>
 
 
@@ -127,24 +128,34 @@ include "../services/get_user_info_service.php"
              </section>
     
              <section class="center">
-                <!-- Shopping list items will be added here -->
-                <p><strong>Dinner</strong></p>
-                <ul>
-                   <li>Bread</li>
-                   <li>Suger</li>
-                   <li>Milk</li>
-                </ul>
-             </section>
+
+            </section>
     
              <section class="right">
                 <button class = "button">Export to PDF</button>
-                <p>List of groups:</p>
+                <p><strong>List of groups:</strong></p>
                 <select class="select_group">
                    <option value="group1">Family</option>
                    <option value="group2">Friends</option>
                    <option value="group3">School</option>
                 </select>
                 <button class = "button">Share</button>
+
+
+                <p><strong>Choose created list:</strong></p>
+
+                <form action="../services/shopping_lists_service.php" method="POST">
+                <?php
+                     echo '<select name="list_id">';
+                     foreach($lists as $list) {
+                        echo '<option value="' . $list['id'] . '">' . $list['name'] . '</option>';
+                     }
+                     echo '</select>';
+                  ?>
+
+                     <input class = "button" type="submit" name="action" value="Open list"/>
+                  </form>
+
              </section>
     
 

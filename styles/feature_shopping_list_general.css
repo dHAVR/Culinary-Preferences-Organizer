@@ -20,6 +20,17 @@ display: block;
     
 }
 
+.button {
+    width: 100%;
+    margin-top: 1vh;
+    border: 1px solid #402a23;
+    border-radius: 1vw;
+    font-weight: bold;
+    padding: 0.5vh;
+}
+
+
+
 
 /* Left section styles */
 .left {

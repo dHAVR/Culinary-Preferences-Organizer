@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
         $preferences_array = !empty($existing_preferences) ? explode(',', $existing_preferences) : [];
 
         if (in_array($new_preference, $preferences_array)) {
-            $_SESSION['error_message'] = "This dish is already added.";
+            $_SESSION['error_message_dish'] = "This dish is already added.";
             header("Location: ../pages/feature_food_information.php");
             exit();
         }
@@ -66,9 +66,9 @@ if ($result->num_rows > 0) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("si", $updated_preferences, $user_id);
     if ($stmt->execute()) {
-        $_SESSION['success_message'] = "Dish successfully added!";
+        $_SESSION['success_message_dish'] = "Dish successfully added!";
     } else {
-        $_SESSION['error_message'] = "Record update error: " . $conn->error;
+        $_SESSION['error_message_dish'] = "Record update error: " . $conn->error;
     }
 
     header("Location: ../pages/feature_food_information.php");
@@ -85,20 +85,20 @@ if ($result->num_rows > 0) {
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("si", $updated_preferences, $user_id);
             if ($stmt->execute()) {
-                $_SESSION['success_message'] = "Dish successfully removed!";
+                $_SESSION['success_message_dish'] = "Dish successfully removed!";
 
             } else {
-                $_SESSION['error_message'] = "Record update error: " . $conn->error;
+                $_SESSION['error_message_dish'] = "Record update error: " . $conn->error;
             }
         } else {
-            $_SESSION['error_message'] = "No dish found.";
+            $_SESSION['error_message_dish'] = "No dish found.";
         }
     } else {
-        $_SESSION['error_message'] = "You have no existing dishes.";
+        $_SESSION['error_message_dish'] = "You have no existing dishes.";
     }
-    header("Location: ../pages/user_profile_individual.php");
+    header("Location: ../pages/feature_food_information.php");
 }else {
-    $_SESSION['error_message'] = "The user with the specified ID was not found.";
+    $_SESSION['error_message_dish'] = "The user with the specified ID was not found.";
 }
 
 }

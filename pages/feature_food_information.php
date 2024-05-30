@@ -117,28 +117,24 @@ include "../services/get_user_info_service.php"
 
                         <p class = "favorite_info">Like!</p>
  
+                        <?php
+                            $favorite_dishes_array = explode(',', $user['favorite_dishes']);
+                            $is_favorite = in_array("Kyiv Cake", $favorite_dishes_array);
+                        ?>
+
                         <form action="../services/dishes_managing_service.php" method="POST">
-
                             <input type="hidden" name="new_preference" value="Kyiv Cake">
-
-                            <input type="hidden"  name="action" value="Add dish">
-                              <button class="heart_button">
-                               <?php
-                                    $favorite_dishes_array = explode(',', $user['favorite_dishes']);
-                                        if (in_array("Kyiv Cake", $favorite_dishes_array)) {
-                                            echo('<img src="../images/heart_filled_icon.svg" class="heart-icon" alt="Heart Icon">');
-                                        } else{
-                                            echo('<img src="../images/heart_icon.svg" class="heart-icon" alt="Heart Icon">');
-                                        }
-                                    ?>
-                              
-                               </button>
-                            </input>
-
-                       </form>
-
-
-
+                            <input type="hidden" name="action" value="<?php echo $is_favorite ? 'Delete dish' : 'Add dish'; ?>">
+                            <button class="heart_button">
+                                <?php
+                                    if ($is_favorite) {
+                                        echo('<img src="../images/heart_filled_icon.svg" class="heart-icon" alt="Heart Icon">');
+                                    } else {
+                                        echo('<img src="../images/heart_icon.svg" class="heart-icon" alt="Heart Icon">');
+                                    }
+                                ?>
+                            </button>
+                        </form>
 
                     </div>
 

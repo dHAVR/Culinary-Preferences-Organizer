@@ -72,6 +72,7 @@ input[type="submit_profile"] {
     flex-direction: column;
     padding: 1vh;
     margin-left: 5vw;
+    margin-top: 3vh;
     align-items: center;
     font-size: 1.25rem;
     box-sizing: border-box;

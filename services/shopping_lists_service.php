@@ -13,20 +13,28 @@ if ($mysql->connect_errno) {
 }
 
 # Fetch lists from the database.
-$sql_query = "SELECT id, name FROM shopping_lists WHERE access = ?";
-$stmt = $mysql->prepare($sql_query);
-$stmt->bind_param("s", $_SESSION['user_id']);
+$sql_query = "SELECT id, name, access FROM shopping_lists";
+$stmt = $mysql->prepare($sql_query); 
+if (!$stmt) {
+    die('Statement preparation failed: ' . $mysql->error);
+}
+
 $stmt->execute();
 $result = $stmt->get_result();
 
 $lists = [];
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $lists[] = array('name' => $row['name'], 'id' => $row['id']);
+        $access = explode(',', $row['access']);
+
+        if (in_array($_SESSION['user_id'], $access)) {
+            $lists[] = array('name' => $row['name'], 'id' => $row['id']);
+        }
     }
 }
 
-
+# Close the statement.
+$stmt->close();
 
 # Close the connection.
 $mysql->close();

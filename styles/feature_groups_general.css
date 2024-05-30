@@ -31,10 +31,48 @@
     /* Sizing */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     height: 30vh;
     margin: 15px;
+}
+
+
+.groups_category_title
+{
+    margin-bottom: 10px;
+}
+
+
+.groups_list
+{
+    /* Styling */
+    list-style-type: none;
+}
+
+
+.groups_list_group
+{
+    /* Sizing */
+    font-size: 20px;
+
+    /* Styling */
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.4;
+}
+
+
+.groups_list_group_link:hover, .groups_list_group_link:active,
+.groups_list_group_link:visited, .groups_list_group_link:link
+{
+    text-decoration: none;
+}
+
+
+.groups_list_group_link:hover
+{
+    font-size: 24px;
 }
 
 

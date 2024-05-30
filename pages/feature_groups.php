@@ -126,10 +126,20 @@
 
                     <h2 class = "groups_category_title">My Groups</h2>
     
-                    <ul>
-                        <li>Friends</li>
-                        <li>Family</li>
-                        <li>Trip</li>
+                    <ul class = "groups_list">
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Friends</a>
+                        </li>
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Family</a>
+                        </li>
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Trip</a>
+                        </li>
+
                     </ul>
                 
                 </section>

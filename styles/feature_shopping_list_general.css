@@ -36,13 +36,13 @@ display: block;
 .left {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    margin-left: 2vh;
+    width: 60%;
+    margin-left: 2vw;
 }
 
 .left input[type="text"] {
     border: 0.1vw solid #ccc;
-    width: 100%;
+    width: 97%;
     border-radius: 1vw;
     padding: 1vh;
     margin-top: 1vh;
@@ -98,6 +98,15 @@ input[type="submit_profile"] {
     border-radius: 10px;
     font-weight: bold;
 }
+
+ .add_item_form{
+     margin-top: 2vh;
+  }
+
+  .select_groups_form{
+    margin-bottom: 2vh;
+  }
+
 
 .select_group{
     padding: 0.5vh;

@@ -1,6 +1,5 @@
 <?php
 
-
 # Connect to the database.
 $mysql = new mysqli(
     'localhost',
@@ -76,6 +75,22 @@ if (isset($_POST['action']) && $_POST['action'] == 'Add item' && !empty($_POST['
             header("Location: feature_shopping_lists.php?list_id=$list_id");
             exit();
         }
+    }
+}
+
+# Handle form submission for deleting the selected list
+if (isset($_POST['action']) && $_POST['action'] == 'Delete list' && !empty($_POST['list_id'])) {
+    $list_id = $_POST['list_id'];
+
+    # Delete the list from the database
+    $stmt = $mysql->prepare("DELETE FROM shopping_lists WHERE id = ?");
+    if ($stmt) {
+        $stmt->bind_param("i", $list_id);
+        $stmt->execute();
+        $stmt->close();
+
+        header("Location: feature_shopping_lists.php");
+        exit();
     }
 }
 

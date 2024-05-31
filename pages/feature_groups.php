@@ -2,8 +2,13 @@
     Groups Page
     Page Structure
 -->
+
+
+
 <?php
-include "../services/get_user_info_service.php"
+
+    include "../services/get_user_info_service.php"
+
 ?>
 
 
@@ -121,10 +126,20 @@ include "../services/get_user_info_service.php"
 
                     <h2 class = "groups_category_title">My Groups</h2>
     
-                    <ul>
-                        <li>Friends</li>
-                        <li>Family</li>
-                        <li>Trip</li>
+                    <ul class = "groups_list">
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Friends</a>
+                        </li>
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Family</a>
+                        </li>
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Trip</a>
+                        </li>
+
                     </ul>
                 
                 </section>
@@ -134,10 +149,86 @@ include "../services/get_user_info_service.php"
     
                     <h2 class = "groups_category_title">Friends</h2>
     
-                    <ul>
-                        <li>James Smith</li>
-                        <li>Linda Mitchell</li>
-                        <li>Roger Browns</li>
+                    <ul class = "selected_group_list">
+
+                        <li>
+
+                            <p class = "member_name">James Smith</p>
+
+                            <p>
+                                <span class = "member_information_label">Age: </span>
+                                <span class = "member_information_value">25</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Nationality: </span>
+                                <span class = "member_information_value">American</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Allergies: </span>
+                                <span class = "member_information_value">pollen, dust</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Favorite Dishes: </span>
+                                <span class = "member_information_value">Kyiv Cake</span>
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p class = "member_name">Linda Mitchell</p>
+
+                            <p>
+                                <span class = "member_information_label">Age: </span>
+                                <span class = "member_information_value">26</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Nationality: </span>
+                                <span class = "member_information_value">Romanian</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Allergies: </span>
+                                <span class = "member_information_value">dust</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Favorite Dishes: </span>
+                                <span class = "member_information_value">none</span>
+                            </p>
+                            
+                        </li>
+
+                        <li>
+
+                            <p class = "member_name">Roger Brown</p>
+
+                            <p>
+                                <span class = "member_information_label">Age: </span>
+                                <span class = "member_information_value">29</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Nationality: </span>
+                                <span class = "member_information_value">American</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Allergies: </span>
+                                <span class = "member_information_value">none</span>
+                            </p>
+
+                            <p>
+                                <span class = "member_information_label">Favorite Dishes: </span>
+                                <span class = "member_information_value">Kyiv Cake</span>
+                            </p>
+
+                        </li>
+
                     </ul>
     
                 </section>

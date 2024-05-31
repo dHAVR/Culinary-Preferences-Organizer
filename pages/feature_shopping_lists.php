@@ -4,7 +4,7 @@ include "../services/get_user_info_service.php";
 include "../services/shopping_lists_service.php";
 ?>
 
-
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html>
 <head>
@@ -137,12 +137,17 @@ include "../services/shopping_lists_service.php";
             <section class="right">
                 <button class="button">Export to PDF</button>
                 <p><strong>List of groups:</strong></p>
-                <select class="select_group">
-                    <option value="group1">Family</option>
-                    <option value="group2">Friends</option>
-                    <option value="group3">School</option>
-                </select>
-                <button class="button">Share</button>
+                <form action="feature_shopping_lists.php" method="POST">
+                    <select class="select_group" name="group_id">
+                        <?php
+                            foreach ($groups as $group) {
+                                echo '<option value="' . $group['id'] . '">' . htmlspecialchars($group['name']) . '</option>';
+                            }
+                        ?>
+                    </select>
+                    <input type="hidden" name="list_id" value="<?= isset($_GET['list_id']) ? htmlspecialchars($_GET['list_id']) : '' ?>" />
+                    <input class="button" type="submit" name="action" value="Share" />
+                </form>
 
                 <p><strong>Choose created list:</strong></p>
                 <form action="feature_shopping_lists.php" method="GET">

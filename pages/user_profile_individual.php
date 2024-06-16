@@ -137,6 +137,17 @@ include "../services/get_user_info_service.php"
 
             <section class="center">
                 <h3>Additional information about you:</h3>
+                <?php
+                    if (isset($_SESSION['error_update_message'])) {
+                        echo '<p class="error_message">' . $_SESSION['error_update_message'] . '</p>';
+                        unset($_SESSION['error_update_message']);
+                    }
+                    if (isset($_SESSION['success_message_update'])) {
+                        echo '<p class="success_message">' . $_SESSION['success_message_update'] . '</p>';
+                        unset($_SESSION['success_message_update']);
+                    }
+            ?>
+
 
                 <form action="../services/update_profile_service.php" method="POST">
                     <div class="center_form"> <!-- Изменено с section на div и добавлен class -->

@@ -8,7 +8,7 @@ if ($conn->connect_errno) {
 }
 
 if (!isset($_SESSION['user_id'])) {
-    $_SESSION['error_message'] = "Please Login.";
+    $_SESSION['error_update_message'] = "Please Login.";
     header("Location: ../pages/authentication_authentication.php");
     exit();
 }
@@ -19,42 +19,33 @@ $user_type = $_SESSION['user_type'];
 $updates = [];
 $params = [];
 
+function validate_input($data, $field) {
+    switch ($field) {
+        case 'email_address':
+            return filter_var($data, FILTER_VALIDATE_EMAIL);
+        case 'age':
+            return filter_var($data, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+        case 'password':
+            return strlen($data) >= 1;
+        case 'username':
+            return preg_match('/^[a-zA-Z0-9_]+$/', $data);
+        default:
+            return !empty(trim($data));
+    }
+}
+
 if ($user_type == 'individual') {
+    $fields = ['first_name', 'last_name', 'email_address', 'nationality', 'age', 'username', 'password'];
 
-
-    if (!empty($_POST['first_name'])) {
-        $updates[] = "first_name = ?";
-        $params[] = $_POST['first_name'];
-    }
-
-    if (!empty($_POST['last_name'])) {
-        $updates[] = "last_name = ?";
-        $params[] = $_POST['last_name'];
-    }
-
-    if (!empty($_POST['email_address'])) {
-        $updates[] = "email_address = ?";
-        $params[] = $_POST['email_address'];
-    }
-
-    if (!empty($_POST['nationality'])) {
-        $updates[] = "nationality = ?";
-        $params[] = $_POST['nationality'];
-    }
-
-    if (!empty($_POST['age'])) {
-        $updates[] = "age = ?";
-        $params[] = $_POST['age'];
-    }
-
-    if (!empty($_POST['username'])) {
-        $updates[] = "username = ?";
-        $params[] = $_POST['username'];
-    }
-
-    if (!empty($_POST['password'])) {
-        $updates[] = "password = ?";
-        $params[] = $_POST['password']; 
+    foreach ($fields as $field) {
+        if (!empty($_POST[$field]) && validate_input($_POST[$field], $field)) {
+            $updates[] = "$field = ?";
+            $params[] = $_POST[$field];
+        } elseif (!empty($_POST[$field])) {
+            $_SESSION['error_update_message'] = "Invalid value for $field.";
+            header("Location: ../pages/user_profile_individual.php");
+            exit();
+        }
     }
 
     if (!empty($updates)) {
@@ -69,25 +60,27 @@ if ($user_type == 'individual') {
         if ($stmt->execute()) {
             $_SESSION['success_message_update'] = "Profile updated successfully!";
         } else {
-            $_SESSION['error_message_update'] = "Record update error: " . $stmt->error;
+            $_SESSION['error_update_message'] = "Record update error: " . $stmt->error;
         }
         $stmt->close();
     } else {
-        $_SESSION['error_message_update'] = "No data to update.";
+        $_SESSION['error_update_message'] = "No valid data to update.";
     }
 
     header("Location: ../pages/user_profile_individual.php");
 
 } else {
+    $fields = ['username', 'password'];
 
-    if (!empty($_POST['username'])) {
-        $updates[] = "username = ?";
-        $params[] = $_POST['username'];
-    }
-    
-    if (!empty($_POST['password'])) {
-        $updates[] = "password = ?";
-        $params[] = $_POST['password']; 
+    foreach ($fields as $field) {
+        if (!empty($_POST[$field]) && validate_input($_POST[$field], $field)) {
+            $updates[] = "$field = ?";
+            $params[] = $_POST[$field];
+        } elseif (!empty($_POST[$field])) {
+            $_SESSION['error_update_message'] = "Invalid value for $field.";
+            header("Location: ../pages/user_profile_administrator.php");
+            exit();
+        }
     }
 
     if (!empty($updates)) {
@@ -102,11 +95,11 @@ if ($user_type == 'individual') {
         if ($stmt->execute()) {
             $_SESSION['success_message'] = "Profile updated successfully!";
         } else {
-            $_SESSION['error_message'] = "Record update error: " . $stmt->error;
+            $_SESSION['error_update_message'] = "Record update error: " . $stmt->error;
         }
         $stmt->close();
     } else {
-        $_SESSION['error_message'] = "No data to update.";
+        $_SESSION['error_update_message'] = "No valid data to update.";
     }
 
     header("Location: ../pages/user_profile_administrator.php");

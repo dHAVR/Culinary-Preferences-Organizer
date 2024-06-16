@@ -42,6 +42,16 @@
     color: white;
 }
 
+.error_message {
+    color: red;
+    font-weight: bold;
+}
+
+.success_message {
+    color: green;
+    font-weight: bold;
+}
+
 .left {
     display: flex;
     flex-direction: column;

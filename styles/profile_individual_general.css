@@ -8,7 +8,6 @@
 .center_form{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1vh;
     align-items: center;
 }
 
@@ -144,6 +143,7 @@ input[type="file"] {
     background-color: #402a23;
     border: 0.5vw solid #402a23;
     font-weight: bold;
+    padding: 0;
     width: 100%;
     color: white;
     border-radius: 1vw;
@@ -172,6 +172,7 @@ input[type="file"] {
     border: 0.5vw solid #402a23;
     font-weight: bold;
     color: white;
+    padding: 0;
     width: 95%;
     border-radius: 1vw;
 }

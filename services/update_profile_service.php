@@ -34,13 +34,45 @@ function validate_input($data, $field) {
     }
 }
 
+
+if (empty($_POST['current_password'])) {
+    $_SESSION['error_update_message'] = "Current password is required.";
+    header("Location: ../pages/user_profile_".($user_type == 'individual' ? 'individual' : 'administrator').".php");
+    exit();
+}
+
+$current_password = $_POST['current_password'];
+
+
+$table = $user_type == 'individual' ? 'individual_users' : 'administrator_users';
+$password_field = 'password';
+
+$stmt = $conn->prepare("SELECT $password_field FROM $table WHERE id = ?");
+$stmt->bind_param('i', $user_id);
+$stmt->execute();
+$stmt->bind_result($db_password);
+$stmt->fetch();
+$stmt->close();
+
+
+if (!$current_password == $db_password) {
+    $_SESSION['error_update_message'] = "Current password is incorrect.";
+    header("Location: ../pages/user_profile_".($user_type == 'individual' ? 'individual' : 'administrator').".php");
+    exit();
+}
+
 if ($user_type == 'individual') {
     $fields = ['first_name', 'last_name', 'email_address', 'nationality', 'age', 'username', 'password'];
 
     foreach ($fields as $field) {
         if (!empty($_POST[$field]) && validate_input($_POST[$field], $field)) {
-            $updates[] = "$field = ?";
-            $params[] = $_POST[$field];
+            if ($field == 'password') {
+                $updates[] = "$field = ?";
+                $params[] = password_hash($_POST[$field], PASSWORD_DEFAULT);
+            } else {
+                $updates[] = "$field = ?";
+                $params[] = $_POST[$field];
+            }
         } elseif (!empty($_POST[$field])) {
             $_SESSION['error_update_message'] = "Invalid value for $field.";
             header("Location: ../pages/user_profile_individual.php");
@@ -74,8 +106,13 @@ if ($user_type == 'individual') {
 
     foreach ($fields as $field) {
         if (!empty($_POST[$field]) && validate_input($_POST[$field], $field)) {
-            $updates[] = "$field = ?";
-            $params[] = $_POST[$field];
+            if ($field == 'password') {
+                $updates[] = "$field = ?";
+                $params[] = password_hash($_POST[$field], PASSWORD_DEFAULT);
+            } else {
+                $updates[] = "$field = ?";
+                $params[] = $_POST[$field];
+            }
         } elseif (!empty($_POST[$field])) {
             $_SESSION['error_update_message'] = "Invalid value for $field.";
             header("Location: ../pages/user_profile_administrator.php");

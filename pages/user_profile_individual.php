@@ -159,6 +159,7 @@ include "../services/get_user_info_service.php";
                                 <input type="password" name="password" placeholder="Password">
                             </div>
                         </div>
+                        <input type="password" name="current_password" placeholder="Current password">
                         <input class="button" type="submit" value="Update Profile" />
                     </div>
                 </form>

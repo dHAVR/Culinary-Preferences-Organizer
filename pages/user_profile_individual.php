@@ -1,5 +1,5 @@
 <?php
-include "../services/get_user_info_service.php"
+include "../services/get_user_info_service.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +33,10 @@ include "../services/get_user_info_service.php"
                 event.target.submit(); 
             }
         }
+
+        function triggerFileInput() {
+            document.getElementById('file-upload').click();
+        }
     </script>
 
     <!-- Title -->
@@ -55,7 +59,7 @@ include "../services/get_user_info_service.php"
 
     <!-- User Profile Picture -->
     <a href="./user_profile_individual.php">
-        <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
+        <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." onclick="triggerFileInput()"/>
     </a>
 
 </header>
@@ -109,8 +113,11 @@ include "../services/get_user_info_service.php"
             <h4>Type of Account: Individual</h4>
             <div class="user_info_main">
                 <div class="user_info_row">
-                    <img src="data:image/png;base64,<?= $profile_photograph ?>" alt="User Photo">
-                     <div class="user_info_column">
+                <div class="profile_photo_container" onclick="triggerFileInput()">
+                        <img class="profile_photo" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User Photo">
+                        <div class="edit_icon">+</div>
+                    </div>
+                    <div class="user_info_column">
                         <p class="user_info"><strong>First name:</strong> <?= htmlspecialchars($user['first_name']) ?></p>
                         <p class="user_info"><strong>Last name:</strong> <?= htmlspecialchars($user['last_name']) ?></p>
                         <p class="user_info"><strong>Email:</strong> <?= htmlspecialchars($user['email_address']) ?></p>
@@ -125,12 +132,8 @@ include "../services/get_user_info_service.php"
 
                 </div>
             </div>
-            <form method="post" enctype="multipart/form-data" action="../services/upload_profile_picture_service.php">
-                <label for="file-upload" class="custom-file-upload">
-                    Choose a photo
-                </label>
-                <input id="file-upload" type="file" name="photo" required>
-                <button type="submit" class="button">Upload</button>
+            <form id="photo-form" method="post" enctype="multipart/form-data" action="../services/upload_profile_picture_service.php">
+                <input id="file-upload" type="file" name="photo" required style="display:none" onchange="document.getElementById('photo-form').submit()">
             </form>
 
         </section>
@@ -146,13 +149,13 @@ include "../services/get_user_info_service.php"
                         echo '<p class="success_message">' . $_SESSION['success_message_update'] . '</p>';
                         unset($_SESSION['success_message_update']);
                     }
-            ?>
+                ?>
 
 
                 <form action="../services/update_profile_service.php" method="POST">
-                    <div class="center_form"> <!-- Изменено с section на div и добавлен class -->
-                        <input type="text" name="email_address" placeholder="Email", value="<?= htmlspecialchars($user['email_address']) ?>">
-                        <div class="center_form_info"> <!-- Добавлен class -->
+                    <div class="center_form"> 
+                        <input type="text" name="email_address" placeholder="Email" value="<?= htmlspecialchars($user['email_address']) ?>">
+                        <div class="center_form_info"> 
                             <div>
                                 <input type="text" name="first_name" placeholder="First name" value="<?= htmlspecialchars($user['first_name']) ?>">
                                 <input type="text" name="nationality" placeholder="Nationality" value="<?= htmlspecialchars($user['nationality']) ?>">
@@ -164,7 +167,7 @@ include "../services/get_user_info_service.php"
                                 <input type="password" name="password" placeholder="Password">
                             </div>
                         </div>
-                        <input class = "button" type="submit" value="Update Profile" />
+                        <input class="button" type="submit" value="Update Profile" />
                     </div>
                 </form>
 
@@ -175,7 +178,7 @@ include "../services/get_user_info_service.php"
                 
                 <!-- Logout -->
                 <form action = "../services/logout_service.php" method = "GET">
-                    <button class = "button">Logout</button>
+                    <button class="button">Logout</button>
                 </form>
             
             </section>
@@ -198,8 +201,8 @@ include "../services/get_user_info_service.php"
                 <section>
                     <input type="text" name="new_allergy" placeholder="Enter allergy...">
                 </section>
-                <input class = "button" type="submit" name="action" value="Add Allergy" />
-                <input class = "button" type="submit" name="action" value="Delete Allergy" />
+                <input class="button" type="submit" name="action" value="Add Allergy" />
+                <input class="button" type="submit" name="action" value="Delete Allergy" />
             </form>
 
           </section>

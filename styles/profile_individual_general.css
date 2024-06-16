@@ -42,6 +42,7 @@
     color: white;
 }
 
+
 .error_message {
     color: red;
     font-weight: bold;
@@ -78,6 +79,29 @@ input[type="file"] {
     color: white;
     cursor: pointer;
   }
+
+  .profile_photo_container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.profile_photo {
+    display: block;
+}
+
+.profile_photo_container .edit_icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 1;
+}
 
 
 .user_info_main{

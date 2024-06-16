@@ -113,20 +113,12 @@ include "../services/get_user_info_service.php";
             <h4>Type of Account: Individual</h4>
             <div class="user_info_main">
                 <div class="user_info_row">
-                <div class="profile_photo_container" onclick="triggerFileInput()">
+                    <div class="profile_photo_container" onclick="triggerFileInput()">
                         <img class="profile_photo" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User Photo">
                         <div class="edit_icon">+</div>
                     </div>
-                    <div class="user_info_column">
-                        <p class="user_info"><strong>First name:</strong> <?= htmlspecialchars($user['first_name']) ?></p>
-                        <p class="user_info"><strong>Last name:</strong> <?= htmlspecialchars($user['last_name']) ?></p>
-                        <p class="user_info"><strong>Email:</strong> <?= htmlspecialchars($user['email_address']) ?></p>
-                        <p class="user_info"><strong>Username:</strong> <?= htmlspecialchars($user['username']) ?></p>
-                     </div>
                 </div>
                 <div>
-                    <p class="user_info"><strong>Nationality:</strong> <?= htmlspecialchars($user['nationality']) ?></p>
-                    <p class="user_info"><strong>Age:</strong> <?= htmlspecialchars($user['age']) ?></p>
                     <p class="user_info"><strong>Allergies:</strong> <?= htmlspecialchars($user['allergies']) ?></p>
                     <p class="user_info"><strong>Favorite dishes:</strong> <?= htmlspecialchars($user['favorite_dishes']) ?></p>
 
@@ -197,7 +189,7 @@ include "../services/get_user_info_service.php";
             ?>
 
             <h2>Allergies:</h2>
-            <form action="../services/allergy_managing_service.php" method="POST">
+            <form action="../services/allergy_managing_service.php" class= "add_allergy"method="POST">
                 <section>
                     <input type="text" name="new_allergy" placeholder="Enter allergy...">
                 </section>

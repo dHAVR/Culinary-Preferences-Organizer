@@ -27,10 +27,10 @@ include "../services/get_user_info_service.php"
         <link rel = "stylesheet" href = "../styles/global_responsive.css">
 
         <!-- Specific General Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/feature_admin_user_page_general.css">
+        <link rel = "stylesheet" href = "../styles/admin_user_page_general.css">
 
         <!-- Specific Responsive Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/feature_admin_user_page_responsive.css">
+        <link rel = "stylesheet" href = "../styles/admin_user_page_responsive.css">
 
         <!-- Title -->
         <title>My Profile</title>

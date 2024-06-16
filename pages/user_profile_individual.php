@@ -21,10 +21,19 @@ include "../services/get_user_info_service.php"
     <link rel="stylesheet" href="../styles/global_responsive.css">
 
     <!-- Specific General Stylesheet -->
-    <link rel="stylesheet" href="../styles/feature_profile_individual_general.css">
+    <link rel="stylesheet" href="../styles/profile_individual_general.css">
 
     <!-- Specific Responsive Stylesheet -->
-    <link rel="stylesheet" href="../styles/feature_profile_individual_responsive.css">
+    <link rel="stylesheet" href="../styles/profile_individual_responsive.css">
+
+    <script>
+        function confirmDeletion(event) {
+            event.preventDefault(); 
+            if (confirm("Are you sure you want to delete your account?")) {
+                event.target.submit(); 
+            }
+        }
+    </script>
 
     <!-- Title -->
     <title>My Profile</title>
@@ -149,8 +158,8 @@ include "../services/get_user_info_service.php"
                 </form>
 
                 <!-- Delete Account -->
-                <form action = "../services/account_deletion_service.php" method = "GET">
-                    <button class = "button">Delete Account</button>
+                <form action="../services/account_deletion_service.php" method="GET" onsubmit="confirmDeletion(event)">
+                  <button type="submit" class="button">Delete Account</button>
                 </form>
                 
                 <!-- Logout -->

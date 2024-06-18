@@ -38,7 +38,7 @@
     <header class="header">
 
         <!-- Logo -->
-        <a href="./authentication_authentication.php">
+        <a href="../index.php">
             <img class="logo" src="../images/logo.png" alt="Logo." />
         </a>
 

@@ -68,8 +68,8 @@ margin-bottom: 1vh;
 
 
 .dish_image {
-    height: 20vh; 
-    width: 12.5vw;
+    height: 10vw;
+    width: 10vw;
     object-fit: cover;
     border-radius: 50%;
     margin-top: 1vh;

@@ -59,7 +59,7 @@ include "../services/get_user_info_service.php";
 
     <!-- User Profile Picture -->
     <a href="./user_profile_individual.php">
-        <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." onclick="triggerFileInput()"/>
+        <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture."/>
     </a>
 
 </header>

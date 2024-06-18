@@ -42,6 +42,38 @@
         $group_names[] = $row['name'];
 
 
+
+    # Get the current group name.
+    $current_group_name = $_SESSION['current_group'];
+
+    # Fetch the users list (IDs) from the groups table.
+    $sql_query_select = "SELECT users FROM groups WHERE name = ?";
+    $stmt = $mysql->prepare($sql_query_select);
+    $stmt->bind_param("s", $current_group_name);
+    $stmt->execute();
+    $stmt->bind_result($users);
+    $stmt->fetch();
+    $stmt->close();
+
+    # Split the user IDs into an array.
+    $user_ids = explode(',', $users);
+
+    $formatted_user_names = [];
+
+    # Fetch and format user names based on user IDs.
+    foreach ($user_ids as $user_id) {
+        $sql_query_user_name = "SELECT first_name, last_name FROM individual_users WHERE id = ?";
+        $stmt = $mysql->prepare($sql_query_user_name);
+        $stmt->bind_param("i", $user_id);  // Assuming user IDs are integers
+        $stmt->execute();
+        $stmt->bind_result($first_name, $last_name);
+        if ($stmt->fetch()) {
+            $formatted_user_names[] = $first_name . ' ' . $last_name;
+        }
+        $stmt->close();
+    }
+
+
     # Close the connection.
 
     $mysql->close();
@@ -167,7 +199,7 @@
 
                         <?php foreach ($group_names as $name): ?>
                             <li class = "groups_list_group">
-                                <a class = "groups_list_group_link" href = "#">
+                                <a class = "groups_list_group_link" href = "../services/update_current_group.php?group=<?php echo urlencode($name); ?>">
                                     <?php echo htmlspecialchars($name); ?>
                                 </a>
                             </li>
@@ -180,21 +212,17 @@
                 <!-- Selected Group -->
                 <section class = "selected_group_container">
 
-                    <h2 class = "groups_category_title">Friends</h2>
+                    <h2 class = "groups_category_title"><?php echo htmlspecialchars($current_group_name); ?></h2>
 
                     <ul class = "selected_group_list">
 
-                        <li class = "groups_list_group">
-                            <a class = "groups_list_group_link" href = "#">John Michael</a>
-                        </li>
-
-                        <li class = "groups_list_group">
-                            <a class = "groups_list_group_link" href = "#">Michael Kors</a>
-                        </li>
-
-                        <li class = "groups_list_group">
-                            <a class = "groups_list_group_link" href = "#">Michael</a>
-                        </li>
+                        <?php foreach ($formatted_user_names as $formatted_user_name): ?>
+                            <li class = "groups_list_group">
+                                <a class = "groups_list_group_link" href = "">
+                                    <?php echo htmlspecialchars($formatted_user_name); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
 
                     </ul>
 

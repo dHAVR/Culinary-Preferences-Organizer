@@ -43,7 +43,7 @@
         </a>
 
         <!-- Title -->
-        <a class="title_link" href="./authentication_authentication.php">
+        <a class="title_link" href="../index.php">
             <h1 class="title">Culinary Love for You</h1>
         </a>
 

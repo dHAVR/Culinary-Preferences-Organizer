@@ -74,7 +74,7 @@
             <!-- Registration Form -->
             <div class = "registration_form_container">
 
-                <form class = "registration_form" action = "../services/authentication_registration_service.php" method = "GET">
+                <form class = "registration_form" action = "../services/authentication_registration_service.php" method = "POST">
 
                     <!-- First Name -->
                     <div class = "first_name_container">

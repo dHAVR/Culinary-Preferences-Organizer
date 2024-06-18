@@ -22,11 +22,16 @@
 
     # Get user's input.
 
-    $first_name = $_GET["first_name"];
-    $last_name = $_GET["last_name"];
-    $username = $_GET["username"];
-    $account_type = $_GET["account_type"];
-    $password = $_GET["password"];
+    $first_name = $_POST["first_name"];
+    $last_name = $_POST["last_name"];
+    $username = $_POST["username"];
+    $account_type = $_POST["account_type"];
+    $raw_password = $_POST["password"];
+
+
+    # Hash the password.
+
+    $password = password_hash($raw_password, PASSWORD_DEFAULT);
 
 
     # Create SQL queries for checking whether the user already has an account or not.

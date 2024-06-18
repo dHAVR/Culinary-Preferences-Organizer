@@ -7,7 +7,44 @@
 
 <?php
 
-    include "../services/get_user_info_service.php"
+    include "../services/get_user_info_service.php";
+
+
+    # Connect to the database.
+
+    $mysql = new mysqli
+    (
+        'localhost',
+        'root',
+        '',
+        'culinary_preferences_organizer'
+    );
+
+    if (mysqli_connect_errno())
+        die('Connection failed!');
+
+
+    # Get the current user's ID.
+
+    $user_id = $_SESSION['user_id'];
+
+
+    # Fetch group names that belong to the current user.
+
+    $sql_query_select = "SELECT name FROM groups WHERE FIND_IN_SET('$user_id', users) > 0;";
+    $sql_result_select = $mysql->query($sql_query_select);
+
+
+    # Store the group names into an array.
+
+    $group_names = [];
+    while ($row = $sql_result_select->fetch_assoc())
+        $group_names[] = $row['name'];
+
+
+    # Close the connection.
+
+    $mysql->close();
 
 ?>
 
@@ -128,17 +165,13 @@
     
                     <ul class = "groups_list">
 
-                        <li class = "groups_list_group">
-                            <a class = "groups_list_group_link" href = "#">Friends</a>
-                        </li>
-
-                        <li class = "groups_list_group">
-                            <a class = "groups_list_group_link" href = "#">Family</a>
-                        </li>
-
-                        <li class = "groups_list_group">
-                            <a class = "groups_list_group_link" href = "#">Trip</a>
-                        </li>
+                        <?php foreach ($group_names as $name): ?>
+                            <li class = "groups_list_group">
+                                <a class = "groups_list_group_link" href = "#">
+                                    <?php echo htmlspecialchars($name); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
 
                     </ul>
                 

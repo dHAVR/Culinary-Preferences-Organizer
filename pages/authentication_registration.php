@@ -56,7 +56,7 @@
             </a>
 
             <!-- User Profile Picture -->
-            <a href = "../index.php">
+            <a href = "./authentication_authentication.php">
                 <img class = "user_profile_picture" src = "../images/profile_picture_anonymous.png" alt = "User profile picture." />
             </a>
 

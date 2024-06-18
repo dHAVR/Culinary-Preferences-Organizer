@@ -1,12 +1,18 @@
 <!--
     Home Page for Authenticated Users
 -->
-<?php
-include "../services/get_user_info_service.php"
-?>
+
 
 
 <!DOCTYPE html>
+
+
+
+<?php
+
+    include "../services/get_user_info_service.php";
+
+?>
 
 
 
@@ -110,7 +116,7 @@ include "../services/get_user_info_service.php"
             <section class = "user_options">
 
                 <!-- Welcome Message -->
-                <p class = "welcome_message">Hello, Roman! What would you like to do today?</p>
+                <p class = "welcome_message">Welcome back, <?= $user['first_name'] ?>! What would you like to do today?</p>
 
                 <!-- See Groups -->
                 <a href = "./feature_groups.php">

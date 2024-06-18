@@ -38,6 +38,9 @@
 
         # Add the group to the database.
         $sql_result_insert = $mysql->query($sql_query_insert);
+
+        # Set a session variable.
+        $_SESSION['current_group'] = $name;
     }
 
     $groups_redirect = "../pages/feature_groups.php";

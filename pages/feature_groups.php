@@ -263,7 +263,7 @@
                     <div class = "add_person_container">
 
                         <!-- Add Person -->
-                        <form class = "add_person_form" action = "#" method = "POST">
+                        <form class = "add_person_form" action = "../services/add_person_to_group_service.php" method = "POST">
         
                             <div>
                                 <label for = "username">Username:</label>

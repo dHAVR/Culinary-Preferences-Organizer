@@ -26,6 +26,11 @@ body {
     text-align: center; 
 }
 
+.link{
+    margin-top: 1vh;
+    font-size: 2vh;
+}
+
 /* Input Styles */
 input[type="text"],
 input[type="password"] {

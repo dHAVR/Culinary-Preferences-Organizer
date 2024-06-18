@@ -38,7 +38,7 @@
     <header class="header">
 
         <!-- Logo -->
-        <a href="./authentication_authentication.php">
+        <a href="../index.php">
             <img class="logo" src="../images/logo.png" alt="Logo." />
         </a>
 
@@ -71,6 +71,9 @@
                 <input type="password" id="password" name="password" required>
                 <input type="submit" value="Login">
             </form>
+            <a class="link" href="./pages/authentication_registration.php">
+               <h1 class="link">Don’t have an account yet? Create one now!</h1>
+            </a>
         </div>
     </main>
 

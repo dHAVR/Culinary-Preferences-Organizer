@@ -74,10 +74,9 @@
 
 .user_profile_picture
 {
-    /* Sizing */
+    height: 5vw;
     width: 5vw;
-
-    /* Styling */
+    object-fit: cover;
     border-radius: 50%;
 }
 

@@ -146,15 +146,36 @@
     
                 <!-- Selected Group -->
                 <section class = "selected_group_container">
-    
+
                     <h2 class = "groups_category_title">Friends</h2>
+
+                    <ul class = "selected_group_list">
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">John Michael</a>
+                        </li>
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Michael Kors</a>
+                        </li>
+
+                        <li class = "groups_list_group">
+                            <a class = "groups_list_group_link" href = "#">Michael</a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+                <!-- Selected Member -->
+                <section class = "selected_member_container">
     
+                    <h2 class = "groups_category_title">John Michael</h2>
+
                     <ul class = "selected_group_list">
 
                         <li>
-
-                            <p class = "member_name">James Smith</p>
-
+                            
                             <p>
                                 <span class = "member_information_label">Age: </span>
                                 <span class = "member_information_value">25</span>
@@ -177,60 +198,8 @@
 
                         </li>
 
-                        <li>
-
-                            <p class = "member_name">Linda Mitchell</p>
-
-                            <p>
-                                <span class = "member_information_label">Age: </span>
-                                <span class = "member_information_value">26</span>
-                            </p>
-
-                            <p>
-                                <span class = "member_information_label">Nationality: </span>
-                                <span class = "member_information_value">Romanian</span>
-                            </p>
-
-                            <p>
-                                <span class = "member_information_label">Allergies: </span>
-                                <span class = "member_information_value">dust</span>
-                            </p>
-
-                            <p>
-                                <span class = "member_information_label">Favorite Dishes: </span>
-                                <span class = "member_information_value">none</span>
-                            </p>
-                            
-                        </li>
-
-                        <li>
-
-                            <p class = "member_name">Roger Brown</p>
-
-                            <p>
-                                <span class = "member_information_label">Age: </span>
-                                <span class = "member_information_value">29</span>
-                            </p>
-
-                            <p>
-                                <span class = "member_information_label">Nationality: </span>
-                                <span class = "member_information_value">American</span>
-                            </p>
-
-                            <p>
-                                <span class = "member_information_label">Allergies: </span>
-                                <span class = "member_information_value">none</span>
-                            </p>
-
-                            <p>
-                                <span class = "member_information_label">Favorite Dishes: </span>
-                                <span class = "member_information_value">Kyiv Cake</span>
-                            </p>
-
-                        </li>
-
                     </ul>
-    
+
                 </section>
     
                 <!-- New Group -->
@@ -264,8 +233,8 @@
                         <form class = "add_person_form" action = "#" method = "GET">
         
                             <div>
-                                <label for = "email_address">Email Address:</label>
-                                <input class = "email_address_input" type = "text" id = "email_address" name = "email_address" placeholder = "linda_smith@gmail.com" />
+                                <label for = "username">Username:</label>
+                                <input class = "username_input" type = "text" id = "username" name = "username" placeholder = "romantudor" />
                             </div>
 
                             <div>

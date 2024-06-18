@@ -26,7 +26,7 @@
 }
 
 
-.my_groups_container, .selected_group_container, .new_group_container
+.my_groups_container, .selected_group_container, .new_group_container, .selected_member_container
 {
     /* Sizing */
     display: flex;
@@ -34,13 +34,16 @@
     justify-content: flex-start;
     align-items: center;
     height: 30vh;
+    width: 20vw;
     margin: 15px;
 }
 
 
 .groups_category_title
 {
+    /* Sizing */
     margin-bottom: 10px;
+    font-size: 28px;
 }
 
 
@@ -66,12 +69,14 @@
 .groups_list_group_link:hover, .groups_list_group_link:active,
 .groups_list_group_link:visited, .groups_list_group_link:link
 {
+    /* Styling */
     text-decoration: none;
 }
 
 
 .groups_list_group_link:hover
 {
+    /* Sizing */
     font-size: 24px;
 }
 
@@ -97,6 +102,7 @@
 
 .member_information_label
 {
+    /* Styling */
     font-weight: bold;
     line-height: 1.3;
 }
@@ -113,7 +119,7 @@
 }
 
 
-.group_name_input, .email_address_input
+.group_name_input, .username_input
 {
     /* Sizing */
     font-size: 20px;
@@ -127,10 +133,17 @@
 }
 
 
-.email_address_input
+.username_input
 {
     /* Sizing */
-    width: 260px;
+    width: 180px;
+}
+
+
+.username_input::placeholder
+{
+    /* Styling */
+    color: #F3BC77;
 }
 
 
@@ -157,11 +170,4 @@
 {
     /* Sizing */
     width: 140px;
-}
-
-
-.email_address_input::placeholder
-{
-    /* Styling */
-    color: #F3BC77;
 }

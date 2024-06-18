@@ -108,6 +108,15 @@
                         <label class = "label_text" for = "password">Password:</label>
                         <input class = "input_field" type = "password" id = "password" name = "password" placeholder = "*********" />
                     </div>
+
+                    <!-- Approval Key -->
+                    <div class = "password_container">
+                        <label class = "label_text" for = "approval_key">Approval Key*:</label>
+                        <input class = "input_field" type = "password" id = "approval_key" name = "approval_key" placeholder = "*********" />
+                    </div>
+
+                    <!-- Note -->
+                    <p class = "note">*: Only when requesting to create an administrator account.</p>
     
                     <!-- Register -->
                     <div class = "submit_container">

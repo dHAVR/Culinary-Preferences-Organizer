@@ -87,3 +87,13 @@
     /* Styling */
     border-radius: 6px;
 }
+
+
+.note
+{
+    /* Sizing */
+    font-size: 16px;
+
+    /* Styling */
+    font-weight: normal;
+}

@@ -212,7 +212,7 @@
                     <div class = "create_group_container">
 
                         <!-- Create Group -->
-                        <form class = "create_group_form" action = "#" method = "GET">
+                        <form class = "create_group_form" action = "../services/create_group_service.php" method = "POST">
         
                             <div>
                                 <label for = "group_name">Name:</label>
@@ -230,7 +230,7 @@
                     <div class = "add_person_container">
 
                         <!-- Add Person -->
-                        <form class = "add_person_form" action = "#" method = "GET">
+                        <form class = "add_person_form" action = "#" method = "POST">
         
                             <div>
                                 <label for = "username">Username:</label>

@@ -1,6 +1,7 @@
 <!-- Administrator User Profile -->
 
 <?php
+session_start();
 include "../services/get_user_info_service.php"
 ?>
 <!DOCTYPE html>

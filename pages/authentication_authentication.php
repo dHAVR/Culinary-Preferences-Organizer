@@ -71,7 +71,7 @@
                 <input type="password" id="password" name="password" required>
                 <input type="submit" value="Login">
             </form>
-            <a class="link" href="./pages/authentication_registration.php">
+            <a class="link" href="./authentication_registration.php">
                <h1 class="link">Don’t have an account yet? Create one now!</h1>
             </a>
         </div>

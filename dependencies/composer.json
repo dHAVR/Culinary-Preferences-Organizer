@@ -1,0 +1,17 @@
+{
+    "name": "dasha/dependencies",
+    "autoload": {
+        "psr-4": {
+            "Dasha\\Dependencies\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daryna",
+            "email": "dasha.g2007@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}

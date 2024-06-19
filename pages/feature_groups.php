@@ -6,7 +6,7 @@
 
 
 <?php
-
+    session_start();
     include "../services/get_user_info_service.php";
 
 

@@ -1,5 +1,6 @@
 <!-- Shopping Lists -->
 <?php
+session_start();
 include "../services/get_user_info_service.php";
 include "../services/shopping_lists_service.php";
 ?>

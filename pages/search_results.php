@@ -48,7 +48,7 @@ $searchResults = isset($_SESSION['search_results']) ? $_SESSION['search_results'
                 <button class="navbar_button">Groups</button>
             </a>
         <!-- Search for a Dish -->
-        <form class="search_form" action="./search_results.php" method="GET">
+        <form class="search_form" action="../services/search_results.php" method="GET">
 
             <div class="search_message_container">
                 <label class="search_message" for="search_dish">Search for a Dish:</label>
@@ -102,5 +102,8 @@ $searchResults = isset($_SESSION['search_results']) ? $_SESSION['search_results'
 
 </body>
 </html>
+<?php
+unset($_SESSION['search_results']);
+?>
 
 

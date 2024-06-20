@@ -129,7 +129,7 @@ if (isset($_GET['list_id'])) {
 
 # Fetch groups from the database where the current user is a member
 $user_id = $_SESSION['user_id'];
-$sql_query_groups = "SELECT id, name, users FROM group_users WHERE FIND_IN_SET(?, users)";
+$sql_query_groups = "SELECT id, name, users FROM groups WHERE FIND_IN_SET(?, users)";
 $stmt_groups = $mysql->prepare($sql_query_groups);
 if (!$stmt_groups) {
     die('Statement preparation failed: ' . $mysql->error);
@@ -152,7 +152,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'Share' && !empty($_POST['lis
     $group_id = $_POST['group_id'];
 
     # Fetch the users in the selected group
-    $stmt_group_users = $mysql->prepare("SELECT users FROM group_users WHERE id = ?");
+    $stmt_group_users = $mysql->prepare("SELECT users FROM groups WHERE id = ?");
     if ($stmt_group_users) {
         $stmt_group_users->bind_param("i", $group_id);
         $stmt_group_users->execute();

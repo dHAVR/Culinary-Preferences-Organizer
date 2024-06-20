@@ -76,7 +76,7 @@ include "../services/get_user_info_service.php"
                 </a>
 
                 <!-- Search for a Dish -->
-                <form class = "search_form" action = "./feature_food_information.php" method = "GET">
+                <form class = "search_form" action = "../services/search_results.php" method = "GET">
 
                     <div class = "search_message_container">
                         <label class = "search_message" for = "search_dish">Search for a Dish:</label>

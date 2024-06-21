@@ -11,13 +11,17 @@ function searchProductsByName($productName) {
     $uniqueProductNames = [];
 
     try {
-        
+       
+        $page = rand(1, 5);
+        $sortOptions = ['unique_scans', 'popularity'];
+        $sort_by = $sortOptions[array_rand($sortOptions)];
+
         $response = $client->request('GET', '/cgi/search.pl', [
             'query' => [
                 'search_terms' => $productName,
-                'page' => 1,
+                'page' => $page,
                 'page_size' => 20,
-                'sort_by' => 'unique_scans',
+                'sort_by' => $sort_by,
                 'json' => 1
             ]
         ]);
@@ -26,7 +30,6 @@ function searchProductsByName($productName) {
 
         if (!empty($data['products'])) {
             foreach ($data['products'] as $product) {
-                
                 if (!empty($product['product_name']) && !in_array($product['product_name'], $uniqueProductNames) && count($products) < 9) {
                     if (isset($product['countries_tags']) && is_array($product['countries_tags'])) {
                         $englishCountries = array_filter($product['countries_tags'], function($countryTag) {
@@ -40,8 +43,8 @@ function searchProductsByName($productName) {
 
                             $products[] = [
                                 'product_name' => htmlspecialchars($product['product_name']),
-                                'brands' => htmlspecialchars($product['brands']),
-                                'quantity' => htmlspecialchars($product['quantity']),
+                                'brands' => !empty($product['brands']) ? htmlspecialchars($product['brands']) : 'Unknown Brand',
+                                'quantity' => !empty($product['quantity']) ? htmlspecialchars($product['quantity']) : 'Unknown Quantity',
                                 'countries' => htmlspecialchars(implode(', ', $countries)),
                                 'image_url' => isset($product['image_url']) ? htmlspecialchars($product['image_url']) : null
                             ];
@@ -57,7 +60,6 @@ function searchProductsByName($productName) {
 
     return $products;
 }
-
 
 if (isset($_GET['search_dish'])) {
     $productName = trim($_GET['search_dish']);

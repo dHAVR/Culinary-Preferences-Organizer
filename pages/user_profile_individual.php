@@ -1,6 +1,8 @@
 <?php
 session_start();
 include "../services/get_user_info_service.php";
+include "../services/suggestion_service.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -199,6 +201,23 @@ include "../services/get_user_info_service.php";
                 <input class="button" type="submit" name="action" value="Add Allergy" />
                 <input class="button" type="submit" name="action" value="Delete Allergy" />
             </form>
+
+            <h3 class = "title_suggest">Based on your favorite dishes we can suggest this to try!</h3>
+            <div class="recommended_dishes">
+            <?php
+                if (!empty($recommended_products)) {
+                    foreach ($recommended_products as $product) {
+                        echo '<li>';
+                        echo '<a class="search_result_link" href="./feature_food_information.php?product_name=' . urlencode($product['product_name']) . '">';
+                        echo htmlspecialchars($product['product_name']);
+                        echo '</a>';
+                        echo '</li>';
+                    }
+                } else {
+                    echo '<li>No products found.</li>';
+                }
+                ?>
+            </div>
 
           </section>
 

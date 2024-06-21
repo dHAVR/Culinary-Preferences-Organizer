@@ -1,5 +1,5 @@
 <!--
-    Product Management Page
+    Management Page
     Page Structure
 -->
 
@@ -35,7 +35,7 @@
         <link rel = "stylesheet" href = "../styles/product_management_responsive.css">
 
         <!-- Title -->
-        <title>Product Management</title>
+        <title>Data Management</title>
 
     </head>
 
@@ -56,7 +56,7 @@
             </a>
 
             <!-- User Profile Picture -->
-            <a href = "./user_profile_individual.php">
+            <a href = "./user_profile_administrator.php">
                 <img class = "user_profile_picture" src = "../images/profile_picture_example.jpg" alt = "User profile picture." />
             </a>
 
@@ -107,27 +107,23 @@
 
             <!-- Title -->
             <div class = "page_title_container">
-                <h1 class = "page_title">Product Management</h1>
+                <h1 class = "page_title">Data Management</h1>
             </div>
             
-            <!-- Add Product -->
+            <!-- Delete User -->
             <section class = "operation_container">
 
-                <h2 class = "operation_title">Add or Delete Product</h2>
+                <h2 class = "operation_title">Delete User</h2>
 
-                <form class = "operation_form" action = "#" method = "GET">
+                <form class = "operation_form" action = "../services/service_administration_user_deletion.php" method = "POST">
     
-                    <div class = "name_of_product_container">
-                        <label class = "product_name_label" for = "product_name">Name of Product:</label>
-                        <input class = "operation_input" type = "text" id = "product_name" name = "product_name" placeholder = "kyiv_cake" />
+                    <div class = "username_container">
+                        <label class = "username_label" for = "username">Username:</label>
+                        <input class = "operation_input" type = "text" id = "username" name = "username" placeholder = "romantudor" />
                     </div>
 
                     <div>
-                        <input class = "button operation_button" type = "submit" value = "Add Product" />
-                    </div>
-
-                    <div>
-                        <input class = "button operation_button" type = "submit" value = "Delete Product" />
+                        <input class = "button operation_button" type = "submit" value = "Delete User" />
                     </div>
 
                 </form>

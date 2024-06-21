@@ -31,7 +31,7 @@
 }
 
 
-.name_of_product_container
+.username_container
 {
     /* Sizing */
     display: flex;
@@ -41,7 +41,7 @@
 }
 
 
-.product_name_label
+.username_label
 {
     /* Sizing */
     font-size: 24px;

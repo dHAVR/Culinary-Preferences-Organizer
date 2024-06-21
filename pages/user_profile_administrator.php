@@ -113,8 +113,8 @@ include "../services/get_user_info_service.php"
              </ul>
 
                <!-- Product Management -->
-               <form action = "./product_management.php" method = "GET">
-                  <button class = "button action_button">Product Management</button>
+               <form action = "./data_management.php" method = "GET">
+                  <button class = "button action_button">Management</button>
                </form>
 
             </section>

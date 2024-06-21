@@ -44,7 +44,8 @@
 
 
     # Get the current group name.
-    $current_group_name = $_SESSION['current_group'];
+    if (isset($_SESSION['current_group']))
+        $current_group_name = $_SESSION['current_group'];
 
     # Fetch the users list (IDs) from the groups table.
     $sql_query_select = "SELECT users FROM groups WHERE name = ?";
@@ -74,7 +75,54 @@
     }
 
 
-    # Close the connection.
+    if (isset($_SESSION['group_member_name']))
+        $group_member_name = $_SESSION['group_member_name'];
+    else
+        $group_member_name = null;
+
+    if (isset($_SESSION['group_member_age']))
+    {
+        $group_member_age_label = "Age: ";
+        $group_member_age = $_SESSION['group_member_age'];
+    }
+    else
+    {
+        $group_member_age_label = null;
+        $group_member_age = null;
+    }
+        
+    if (isset($_SESSION['group_member_nationality']))
+    {
+        $group_member_nationality_label = "Nationality: ";
+        $group_member_nationality = $_SESSION['group_member_nationality'];
+    }
+    else
+    {
+        $group_member_nationality_label = null;
+        $group_member_nationality = null;
+    }
+        
+    if (isset($_SESSION['group_member_allergies']))
+    {
+        $group_member_allergies_label = "Allergies: ";
+        $group_member_allergies = $_SESSION['group_member_allergies'];
+    }
+    else
+    {
+        $group_member_allergies_label = null;
+        $group_member_allergies = null;
+    }
+        
+    if (isset($_SESSION['group_member_favorite_dishes']))
+    {
+        $group_member_favorite_dishes_label = "Favorite Dishes: ";
+        $group_member_favorite_dishes = $_SESSION['group_member_favorite_dishes'];
+    }
+    else
+    {
+        $group_member_favorite_dishes_label = null;
+        $group_member_favorite_dishes = null;
+    }
 
     $mysql->close();
 
@@ -218,7 +266,7 @@
 
                         <?php foreach ($formatted_user_names as $formatted_user_name): ?>
                             <li class = "groups_list_group">
-                                <a class = "groups_list_group_link" href = "">
+                                <a class = "groups_list_group_link" href = "../services/update_current_member.php?member=<?php echo urlencode($formatted_user_name); ?>">
                                     <?php echo htmlspecialchars($formatted_user_name); ?>
                                 </a>
                             </li>
@@ -231,30 +279,30 @@
                 <!-- Selected Member -->
                 <section class = "selected_member_container">
     
-                    <h2 class = "groups_category_title">John Michael</h2>
+                    <h2 class = "groups_category_title"><?php echo htmlspecialchars($group_member_name); ?></h2>
 
                     <ul class = "selected_group_list">
 
                         <li>
                             
                             <p>
-                                <span class = "member_information_label">Age: </span>
-                                <span class = "member_information_value">25</span>
+                                <span class = "member_information_label"><?php echo htmlspecialchars($group_member_age_label); ?></span>
+                                <span class = "member_information_value"><?php echo htmlspecialchars($group_member_age); ?></span>
                             </p>
 
                             <p>
-                                <span class = "member_information_label">Nationality: </span>
-                                <span class = "member_information_value">American</span>
+                                <span class = "member_information_label"><?php echo htmlspecialchars($group_member_nationality_label); ?></span>
+                                <span class = "member_information_value"><?php echo htmlspecialchars($group_member_nationality); ?></span>
                             </p>
 
                             <p>
-                                <span class = "member_information_label">Allergies: </span>
-                                <span class = "member_information_value">pollen, dust</span>
+                                <span class = "member_information_label"><?php echo htmlspecialchars($group_member_allergies_label); ?></span>
+                                <span class = "member_information_value"><?php echo htmlspecialchars($group_member_allergies); ?></span>
                             </p>
 
                             <p>
-                                <span class = "member_information_label">Favorite Dishes: </span>
-                                <span class = "member_information_value">Kyiv Cake</span>
+                                <span class = "member_information_label"><?php echo htmlspecialchars($group_member_favorite_dishes_label); ?></span>
+                                <span class = "member_information_value"><?php echo htmlspecialchars($group_member_favorite_dishes); ?></span>
                             </p>
 
                         </li>

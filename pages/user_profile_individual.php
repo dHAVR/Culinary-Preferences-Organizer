@@ -202,7 +202,7 @@ include "../services/suggestion_service.php";
                 <input class="button" type="submit" name="action" value="Delete Allergy" />
             </form>
 
-            <h3 class = "title_suggest">Based on your favorite dishes we can suggest this to try!</h3>
+            <h3 class = "title_suggest">Based on your favorite dishes and allergies we can suggest this to try!</h3>
             <div class="recommended_dishes">
             <?php
                 if (!empty($recommended_products)) {
@@ -214,7 +214,7 @@ include "../services/suggestion_service.php";
                         echo '</li>';
                     }
                 } else {
-                    echo '<li>No products found.</li>';
+                    echo "<li>You don't have favorite countries.</li>";
                 }
                 ?>
             </div>

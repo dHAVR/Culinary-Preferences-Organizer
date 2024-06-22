@@ -63,7 +63,13 @@ function searchProductsByName($productName) {
 
 if (isset($_GET['search_dish'])) {
     $productName = trim($_GET['search_dish']);
+    if (empty($productName)) {
+        $_SESSION['search_message'] = "Please enter a product name to search.";
+        header('Location: ../pages/search_results.php');
+        exit();
+    }
     $_SESSION['search_results'] = searchProductsByName($productName);
+    $_SESSION['search_message'] = null;
     header('Location: ../pages/search_results.php');
     exit();
 } else {

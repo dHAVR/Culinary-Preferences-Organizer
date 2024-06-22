@@ -98,12 +98,7 @@ function searchProductsByCountries($countries, $allergens) {
                         break 2;
                     }
 
-                   
-
                     $containsAllergens = productContainsAllergens($product, $allergens);
-                    foreach ($product['allergens_tags'] as $productAllergen) {
-                    error_log('Product: ' .$product['product_name'].''. $productAllergen . ' contains allergens: ' . ($containsAllergens ? 'Yes' : 'No'));
-                    }
 
                     if (!empty($product['product_name']) && !$containsAllergens) {
                         $products[] = [
@@ -131,7 +126,6 @@ function getTopProducts($userId) {
     $allergens = getUserAllergies($conn, $userId);
 
     if (empty($countries)) {
-        echo "No favorite countries found.\n";
         return [];
     }
 
@@ -140,7 +134,6 @@ function getTopProducts($userId) {
     $conn->close();
     return $products;
 }
-
 
 $userId = $_SESSION['user_id']; 
 $recommended_products = getTopProducts($userId);

@@ -19,11 +19,17 @@
 {
     /* Sizing */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
     height: 50vh;
+}
+
+.search_message_products{
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
 }
 
 

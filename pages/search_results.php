@@ -1,8 +1,8 @@
 <?php
 session_start();
 $searchResults = isset($_SESSION['search_results']) ? $_SESSION['search_results'] : [];
-  include "../services/get_user_info_service.php";
-
+$searchMessage = isset($_SESSION['search_message']) ? $_SESSION['search_message'] : null;
+include "../services/get_user_info_service.php";
 ?>
 
 <!DOCTYPE html>
@@ -75,8 +75,11 @@ $searchResults = isset($_SESSION['search_results']) ? $_SESSION['search_results'
 
         <!-- Search Results -->
         <div class="search_results_container">
-            <ul class="search_results_list">
-            <?php
+            <?php 
+            if ($searchMessage) {
+                echo '<div class="search_message_products">' . htmlspecialchars($searchMessage) . '</div>';
+            } else {
+                echo '<ul class="search_results_list">';
                 if (!empty($searchResults)) {
                     foreach ($searchResults as $product) {
                         echo '<li>';
@@ -88,8 +91,9 @@ $searchResults = isset($_SESSION['search_results']) ? $_SESSION['search_results'
                 } else {
                     echo '<li>No products found.</li>';
                 }
-                ?>
-            </ul>
+                echo '</ul>';
+            }
+            ?>
         </div>
     </main>
 
@@ -104,6 +108,5 @@ $searchResults = isset($_SESSION['search_results']) ? $_SESSION['search_results'
 </html>
 <?php
 unset($_SESSION['search_results']);
+unset($_SESSION['search_message']);
 ?>
-
-

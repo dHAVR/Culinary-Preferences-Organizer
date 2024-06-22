@@ -1,7 +1,67 @@
 <!-- Food Information -->
 <?php
-session_start();
-include "../services/get_user_info_service.php"
+
+    session_start();
+    $searchResults = isset($_SESSION['search_results']) ? $_SESSION['search_results'] : [];
+    $searchMessage = isset($_SESSION['search_message']) ? $_SESSION['search_message'] : null;
+    include "../services/get_user_info_service.php";
+
+
+    // BELLOW: get info about product.
+
+    if (isset($_GET['product_name']))
+        $product_name = $_GET['product_name'];
+    else
+        $product_name = "";
+
+    $search_url = "https://world.openfoodfacts.org/cgi/search.pl?action=process&search_terms=" . urlencode($product_name) . "&json=1";
+    $response = file_get_contents($search_url);
+    $data = json_decode($response, true);
+
+    $countries = [];
+    $allergies = [];
+    $photograph = "";
+    $ingredients = "";
+
+    if (isset($data['products'][0]))
+    {
+        $product = $data['products'][0];
+
+        // Extract countries where the product is sold
+        if (isset($product['countries_tags']))
+        {
+            foreach ($product['countries_tags'] as $country_tag)
+            {
+                $country_name = ucfirst(str_replace('en:', '', $country_tag));
+                $countries[] = $country_name;
+            }
+        }
+
+        // Extract allergens information
+        if (isset($product['allergens_tags'])) {
+            foreach ($product['allergens_tags'] as $allergen_tag) {
+                $allergy_name = ucfirst(str_replace('en:', '', $allergen_tag));
+                $allergies[] = $allergy_name;
+            }
+        }
+
+        // Extract ingredients information
+        if (isset($product['ingredients_text'])) {
+            $ingredients = $product['ingredients_text'];
+        }
+
+        // Extract the photograph URL
+        if (isset($product['image_url'])) {
+            $photograph = $product['image_url'];
+        }
+    } else {
+        echo "Product not found.";
+    }
+
+    // Convert arrays to comma-separated strings for easier display or further processing
+    $countries_string = implode(", ", $countries);
+    $allergies_string = implode(", ", $allergies);
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +72,7 @@ include "../services/get_user_info_service.php"
 
     <head>
         
-            <!-- Charset -->
+        <!-- Charset -->
         <meta charset = "UTF-8" />
 
         <!-- Viewport -->
@@ -34,7 +94,7 @@ include "../services/get_user_info_service.php"
         <link rel = "stylesheet" href = "../styles/feature_food_information_responsive.css">
 
         <!-- Title -->
-        <title>Culinary Love for You</title>
+        <title><?= $product_name ?></title>
 
     </head>
 
@@ -112,9 +172,9 @@ include "../services/get_user_info_service.php"
 
                     <div class="right">
 
-                        <h2>Kyiv Cake</h2>
+                        <h2><?= $product_name ?></h2>
                     
-                        <img src="../images/kyiv_cake.png" alt="Picture of the dish" class="dish_image">
+                        <img src="<?= $photograph ?>" alt="Picture of the dish" class="dish_image">
 
                         <p class = "favorite_info">Like!</p>
  
@@ -138,40 +198,27 @@ include "../services/get_user_info_service.php"
                         </form>
 
                     </div>
-
-                    <div class="ingredients">
-                    <h3>Ingredients:</h3>
-
-                         <ul>
-                             <li>Eggs</li>
-                             <li>sugger powder</li>
-                             <li>hazelnuts</li>
-                             <li>flour</li>
-                             <li>butter</li>
-                             <li>cacao</li>
-                            <li>sugar</li>
-
-                          </ul>
-                     </div>
                                                         
                 <div class="food-info">
 
-                    <div class="details">
-                        <p ><strong>Origin: </strong>&nbsp;Ukraine</p>
-                        <p ><strong>Description:</strong> &nbsp;Kyivski tort is a cake originating from Kyiv,
-                             the capital of Ukraine. 
-                             Instead of common sponge cake, kyivski tort contains a nutty
-                              meringue with a crunchy and airy texture, a technique which
-                               was created in 1956 at the Karl Marx Confectionery Factory.
+                    <div>
 
-                            Although walnuts were initially used for the 
-                            meringue, they were later replaced with cashews,
-                             and then hazelnuts. The layers of nutty meringue 
-                             are combined with a sweet vanilla and chocolate buttercream. 
-                             The cake is usually sprinkled with chopped hazelnuts and left 
-                             to cool before serving, so that the cream develops a silky, 
-                             mousse-like texture..</p>
+                        <p>Available in: </p><span><?= $countries_string ?></span>
+
                     </div>
+
+                    <div>
+
+                        <p>Allergens: </p><span><?= $allergies_string ?></span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Ingredients: </p><span><?= $ingredients ?></span>
+
+                    </div>
+
 
                 </div>
 

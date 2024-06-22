@@ -15,7 +15,12 @@
     .logo, .user_profile_picture
     {
         /* Sizing */
-        width: 13vw;
+        height: 10vw;
+        width: 10vw;
+
+        /* Styling */
+        object-fit: cover;
+        border-radius: 50%;
     }
 
 
@@ -77,7 +82,12 @@
     .logo, .user_profile_picture
     {
         /* Sizing */
-        width: 12vw;
+        height: 10vw;
+        width: 10vw;
+
+        /* Styling */
+        object-fit: cover;
+        border-radius: 50%;
     }
 
 
@@ -139,7 +149,12 @@
     .logo, .user_profile_picture
     {
         /* Sizing */
-        width: 12vw;
+        height: 10vw;
+        width: 10vw;
+
+        /* Styling */
+        object-fit: cover;
+        border-radius: 50%;
     }
 
 

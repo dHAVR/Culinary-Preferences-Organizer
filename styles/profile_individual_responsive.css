@@ -4,6 +4,25 @@
         margin-left: 2vw;
     }
 
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .grid-container {
         margin-left: 2vw;
         margin-right: 2vw;
@@ -28,6 +47,10 @@
         width: 90%;
         padding: 0;
     }
+    .center input[type="text"],
+    .center input[type="password"]{
+        width: 85%;
+    }
 
     .center input[type="submit"],
     .right input[type="submit"] {
@@ -36,9 +59,28 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
    
     .center {
         margin-left: 2vw;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
@@ -73,6 +115,20 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 20%;
+    }
+
 
     .left_button,
     .create_list_buttom {

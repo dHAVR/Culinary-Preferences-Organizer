@@ -27,7 +27,7 @@ include "../services/shopping_lists_service.php";
     <link rel="stylesheet" href="../styles/feature_shopping_list_general.css">
 
     <!-- Specific Responsive Stylesheet -->
-    <link rel="stylesheet" href="../styles/feature_shopping_list_style_responsive.css">
+    <link rel="stylesheet" href="../styles/feature_shopping_list_responsive.css">
 
     <!-- Title -->
     <title>Shopping Lists</title>
@@ -135,13 +135,13 @@ include "../services/shopping_lists_service.php";
             </section>
 
             <section class="right">
-                <form action="../services/export_to_pdf.php" method="GET" target="_blank">
+                <form class = "action"  action="../services/export_to_pdf.php" method="GET" target="_blank">
                     <input type="hidden" name="list_id" value="<?= isset($_GET['list_id']) ? htmlspecialchars($_GET['list_id']) : '' ?>" />
                     <button class="button" type="submit">Export to PDF</button>
                 </form>
 
                 <p><strong>List of groups:</strong></p>
-                <form action="feature_shopping_lists.php" method="POST">
+                <form class = "action" action="feature_shopping_lists.php" method="POST">
                     <select class="select_group" name="group_id">
                         <?php
                             foreach ($groups as $group) {
@@ -154,7 +154,7 @@ include "../services/shopping_lists_service.php";
                 </form>
 
                 <p><strong>Choose created list:</strong></p>
-                <form action="feature_shopping_lists.php" method="GET">
+                <form class = "action" action="feature_shopping_lists.php" method="GET">
                     <?php
                         echo '<select name="list_id">';
                         foreach ($lists as $list) {
@@ -166,7 +166,7 @@ include "../services/shopping_lists_service.php";
                 </form>
 
                 <!-- Delete List -->
-                <form action="feature_shopping_lists.php" method="POST">
+                <form class="delete" action="feature_shopping_lists.php" method="POST">
                     <input type="hidden" name="list_id" value="<?= isset($_GET['list_id']) ? htmlspecialchars($_GET['list_id']) : '' ?>" />
                     <input class="button" type="submit" name="action" value="Delete list"/>
                 </form>

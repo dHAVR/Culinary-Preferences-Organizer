@@ -1,35 +1,50 @@
 /****
-    Home Page for Anonymous Users General Stylesheet
-    << Screens Wider Than 1024px >>
+
+    Home Page for Anonymous Users
+
+    General Style
+    << For Screens Wider Than 1024px >>
+    
 ****/
 
 
 
 /*** Main ***/
 
+
 /** Welcome Message **/
 
 .welcome_message
 {
     /* Sizing */
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
 
     /* Styling */
-    font-size: 24px;
     text-align: center;
 }
 
 
-/** Login Button and Register Button **/
+/** Website Name **/
 
-.login_button, .register_button
+.website_name
+{
+    /* Styling */
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/** Buttons **/
+
+.local_button
 {
     /* Sizing */
+    font-size: 36px;
     width: 200px;
     height: 100px;
 
     /* Styling */
-    font-size: 30px;
     border-radius: 20px;
 }

@@ -119,7 +119,7 @@ include "../services/get_user_info_service.php"
 
                     <!-- Statistics Types -->
                     <section class = "statistics_types">
-                        <button class = "button">Personal Statistics</button>
+                        <button class = "button" id = "personal_statistics">Personal Statistics</button>
                         <button class = "button">Global Statistics</button>
                     </section>
     
@@ -135,7 +135,7 @@ include "../services/get_user_info_service.php"
     
                     <!-- Statistics Visualization -->
                     <section>
-                        <img class = "statistics_chart" src = "../images/statistics_example.png" alt = "Statistics example.">
+                        <div id = "statistics_visualization"></div>
                     </section>
     
                 </div>
@@ -154,6 +154,18 @@ include "../services/get_user_info_service.php"
             </p>
 
         </footer>
+
+        <script>
+
+            document.getElementById('personal_statistics').addEventListener('click', function() {
+                fetch('../services/statistics_generation_service.php')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('statistics_visualization').innerHTML = data;
+                    });
+            });
+
+        </script>
 
     </body>
 

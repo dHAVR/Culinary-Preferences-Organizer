@@ -119,14 +119,13 @@ include "../services/get_user_info_service.php"
 
                     <!-- Statistics Types -->
                     <section class = "statistics_types">
-                        <button class = "button" id = "personal_statistics">Personal Statistics</button>
-                        <button class = "button">Global Statistics</button>
+                        <button class = "button" id = "personal_statistics">Generate Statistics</button>
                     </section>
     
                     <!-- Export Options -->
                     <section class = "export_options">
                         <button class = "button">Export to PDF</button>
-                        <button class = "button">Export to CSV</button>
+                        <button class = "button" onclick = "window.location.href = '../services/statistics_export_csv_service.php'">Export to CSV</button>
                     </section>
     
                 </div>

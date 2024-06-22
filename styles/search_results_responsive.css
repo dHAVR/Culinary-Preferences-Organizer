@@ -1,16 +1,60 @@
-/****
-    Search Results Page
-    Responsive Stylesheet
-    For Screens Not Wider Than 1024px
-****/
 
+@media screen and (max-width: 480px) {
+
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 100%;
+    }
+
+    .search_results_list{
+        margin-left: 1vw;
+    }
+
+    .footer{
+        height: 10%;
+
+    }
+
+    .search_result_link{
+        font-size: 1.5vh;
+    }
+
+    .search_message_products{
+        font-size: 1.5vh;
+    }
+   
+}
 
 
 /*** From 769px to 1024px Wide Screens ***/
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
-    /** To Add **/
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
+
+    .search_result_link{
+        font-size: 2vh;
+    }
+
+    .search_message_products{
+        font-size: 2vh;
+    }
+   
 }
 
 
@@ -19,14 +63,27 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    /** To Add **/
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
+
+    .search_result_link{
+        font-size: 2vh;
+    }
+    
+    .search_message_products{
+        font-size: 2vh;
+    }
+   
 }
 
 
-
-/*** From 1px to 480px Wide Screens ***/
-
-@media only screen and (max-width: 480px)
-{
-    /** To Add **/
-}

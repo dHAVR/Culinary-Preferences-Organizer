@@ -169,12 +169,12 @@ include "../services/suggestion_service.php";
                 </form>
 
                 <!-- Delete Account -->
-                <form action="../services/account_deletion_service.php" method="GET" onsubmit="confirmDeletion(event)">
-                  <button type="submit" class="button">Delete Account</button>
+                <form class= "action" action="../services/account_deletion_service.php" method="GET" onsubmit="confirmDeletion(event)">
+                  <button type="submit" class="button ">Delete Account</button>
                 </form>
                 
                 <!-- Logout -->
-                <form action = "../services/logout_service.php" method = "GET">
+                <form class= "action" action = "../services/logout_service.php" method = "GET">
                     <button class="button">Logout</button>
                 </form>
             

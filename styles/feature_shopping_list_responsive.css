@@ -1,5 +1,18 @@
 @media screen and (max-width: 480px) {
 
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
+
     .page {
         display: flex;
         flex-direction: column;
@@ -23,27 +36,35 @@
     .right {
         width: 70%;
     }
+
+    .delete{
+        margin-bottom: 1vh;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
     
     .page {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 2vh;
+    .delete{
+        margin-bottom: 1vh;
     }
-
-    .center {
-        font-size: 2vh;
-    }
-
 
     .left,
     .center,
@@ -51,36 +72,38 @@
         width: 70%;
     }
 
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
-    .left input[type="text"] {
-        padding: 0.75vh;
+    .header{
+        height: 20%;
+    }
+    
+    .main{
+
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
+    
+    .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .delete{
         margin-bottom: 1vh;
     }
 
-    input[type="submit"] {
-        margin-top: 0.5vh;
-        border-radius: 8px;
+    .left,
+    .center,
+    .right {
+        width: 70%;
     }
 
-    .left h2 {
-        margin-bottom: 1vh;
-        margin-top: 1vh;
-    }
 
-    .center {
-        padding: 1.5vh;
-    }
-
-    .right select {
-        margin-top: 1vh;
-    }
-
-    .right button {
-        margin-top: 0.5vh;
-        margin-bottom: 0.5vh;
-        border-radius: 8px;
-    }
 }

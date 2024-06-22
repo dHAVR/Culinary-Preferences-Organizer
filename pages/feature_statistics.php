@@ -124,7 +124,7 @@ include "../services/get_user_info_service.php"
     
                     <!-- Export Options -->
                     <section class = "export_options">
-                        <button class = "button">Export to PDF</button>
+                        <button class = "button" onclick = "window.location.href = '../services/statistics_export_pdf_service.php'">Export to PDF</button>
                         <button class = "button" onclick = "window.location.href = '../services/statistics_export_csv_service.php'">Export to CSV</button>
                     </section>
     

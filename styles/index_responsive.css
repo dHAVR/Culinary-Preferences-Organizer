@@ -1,11 +1,15 @@
 /****
-    Home Page for Anonymous Users Responsive Stylesheet
-    << Screens Not Wider Than 1024px >>
+
+    Home Page for Anonymous Users
+    
+    Responsive Style
+    << For Screens Not Wider Than 1024px >>
+
 ****/
 
 
 
-/*** 769px - 1024px Wide Screens ***/
+/*** For 769px to 1024px Wide Screens ***/
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
@@ -13,13 +17,16 @@
 
     .welcome_message
     {
-        font-size: 16px;
+        /* Sizing */
+        font-size: 26px;
+        margin-left: 70px;
+        margin-right: 70px;
     }
 }
 
 
 
-/*** 481px - 768px Wide Screens ***/
+/*** For 481px to 768px Wide Screens ***/
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
@@ -27,13 +34,16 @@
 
     .welcome_message
     {
-        font-size: 14px;
+        /* Sizing */
+        font-size: 24px;
+        margin-left: 60px;
+        margin-right: 60px;
     }
 }
 
 
 
-/*** 1px - 480px Wide Screens ***/
+/*** For 1px to 480px Wide Screens ***/
 
 @media only screen and (max-width: 480px)
 {
@@ -41,6 +51,9 @@
     
     .welcome_message
     {
-        font-size: 12px;
+        /* Sizing */
+        font-size: 22px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }

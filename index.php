@@ -1,6 +1,12 @@
 <!--
+
     Home Page for Anonymous Users
+
+    Page Structure
+
 -->
+
+
 
 <!DOCTYPE html>
 
@@ -65,17 +71,19 @@
 
             <!-- Welcome Message -->
             <p class = "welcome_message">
-                Welcome to Culinary Love for You, your personal culinary preferences organizer!
+                Welcome to 
+                <span class = "website_name">Culinary Love for You</span> 
+                &mdash; your personal culinary preferences organizer!
             </p>
 
-            <!-- Login -->
+            <!-- Login Button -->
             <a href = "./pages/authentication_authentication.php">
-                <button class = "button login_button">Login</button>
+                <button class = "button local_button">Log In</button>
             </a>
             
-            <!-- Register -->
+            <!-- Register Button -->
             <a href = "./pages/authentication_registration.php">
-                <button class = "button register_button">Register</button>
+                <button class = "button local_button">Register</button>
             </a>
 
         </main>

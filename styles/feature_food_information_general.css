@@ -51,6 +51,11 @@ align-items: start;
     align-items: center;
 }
 
+.content_label{
+    display: flex;
+    flex-direction: column;
+}
+
 .right{
     display: flex;
     flex-direction: column;

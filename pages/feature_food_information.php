@@ -1,4 +1,3 @@
-<!-- Food Information -->
 <?php
 
     session_start();
@@ -7,12 +6,8 @@
     include "../services/get_user_info_service.php";
 
 
-    // BELLOW: get info about product.
-
-    if (isset($_GET['product_name']))
-        $product_name = $_GET['product_name'];
-    else
-        $product_name = "";
+    // Get info about product.
+    $product_name = isset($_GET['product_name']) ? $_GET['product_name'] : "";
 
     $search_url = "https://world.openfoodfacts.org/cgi/search.pl?action=process&search_terms=" . urlencode($product_name) . "&json=1";
     $response = file_get_contents($search_url);
@@ -65,178 +60,176 @@
 ?>
 
 <!DOCTYPE html>
-
-
-
 <html>
 
-    <head>
-        
-        <!-- Charset -->
-        <meta charset = "UTF-8" />
+<head>
 
-        <!-- Viewport -->
-        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+    <!-- Charset -->
+    <meta charset="UTF-8" />
 
-        <!-- Favicon -->
-        <link rel = "icon" type = "image/x-icon" href = "../images/favicon.ico" />
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Global General Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/global_general.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
 
-        <!-- Global Responsive Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/global_responsive.css">
+    <!-- Global General Stylesheet -->
+    <link rel="stylesheet" href="../styles/global_general.css">
 
-        <!-- Specific General Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/feature_food_information_general.css">
+    <!-- Global Responsive Stylesheet -->
+    <link rel="stylesheet" href="../styles/global_responsive.css">
 
-        <!-- Specific Responsive Stylesheet -->
-        <link rel = "stylesheet" href = "../styles/feature_food_information_responsive.css">
+    <!-- Specific General Stylesheet -->
+    <link rel="stylesheet" href="../styles/feature_food_information_general.css">
 
-        <!-- Title -->
-        <title><?= $product_name ?></title>
+    <!-- Specific Responsive Stylesheet -->
+    <link rel="stylesheet" href="../styles/feature_food_information_responsive.css">
 
-    </head>
+    <!-- Title -->
+    <title><?= $product_name ?></title>
 
-
-    <body>
-
-        <header class = "header">
-            
-            <!-- Logo -->
-            <a href = "./authentication_home_page.php">
-                <img class = "logo" src = "../images/logo.png" alt = "Logo." />
-            </a>
-   
-            <!-- Title -->
-            <a class = "title_link" href = "./authentication_home_page.php">
-                <h1 class = "title">Culinary Love for You</h1>
-            </a>
-   
-            <!-- User Profile Picture -->
-            <a href = "./user_profile_individual.php">
-                <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
-            </a>
-   
-        </header>
-        
-        <main class = "main">
-
-            <!-- Banner -->
-            <nav class = "banner">
-
-                <!-- Home Button -->
-                <a href = "./authentication_home_page.php">
-                    <button class = "navbar_button">Home</button>
-                </a>
-
-                <!-- Groups Button -->
-                <a href = "./feature_groups.php">
-                    <button class = "navbar_button">Groups</button>
-                </a>
-
-                <!-- Search for a Dish -->
-                <form class = "search_form" action = "../services/search_results.php" method = "GET">
-
-                    <div class = "search_message_container">
-                        <label class = "search_message" for = "search_dish">Search for a Dish:</label>
-                    </div>
-                    
-                    <div class = "search_container">
-                        <input class = "search_input" type = "text" id = "search_dish" name = "search_dish" placeholder = "Kyiv Cake" />
-                        <input class = "search_button" type = "submit" value = "Search!" />
-                    </div>
-
-                </form>
-
-                <!-- Statistics Button -->
-                <a href = "./feature_statistics.php">
-                    <button class = "navbar_button">Statistics</button>
-                </a>
-                
-                <!-- Shopping Lists Button -->
-                <a href = "feature_shopping_lists.php">
-                    <button class = "navbar_button">Shopping Lists</button>
-                </a>
-
-            </nav>
+</head>
 
 
-         <div class="article">
+<body>
 
-         
-         <div class = "page_title_container">
-              <h1>Food Information</h2>
-         </div>
-              <div class="content">
+<header class="header">
 
-                    <div class="right">
+    <!-- Logo -->
+    <a href="./authentication_home_page.php">
+        <img class="logo" src="../images/logo.png" alt="Logo." />
+    </a>
 
-                        <h2><?= $product_name ?></h2>
-                    
-                        <img src="<?= $photograph ?>" alt="Picture of the dish" class="dish_image">
+    <!-- Title -->
+    <a class="title_link" href="./authentication_home_page.php">
+        <h1 class="title">Culinary Love for You</h1>
+    </a>
 
-                        <p class = "favorite_info">Like!</p>
- 
-                        <?php
-                            $favorite_dishes_array = explode(',', $user['favorite_dishes']);
-                            $is_favorite = in_array("Kyiv Cake", $favorite_dishes_array);
-                        ?>
+    <!-- User Profile Picture -->
+    <a href="./user_profile_individual.php">
+        <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
+    </a>
 
-                        <form action="../services/dishes_managing_service.php" method="POST">
-                            <input type="hidden" name="new_preference" value="Kyiv Cake">
-                            <input type="hidden" name="action" value="<?php echo $is_favorite ? 'Delete dish' : 'Add dish'; ?>">
-                            <button class="heart_button">
-                                <?php
-                                    if ($is_favorite) {
-                                        echo('<img src="../images/heart_filled_icon.svg" class="heart-icon" alt="Heart Icon">');
-                                    } else {
-                                        echo('<img src="../images/heart_icon.svg" class="heart-icon" alt="Heart Icon">');
-                                    }
-                                ?>
-                            </button>
-                        </form>
+</header>
 
-                    </div>
-                                                        
+<main class="main">
+
+    <!-- Banner -->
+    <nav class="banner">
+
+        <!-- Home Button -->
+        <a href="./authentication_home_page.php">
+            <button class="navbar_button">Home</button>
+        </a>
+
+        <!-- Groups Button -->
+        <a href="./feature_groups.php">
+            <button class="navbar_button">Groups</button>
+        </a>
+
+        <!-- Search for a Dish -->
+        <form class="search_form" action="../services/search_results.php" method="GET">
+
+            <div class="search_message_container">
+                <label class="search_message" for="search_dish">Search for a Dish:</label>
+            </div>
+
+            <div class="search_container">
+                <input class="search_input" type="text" id="search_dish" name="search_dish" placeholder="Kyiv Cake" />
+                <input class="search_button" type="submit" value="Search!" />
+            </div>
+
+        </form>
+
+        <!-- Statistics Button -->
+        <a href="./feature_statistics.php">
+            <button class="navbar_button">Statistics</button>
+        </a>
+
+        <!-- Shopping Lists Button -->
+        <a href="feature_shopping_lists.php">
+            <button class="navbar_button">Shopping Lists</button>
+        </a>
+
+    </nav>
+
+    <div class="article">
+
+        <div class="page_title_container">
+            <h1>Food Information</h1>
+        </div>
+        <div class="content_label">
+
+            <h2><?= $product_name ?></h2>
+
+            <div class="content">
+
+                <div class="right">
+
+                    <img src="<?= $photograph ?>" alt="Picture of the dish" class="dish_image">
+
+                    <p class="favorite_info">Like!</p>
+
+                    <?php
+                    $favorite_dishes_array = explode(',', $user['favorite_dishes']);
+                    $is_favorite = in_array($product_name, $favorite_dishes_array);
+                    ?>
+
+                    <form action="../services/dishes_managing_service.php" method="POST">
+                        <input type="hidden" name="new_preference" value="<?= $product_name ?>">
+                        <input type="hidden" name="action" value="<?php echo $is_favorite ? 'Delete dish' : 'Add dish'; ?>">
+                        <button class="heart_button">
+                            <?php
+                            if ($is_favorite) {
+                                echo('<img src="../images/heart_filled_icon.svg" class="heart-icon" alt="Heart Icon">');
+                            } else {
+                                echo('<img src="../images/heart_icon.svg" class="heart-icon" alt="Heart Icon">');
+                            }
+                            ?>
+                        </button>
+                    </form>
+
+                </div>
+
                 <div class="food-info">
 
                     <div>
 
-                        <p>Available in: </p><span><?= $countries_string ?></span>
+                        <p><strong>Available in: </strong></p><span><?= $countries_string ?></span>
 
                     </div>
 
                     <div>
 
-                        <p>Allergens: </p><span><?= $allergies_string ?></span>
+                        <p><strong>Allergens: </strong></p><span><?= $allergies_string ?></span>
 
                     </div>
 
                     <div>
 
-                        <p>Ingredients: </p><span><?= $ingredients ?></span>
+                        <p><strong>Ingredients: </strong></p><span><?= $ingredients ?></span>
 
                     </div>
-
 
                 </div>
 
             </div>
 
-            </article>
+        </div>
 
-        </main>
+    </div>
 
-        <footer class = "footer">
+</main>
 
-            <!-- Copyright -->
-            <p class = "copyright">
-                Copyright &copy; 2024 Culinary Love for You
-            </p>
+<footer class="footer">
 
-        </footer>
+    <!-- Copyright -->
+    <p class="copyright">
+        Copyright &copy; 2024 Culinary Love for You
+    </p>
 
-    </body>
+</footer>
+
+</body>
 
 </html>

@@ -30,7 +30,7 @@ function searchProductsByName($productName) {
 
         if (!empty($data['products'])) {
             foreach ($data['products'] as $product) {
-                if (!empty($product['product_name']) && !in_array($product['product_name'], $uniqueProductNames) && count($products) < 9) {
+                if (!empty($product['product_name']) && !in_array($product['product_name'], $uniqueProductNames) && count($products) < 6) {
                     if (isset($product['countries_tags']) && is_array($product['countries_tags'])) {
                         $englishCountries = array_filter($product['countries_tags'], function($countryTag) {
                             return strpos($countryTag, 'en:') === 0;

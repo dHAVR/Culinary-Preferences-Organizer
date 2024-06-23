@@ -56,7 +56,7 @@
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['user_type'] = 'individual';
 
-                    header("Location: ../pages/user_profile_individual.php");
+                    header("Location: ../pages/authentication_home_page.php");
                     exit();
                 }
                 else

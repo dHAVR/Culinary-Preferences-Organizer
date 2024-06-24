@@ -57,7 +57,7 @@
 
             <!-- User Profile Picture -->
             <a href = "./user_profile_administrator.php">
-                <img class = "user_profile_picture" src = "../images/profile_picture_example.jpg" alt = "User profile picture." />
+                <img class = "user_profile_picture" src = "../images/profile_picture_anonymous.png" alt = "User profile picture." />
             </a>
 
         </header>
@@ -65,45 +65,6 @@
 
         <!-- Main Window -->
         <main class = "main">
-
-            <!-- Banner -->
-            <nav class = "banner">
-
-                <!-- Home Button -->
-                <a href = "./authentication_home_page.php">
-                    <button class = "navbar_button">Home</button>
-                </a>
-
-                <!-- Groups Button -->
-                <a href = "./feature_groups.php">
-                    <button class = "navbar_button">Groups</button>
-                </a>
-
-                <!-- Search for a Dish -->
-                <form class = "search_form" action = "./search_results.php" method = "GET">
-
-                    <div class = "search_message_container">
-                        <label class = "search_message" for = "search_dish">Search for a Dish:</label>
-                    </div>
-                    
-                    <div class = "search_container">
-                        <input class = "search_input" type = "text" id = "search_dish" name = "search_dish" placeholder = "Kyiv Cake" />
-                        <input class = "search_button" type = "submit" value = "Search!" />
-                    </div>
-
-                </form>
-
-                <!-- Statistics Button -->
-                <a href = "./feature_statistics.php">
-                    <button class = "navbar_button">Statistics</button>
-                </a>
-                
-                <!-- Shopping Lists Button -->
-                <a href = "feature_shopping_lists.php">
-                    <button class = "navbar_button">Shopping Lists</button>
-                </a>
-
-            </nav>
 
             <!-- Title -->
             <div class = "page_title_container">

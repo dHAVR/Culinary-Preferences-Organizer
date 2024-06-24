@@ -30,9 +30,12 @@ function getUserAllergies($conn, $userId) {
     return [];
 }
 
-function getFavoriteCountries($conn) {
-    $sql = "SELECT favorite_countries FROM individual_users";
-    $result = $conn->query($sql);
+function getFavoriteCountries($conn, $userId) {
+    $sql = "SELECT favorite_countries FROM individual_users WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $userId);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $countries = [];
@@ -122,7 +125,7 @@ function searchProductsByCountries($countries, $allergens) {
 
 function getTopProducts($userId) {
     $conn = getDatabaseConnection();
-    $countries = getFavoriteCountries($conn);
+    $countries = getFavoriteCountries($conn, $userId);
     $allergens = getUserAllergies($conn, $userId);
 
     if (empty($countries)) {

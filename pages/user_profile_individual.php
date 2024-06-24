@@ -127,11 +127,13 @@ include "../services/suggestion_service.php";
                     <p class="user_info"><strong>Allergies:</strong> <?= htmlspecialchars($user['allergies']) ?></p>
                     <p class="user_info"><strong>Favorite dishes:</strong> 
                         <?php 
+                        if(!empty($user['favorite_dishes'])){
                         $favorite_dishes = explode(',', $user['favorite_dishes']);
                         foreach ($favorite_dishes as $dish) {
                             $dish = trim($dish);
                             echo '<a class="search_result_link" href="./feature_food_information.php?product_name=' . urlencode($dish) . '">' . htmlspecialchars($dish) . '</a>, ';
                         }
+                    }
                         ?>
                     </p>
                 </div>

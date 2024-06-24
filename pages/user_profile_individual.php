@@ -86,12 +86,12 @@ include "../services/suggestion_service.php";
         <form class="search_form" action="../services/search_results.php" method="GET">
 
             <div class="search_message_container">
-                <label class="search_message" for="search_dish">Search for a Dish:</label>
+                <label class="search_message" for="search_dish">Search for Product:</label>
             </div>
 
             <div class="search_container">
-                <input class="search_input" type="text" id="search_dish" name="search_dish" placeholder="Kyiv Cake" />
-                <input class="search_button" type="submit" value="Search!" />
+                <input class="search_input" type="text" id="search_dish" name="search_dish" placeholder="Coca-Cola" />
+                <input class="search_button" type="submit" value="Search" />
             </div>
 
         </form>

@@ -124,8 +124,15 @@ include "../services/suggestion_service.php";
                 </div>
                 <div>
                     <p class="user_info"><strong>Allergies:</strong> <?= htmlspecialchars($user['allergies']) ?></p>
-                    <p class="user_info"><strong>Favorite dishes:</strong> <?= htmlspecialchars($user['favorite_dishes']) ?></p>
-
+                    <p class="user_info"><strong>Favorite dishes:</strong> 
+                        <?php 
+                        $favorite_dishes = explode(',', $user['favorite_dishes']);
+                        foreach ($favorite_dishes as $dish) {
+                            $dish = trim($dish);
+                            echo '<a class="search_result_link" href="./feature_food_information.php?product_name=' . urlencode($dish) . '">' . htmlspecialchars($dish) . '</a>, ';
+                        }
+                        ?>
+                    </p>
                 </div>
             </div>
             <form id="photo-form" method="post" enctype="multipart/form-data" action="../services/upload_profile_picture_service.php">

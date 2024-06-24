@@ -135,7 +135,7 @@
             </div>
 
             <div class="search_container">
-                <input class="search_input" type="text" id="search_dish" name="search_dish" placeholder="Kyiv Cake" />
+                <input class="search_input" type="text" id="search_dish" name="search_dish" placeholder="Coca-Cola" />
                 <input class="search_button" type="submit" value="Search!" />
             </div>
 

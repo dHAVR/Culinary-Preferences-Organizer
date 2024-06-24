@@ -1,6 +1,11 @@
 
 @media screen and (max-width: 480px) {
 
+    .main{
+        height: 80vh;
+    }
+
+
 
     .main_section{
         display: flex;
@@ -19,6 +24,10 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .main{
+        height: 80vh;
+    }
 
 
     .main_section{
@@ -40,6 +49,10 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .main{
+        height: 80vh;
+    }
 
 
     .main_section input[type="text"],

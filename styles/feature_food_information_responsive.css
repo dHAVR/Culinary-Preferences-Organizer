@@ -1,6 +1,12 @@
 
 @media screen and (max-width: 480px) {
 
+        
+    .main{
+
+        height: 160vh;
+    }
+
 
     .food-info {
         flex-direction: column;
@@ -34,6 +40,12 @@
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
+    .main{
+
+        height: 120vh;
+    }
+
+
  
     .food-info {
         flex-direction: column;
@@ -66,6 +78,11 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .main{
+
+        height: 100vh;
+    }
+
 
 
     .food-info {

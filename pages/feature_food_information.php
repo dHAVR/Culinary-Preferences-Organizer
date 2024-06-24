@@ -193,9 +193,11 @@
 
                 <div class="food-info">
 
+                <div class = "column-food-info">
+
                     <div>
 
-                        <p><strong>Available in: </strong></p><span><?= $countries_string ?></span>
+                        <p><strong>Ingredients: </strong></p><span><?= $ingredients ?></span>
 
                     </div>
 
@@ -205,17 +207,17 @@
 
                     </div>
 
+                </div>
+
                     <div>
 
-                        <p><strong>Ingredients: </strong></p><span><?= $ingredients ?></span>
+                         <p><strong>Available in: </strong></p><span><?= $countries_string ?></span>
 
                     </div>
 
                 </div>
 
             </div>
-
-        </div>
 
     </div>
 

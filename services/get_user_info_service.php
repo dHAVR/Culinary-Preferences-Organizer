@@ -16,7 +16,7 @@ $user_id = $_SESSION['user_id'];
 $user_type = $_SESSION['user_type'];
 
 if($user_type == 'individual'){
-    $sql = "SELECT first_name, last_name, email_address, username, nationality, age, allergies, favorite_dishes, profile_photograph FROM individual_users WHERE id = ?";
+    $sql = "SELECT * FROM individual_users WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $user_id);
     $stmt->execute();

@@ -123,6 +123,7 @@ include "../services/suggestion_service.php";
                     </div>
                 </div>
                 <div>
+                    <p class="user_info"><strong>Favorite countries:</strong> <?= htmlspecialchars($user['favorite_countries']) ?></p>
                     <p class="user_info"><strong>Allergies:</strong> <?= htmlspecialchars($user['allergies']) ?></p>
                     <p class="user_info"><strong>Favorite dishes:</strong> 
                         <?php 

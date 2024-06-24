@@ -2,6 +2,12 @@
 @media screen and (max-width: 480px) {
 
 
+    .main_section{
+        display: flex;
+        flex-direction: column;
+
+    }
+
     .main_section input[type="text"],
     input[type="password"],
     input[type="submit"],
@@ -13,6 +19,14 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+
+
+    .main_section{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
 
 
     .main_section input[type="text"],

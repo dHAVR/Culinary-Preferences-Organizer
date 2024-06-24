@@ -39,7 +39,7 @@ if($user_type == 'individual'){
 
 }else{
 
-    $sql = "SELECT first_name FROM administrator_users WHERE id = ?";
+    $sql = "SELECT * FROM administrator_users WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $user_id);
     $stmt->execute();

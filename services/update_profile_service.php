@@ -34,34 +34,31 @@ function validate_input($data, $field) {
     }
 }
 
-
-if (empty($_POST['current_password'])) {
-    $_SESSION['error_update_message'] = "Current password is required.";
-    header("Location: ../pages/user_profile_".($user_type == 'individual' ? 'individual' : 'administrator').".php");
-    exit();
-}
-
-$current_password = $_POST['current_password'];
-
-
-$table = $user_type == 'individual' ? 'individual_users' : 'administrator_users';
-$password_field = 'password';
-
-$stmt = $conn->prepare("SELECT $password_field FROM $table WHERE id = ?");
-$stmt->bind_param('i', $user_id);
-$stmt->execute();
-$stmt->bind_result($db_password);
-$stmt->fetch();
-$stmt->close();
-
-
-if (!$current_password == $db_password) {
-    $_SESSION['error_update_message'] = "Current password is incorrect.";
-    header("Location: ../pages/user_profile_".($user_type == 'individual' ? 'individual' : 'administrator').".php");
-    exit();
-}
-
 if ($user_type == 'individual') {
+    if (empty($_POST['current_password'])) {
+        $_SESSION['error_update_message'] = "Current password is required.";
+        header("Location: ../pages/user_profile_individual.php");
+        exit();
+    }
+
+    $current_password = $_POST['current_password'];
+
+    $table = 'individual_users';
+    $password_field = 'password';
+
+    $stmt = $conn->prepare("SELECT $password_field FROM $table WHERE id = ?");
+    $stmt->bind_param('i', $user_id);
+    $stmt->execute();
+    $stmt->bind_result($db_password);
+    $stmt->fetch();
+    $stmt->close();
+
+    if (!password_verify($current_password, $db_password)) {
+        $_SESSION['error_update_message'] = "Current password is incorrect.";
+        header("Location: ../pages/user_profile_individual.php");
+        exit();
+    }
+
     $fields = ['first_name', 'last_name', 'email_address', 'nationality', 'age', 'username', 'password'];
 
     foreach ($fields as $field) {
@@ -102,7 +99,7 @@ if ($user_type == 'individual') {
     header("Location: ../pages/user_profile_individual.php");
 
 } else {
-    $fields = ['username', 'password'];
+    $fields = ['username', 'password', 'email_address'];
 
     foreach ($fields as $field) {
         if (!empty($_POST[$field]) && validate_input($_POST[$field], $field)) {
@@ -130,7 +127,7 @@ if ($user_type == 'individual') {
         $stmt->bind_param($types, ...$params);
 
         if ($stmt->execute()) {
-            $_SESSION['success_message'] = "Profile updated successfully!";
+            $_SESSION['success_message_update'] = "Profile updated successfully!";
         } else {
             $_SESSION['error_update_message'] = "Record update error: " . $stmt->error;
         }

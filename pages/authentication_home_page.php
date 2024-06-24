@@ -1,5 +1,9 @@
 <!--
+
     Home Page for Authenticated Users
+
+    Page Structure
+
 -->
 
 
@@ -9,7 +13,11 @@
 
 
 <?php
+
+    // Start the session.
     session_start();
+
+    // Include the necessary files.
     include "../services/get_user_info_service.php";
 
 ?>
@@ -64,7 +72,7 @@
 
             <!-- User Profile Picture -->
             <a href = "./user_profile_individual.php">
-                <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
+                <img class = "user_profile_picture" src = "data: image/png; base64, <?= $profile_photograph ?>" alt = "User profile picture." />
             </a>
 
         </header>
@@ -86,16 +94,16 @@
                     <button class = "navbar_button">Groups</button>
                 </a>
 
-                <!-- Search for a Dish -->
+                <!-- Search for a Product -->
                 <form class = "search_form" action = "../services/search_results.php" method = "GET">
 
                     <div class = "search_message_container">
-                        <label class = "search_message" for = "search_dish">Search for a Dish:</label>
+                        <label class = "search_message" for = "search_dish">Search for Product:</label>
                     </div>
                     
                     <div class = "search_container">
-                        <input class = "search_input" type = "text" id = "search_dish" name = "search_dish" placeholder = "Kyiv Cake" />
-                        <input class = "search_button" type = "submit" value = "Search!" />
+                        <input class = "search_input" type = "text" id = "search_dish" name = "search_dish" placeholder = "Coca-Cola" />
+                        <input class = "search_button" type = "submit" value = "Search" />
                     </div>
 
                 </form>
@@ -116,7 +124,9 @@
             <section class = "user_options">
 
                 <!-- Welcome Message -->
-                <p class = "welcome_message">Welcome back, <?= $user['first_name'] ?>! What would you like to do today?</p>
+                <p class = "welcome_message">
+                    Welcome, <span class = "user"><?= $user['first_name'] ?></span>!
+                    What would you like to do?</p>
 
                 <!-- See Groups -->
                 <a href = "./feature_groups.php">

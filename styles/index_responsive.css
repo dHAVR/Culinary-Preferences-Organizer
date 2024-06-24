@@ -3,7 +3,7 @@
     Home Page for Anonymous Users
     
     Responsive Style
-    << For Screens Not Wider Than 1024px >>
+    For Screens Not Wider Than 1024px
 
 ****/
 
@@ -13,7 +13,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 {
-    /** Main **/
+    /** Welcome Message **/
 
     .welcome_message
     {
@@ -30,7 +30,7 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    /** Main **/
+    /** Welcome Message **/
 
     .welcome_message
     {
@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 480px)
 {
-    /** Main **/
+    /** Welcome Message **/
     
     .welcome_message
     {

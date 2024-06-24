@@ -1,12 +1,18 @@
 /****
+
     Home Page for Authenticated Users
-    General Stylesheet
-    Screens Wider Than 1024px
+
+    General Style
+    For Screens Wider Than 1024px
+
 ****/
 
 
 
 /*** Main ***/
+
+
+/** Main Window **/
 
 .main
 {
@@ -14,6 +20,8 @@
     display: block;
 }
 
+
+/** User Options **/
 
 .user_options
 {
@@ -32,10 +40,18 @@
 .welcome_message
 {
     /* Sizing */
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
+}
+
+
+/** User **/
+
+.user
+{
+    /* Styling */
+    font-style: italic;
+    font-weight: bold;
 }
 
 
@@ -44,7 +60,7 @@
 .option
 {
     /* Sizing */
-    width: 302px;
+    width: 310px;
     height: 84px;
     font-size: 28px;
     

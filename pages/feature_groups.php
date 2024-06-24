@@ -1,12 +1,19 @@
 <!--
+
     Groups Page
+
     Page Structure
+
 -->
 
 
 
 <?php
+
+    # Start the session.
     session_start();
+
+    # Include the necessary files.
     include "../services/get_user_info_service.php";
 
 
@@ -42,13 +49,15 @@
         $group_names[] = $row['name'];
 
 
-
     # Get the current group name.
+
     if (isset($_SESSION['current_group']))
         $current_group_name = $_SESSION['current_group'];
 
-    # Fetch the users list (IDs) from the groups table.
-    $sql_query_select = "SELECT users FROM groups WHERE name = ?";
+
+    # Fetch the users list.
+
+    $sql_query_select = "SELECT users FROM groups WHERE name = ?;";
     $stmt = $mysql->prepare($sql_query_select);
     $stmt->bind_param("s", $current_group_name);
     $stmt->execute();
@@ -56,21 +65,25 @@
     $stmt->fetch();
     $stmt->close();
 
+
     # Split the user IDs into an array.
+
     $user_ids = explode(',', $users);
 
     $formatted_user_names = [];
 
+
     # Fetch and format user names based on user IDs.
-    foreach ($user_ids as $user_id) {
-        $sql_query_user_name = "SELECT first_name, last_name FROM individual_users WHERE id = ?";
+
+    foreach ($user_ids as $user_id)
+    {
+        $sql_query_user_name = "SELECT first_name, last_name FROM individual_users WHERE id = ?;";
         $stmt = $mysql->prepare($sql_query_user_name);
-        $stmt->bind_param("i", $user_id);  // Assuming user IDs are integers
+        $stmt->bind_param("i", $user_id);
         $stmt->execute();
         $stmt->bind_result($first_name, $last_name);
-        if ($stmt->fetch()) {
+        if ($stmt->fetch())
             $formatted_user_names[] = $first_name . ' ' . $last_name;
-        }
         $stmt->close();
     }
 
@@ -182,7 +195,7 @@
 
             <!-- User Profile Picture -->
             <a href = "./user_profile_individual.php">
-                 <img class="user_profile_picture" src="data:image/png;base64,<?= $profile_photograph ?>" alt="User profile picture." />
+                 <img class = "user_profile_picture" src = "data: image/png; base64, <?= $profile_photograph ?>" alt = "User profile picture." />
             </a>
 
         </header>
@@ -204,16 +217,16 @@
                     <button class = "navbar_button">Groups</button>
                 </a>
 
-                <!-- Search for a Dish -->
+                <!-- Search for Product -->
                 <form class = "search_form" action = "../services/search_results.php" method = "GET">
 
                     <div class = "search_message_container">
-                        <label class = "search_message" for = "search_dish">Search for a Dish:</label>
+                        <label class = "search_message" for = "search_dish">Search for Product:</label>
                     </div>
                     
                     <div class = "search_container">
-                        <input class = "search_input" type = "text" id = "search_dish" name = "search_dish" placeholder = "Kyiv Cake" />
-                        <input class = "search_button" type = "submit" value = "Search!" />
+                        <input class = "search_input" type = "text" id = "search_dish" name = "search_dish" placeholder = "Coca-Cola" />
+                        <input class = "search_button" type = "submit" value = "Search" />
                     </div>
 
                 </form>
@@ -235,10 +248,10 @@
                 <h1 class = "page_title">Groups</h1>
             </div>
             
-
             <!-- My Groups -->
             <div class = "groups_container">
 
+                <!-- Available Groups -->
                 <section class = "my_groups_container">
 
                     <h2 class = "groups_category_title">My Groups</h2>
@@ -347,7 +360,7 @@
                             </div>
 
                             <div>
-                                <input class = "button add_person_button" type = "submit" id = "add_person" name = "add_person" value = "Add Person" />
+                                <input class = "button add_person_button" type = "submit" id = "add_person" name = "add_person" value = "Add User" />
                             </div>
 
                         </form>

@@ -22,9 +22,11 @@ body {
 
 
 .left input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email_address"]
+ {
 
-    width: 100%;
+    width: 97%;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
     margin-bottom: 2vh;
@@ -41,13 +43,25 @@ input[type="password"] {
     border-radius: 1vw;
 }
 
+.form{
+    width: 100% ;
+}
+
 .action_button {
+    width: 100%;
+    background-color: #402a23;
+    border: 0.5vw solid #402a23;
+    font-weight: bold;
+    color: white;
+    border-radius: 1vw;
+}
+
+.management_but{
     width: 40%;
     background-color: #402a23;
     border: 0.5vw solid #402a23;
     font-weight: bold;
     color: white;
-    padding: 0.5vh 0.5vw;
     border-radius: 1vw;
 }
 
@@ -60,12 +74,12 @@ input[type="password"] {
     flex-direction: column;
     margin-left: 2rem;
     margin-top: 1rem;
-    width: 70%;
+    width: 50%;
 }
 
 .left section,
 button {
-    margin-top: 1.4vh;
+    margin-top: 1vh;
 }
 
 .right {

@@ -121,7 +121,10 @@
         exit();
     }
     else
-        echo "No favorite dishes found for this user.";
+    {
+        $redirect = "../pages/feature_statistics.php";
+        header("Location: $redirect");
+    }
 
     $mysql->close();
 

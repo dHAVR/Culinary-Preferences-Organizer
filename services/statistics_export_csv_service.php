@@ -65,7 +65,8 @@ if ($favorite_countries && $favorite_dishes) {
     fclose($output);
     exit();
 } else {
-    echo "No favorite countries found for this user.";
+    $redirect = "../pages/feature_statistics.php";
+    header("Location: $redirect");
 }
 
 $mysql->close();
